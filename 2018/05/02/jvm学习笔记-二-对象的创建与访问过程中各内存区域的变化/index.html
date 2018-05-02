@@ -16,10 +16,13 @@
 <meta property="og:site_name" content="irisqp的博客">
 <meta property="og:description" content="JVM笔记(二.对象的创建与访问)1.对象的创建　　首先，当虚拟机遇到一条new指令时，首先去检查这个指令的参数是否能在常量池中定位到一个类的符号引用(即类名)，并检查这个符号引用代表的类是否已经被加载、解析和初始化过。如果没有，则先执行类的加载。 　　在类的加载检查通过后，合法了，就得给人家一个地方住，所以接下来要做的就是给新生对象分配内存。对象所需的内存大小在加载完成以后虚拟机就全部知道了，接">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-02T14:14:42.375Z">
+<meta property="og:image" content="https://irisqp.github.io/image/noteimage/句柄访问对象.jpg">
+<meta property="og:image" content="https://irisqp.github.io/image/noteimage/直接指针访问对象.jpg">
+<meta property="og:updated_time" content="2018-05-02T14:41:27.075Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jvm学习笔记(二)对象的创建与访问过程中各内存区域的变化">
 <meta name="twitter:description" content="JVM笔记(二.对象的创建与访问)1.对象的创建　　首先，当虚拟机遇到一条new指令时，首先去检查这个指令的参数是否能在常量池中定位到一个类的符号引用(即类名)，并检查这个符号引用代表的类是否已经被加载、解析和初始化过。如果没有，则先执行类的加载。 　　在类的加载检查通过后，合法了，就得给人家一个地方住，所以接下来要做的就是给新生对象分配内存。对象所需的内存大小在加载完成以后虚拟机就全部知道了，接">
+<meta name="twitter:image" content="https://irisqp.github.io/image/noteimage/句柄访问对象.jpg">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -191,8 +194,12 @@
 <p>　　至于对齐填充并不是必须存在，仅仅起着占位符的作用，比如HotSpot虚拟机自动内存管理系统的要求是对象的起始地址必须是8字节的整数倍，而对象头正好是8字节的倍数，所以当实例数据的部分没有对齐时，就需要对齐填充来补全。</p>
 <h3 id="3-对象的访问定位"><a href="#3-对象的访问定位" class="headerlink" title="3.对象的访问定位"></a>3.对象的访问定位</h3><p>　　对象的使用是通过掉用栈上的引用数据来操作具体对象的。目前主流的访问方式有通过句柄访问以及直接指针访问。</p>
 <ol>
-<li>句柄访问：java堆中划分出来一块内存作为句柄池，栈的引用中存储的就是对象的句柄地址，而句柄中又包含了对象的实例数据与类型数据各自的地址，即包含了对象的引用和类的引用。</li>
-<li>直接指针：java堆中的对象实例数据中存放对象类型数据的指针，而栈的引用中存储的就是对象实例的地址。</li>
+<li><p>句柄访问：java堆中划分出来一块内存作为句柄池，栈的引用中存储的就是对象的句柄地址，而句柄中又包含了对象的实例数据与类型数据各自的地址，即包含了对象的引用和类的引用。如下图</p>
+<p><img src="\image\noteimage\句柄访问对象.jpg" alt="句柄访问对象"></p>
+</li>
+<li><p>直接指针：java堆中的对象实例数据中存放对象类型数据的指针，而栈的引用中存储的就是对象实例的地址。</p>
+<p><img src="\image\noteimage\直接指针访问对象.jpg" alt="直接指针访问对象"></p>
+</li>
 </ol>
 <p>　　这两种访问方式各有优势，使用句柄的好处就在于栈中引用存放的是稳定的句柄地址，在对象被移动时只会改变句柄中实例数据的指针，而栈中的引用不需要修改。</p>
 <p>　　使用直接指针的好处就在于少了一步引用，速度更快。</p>
