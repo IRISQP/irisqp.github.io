@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="https://irisqp.github.io">
   <title>jvm学习笔记(二)对象的创建与访问过程中各内存区域的变化 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JVM笔记(二.对象的创建与访问)1.对象的创建　　首先，当虚拟机遇到一条new指令时，首先去检查这个指令的参数是否能在常量池中定位到一个类的符号引用(即类名)，并检查这个符号引用代表的类是否已经被加载、解析和初始化过。如果没有，则先执行类的加载。 　　在类的加载检查通过后，合法了，就得给人家一个地方住，所以接下来要做的就是给新生对象分配内存。对象所需的内存大小在加载完成以后虚拟机就全部知道了，接">
+  <meta name="description" content="JVM笔记(二.对象的创建与访问)1.对象的创建　　首先，当虚拟机遇到一条new指令时，首先去检查这个指令的参数是否能在常量池中定位到一个类的符号引用(即类名)，并检查这个符号引用代表的类是否已经被加载、解析和初始化过。如果没有，则先执行类的加载。">
 <meta name="keywords" content="读书笔记,JVM,对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jvm学习笔记(二)对象的创建与访问过程中各内存区域的变化">
 <meta property="og:url" content="https://irisqp.github.io/2018/05/02/jvm学习笔记-二-对象的创建与访问过程中各内存区域的变化/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="JVM笔记(二.对象的创建与访问)1.对象的创建　　首先，当虚拟机遇到一条new指令时，首先去检查这个指令的参数是否能在常量池中定位到一个类的符号引用(即类名)，并检查这个符号引用代表的类是否已经被加载、解析和初始化过。如果没有，则先执行类的加载。 　　在类的加载检查通过后，合法了，就得给人家一个地方住，所以接下来要做的就是给新生对象分配内存。对象所需的内存大小在加载完成以后虚拟机就全部知道了，接">
+<meta property="og:description" content="JVM笔记(二.对象的创建与访问)1.对象的创建　　首先，当虚拟机遇到一条new指令时，首先去检查这个指令的参数是否能在常量池中定位到一个类的符号引用(即类名)，并检查这个符号引用代表的类是否已经被加载、解析和初始化过。如果没有，则先执行类的加载。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://irisqp.github.io/image/noteimage/句柄访问对象.jpg">
 <meta property="og:image" content="https://irisqp.github.io/image/noteimage/直接指针访问对象.jpg">
-<meta property="og:updated_time" content="2018-05-02T14:41:27.075Z">
+<meta property="og:updated_time" content="2018-05-02T14:43:31.532Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jvm学习笔记(二)对象的创建与访问过程中各内存区域的变化">
-<meta name="twitter:description" content="JVM笔记(二.对象的创建与访问)1.对象的创建　　首先，当虚拟机遇到一条new指令时，首先去检查这个指令的参数是否能在常量池中定位到一个类的符号引用(即类名)，并检查这个符号引用代表的类是否已经被加载、解析和初始化过。如果没有，则先执行类的加载。 　　在类的加载检查通过后，合法了，就得给人家一个地方住，所以接下来要做的就是给新生对象分配内存。对象所需的内存大小在加载完成以后虚拟机就全部知道了，接">
+<meta name="twitter:description" content="JVM笔记(二.对象的创建与访问)1.对象的创建　　首先，当虚拟机遇到一条new指令时，首先去检查这个指令的参数是否能在常量池中定位到一个类的符号引用(即类名)，并检查这个符号引用代表的类是否已经被加载、解析和初始化过。如果没有，则先执行类的加载。">
 <meta name="twitter:image" content="https://irisqp.github.io/image/noteimage/句柄访问对象.jpg">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
@@ -179,6 +179,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="JVM笔记-二-对象的创建与访问"><a href="#JVM笔记-二-对象的创建与访问" class="headerlink" title="JVM笔记(二.对象的创建与访问)"></a>JVM笔记(二.对象的创建与访问)</h2><h3 id="1-对象的创建"><a href="#1-对象的创建" class="headerlink" title="1.对象的创建"></a>1.对象的创建</h3><p>　　首先，当虚拟机遇到一条new指令时，首先去检查这个指令的参数是否能在常量池中定位到一个类的符号引用(即类名)，并检查这个符号引用代表的类是否已经被加载、解析和初始化过。如果没有，则先执行类的加载。</p>
+<a id="more"></a>
 <p>　　在类的加载检查通过后，合法了，就得给人家一个地方住，所以接下来要做的就是给新生对象分配内存。对象所需的内存大小在加载完成以后虚拟机就全部知道了，接下来就是划分内存的过程，基本上有这么两种方法：</p>
 <ol>
 <li>java堆中的内存是绝对规整的，用过的内存放一边，空闲的内存放另一边，中间放着一个指针作为分界点的指示器，那么分配内存的过程就是将该指针从分界点移动所需的内存大小的长度到空闲区域，这种分配方式叫做<strong>指针碰撞</strong>；</li>
