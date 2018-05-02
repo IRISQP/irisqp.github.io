@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>寻找丑数 | irisqp的博客</title>
+  <title>Archives: 2018/5 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编程练习题目：把只包含因子2、3和5的数称作丑数（Ugly Number）。例如6、8都是丑数，但14不是，因为它包含因子7。 习惯上我们把1当做是第一个丑数。求按从小到大的顺序的第N个丑数。思路：这道题看似简单，实际要通过很难。首先想到的方法是先实现一个判断给定整数是否是丑数的方法，然后对从1到N的所有整数调用该方法，得到N以内的所有丑数，最后根据输入的参数index找出第index个即可。">
-<meta name="keywords" content="SwordToOffer,programming,丑数">
-<meta property="og:type" content="article">
-<meta property="og:title" content="寻找丑数">
-<meta property="og:url" content="https://irisqp.github.io/2018/04/30/寻找丑数/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="irisqp的博客">
+<meta property="og:url" content="https://irisqp.github.io/archives/2018/05/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="编程练习题目：把只包含因子2、3和5的数称作丑数（Ugly Number）。例如6、8都是丑数，但14不是，因为它包含因子7。 习惯上我们把1当做是第一个丑数。求按从小到大的顺序的第N个丑数。思路：这道题看似简单，实际要通过很难。首先想到的方法是先实现一个判断给定整数是否是丑数的方法，然后对从1到N的所有整数调用该方法，得到N以内的所有丑数，最后根据输入的参数index找出第index个即可。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-30T09:26:34.824Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="寻找丑数">
-<meta name="twitter:description" content="编程练习题目：把只包含因子2、3和5的数称作丑数（Ugly Number）。例如6、8都是丑数，但14不是，因为它包含因子7。 习惯上我们把1当做是第一个丑数。求按从小到大的顺序的第N个丑数。思路：这道题看似简单，实际要通过很难。首先想到的方法是先实现一个判断给定整数是否是丑数的方法，然后对从1到N的所有整数调用该方法，得到N以内的所有丑数，最后根据输入的参数index找出第index个即可。">
+<meta name="twitter:title" content="irisqp的博客">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -155,178 +150,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-寻找丑数" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      寻找丑数
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/05/02/jvm学习笔记-一-java内存区域详解/" class="archive-article-date">
+  	<time datetime="2018-05-02T11:41:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/05/02/jvm学习笔记-一-java内存区域详解/">jvm学习笔记(一)java内存区域详解</a>
     </h1>
   
 
-        
-        <a href="/2018/04/30/寻找丑数/" class="archive-article-date">
-  	<time datetime="2018-04-30T08:56:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：把只包含因子2、3和5的数称作丑数（Ugly-Number）。例如6、8都是丑数，但14不是，因为它包含因子7。-习惯上我们把1当做是第一个丑数。求按从小到大的顺序的第N个丑数。"><a href="#题目：把只包含因子2、3和5的数称作丑数（Ugly-Number）。例如6、8都是丑数，但14不是，因为它包含因子7。-习惯上我们把1当做是第一个丑数。求按从小到大的顺序的第N个丑数。" class="headerlink" title="题目：把只包含因子2、3和5的数称作丑数（Ugly Number）。例如6、8都是丑数，但14不是，因为它包含因子7。 习惯上我们把1当做是第一个丑数。求按从小到大的顺序的第N个丑数。"></a>题目：把只包含因子2、3和5的数称作丑数（Ugly Number）。例如6、8都是丑数，但14不是，因为它包含因子7。 习惯上我们把1当做是第一个丑数。求按从小到大的顺序的第N个丑数。</h3><p><strong>思路</strong>：这道题看似简单，实际要通过很难。首先想到的方法是先实现一个判断给定整数是否是丑数的方法，然后对从1到N的所有整数调用该方法，得到N以内的所有丑数，最后根据输入的参数index找出第index个即可。</p>
-<a id="more"></a>
-<p>java代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GetUglyNumber</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">GetUglyNumber_Solution</span><span class="params">(<span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(index&lt;<span class="number">0</span>) &#123;</span><br><span class="line">        	<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(index==<span class="number">0</span>) &#123;</span><br><span class="line">        	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        ArrayList&lt;Integer&gt; list=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        <span class="comment">//保证产生的丑数list足够大可以包括第index个丑数在内</span></span><br><span class="line">        produceUglyNumber(list,index*index);</span><br><span class="line">        </span><br><span class="line">    	<span class="keyword">return</span> list.get(index-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 判断输入n是否是丑数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> n</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isUglyNumber</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span>(n&lt;<span class="number">0</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	ArrayList&lt;Integer&gt; list=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    	<span class="comment">//求出n的所有因子</span></span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) &#123;</span><br><span class="line">    		<span class="keyword">if</span>(n%i==<span class="number">0</span>) &#123;</span><br><span class="line">    			list.add(i);</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="comment">//判断是否只含有2,3,5因子(1和它本身除外)</span></span><br><span class="line">    	<span class="comment">//n如果是2,3或者5的整数倍，则n可以被除去</span></span><br><span class="line">    	<span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span> || n%<span class="number">3</span>==<span class="number">0</span> || n%<span class="number">5</span>==<span class="number">0</span>) &#123;</span><br><span class="line">    		list.remove(list.indexOf(n));</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">while</span>(list.contains(<span class="number">1</span>)) &#123;</span><br><span class="line">    		list.remove(list.indexOf(<span class="number">1</span>));</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">while</span>(list.contains(<span class="number">2</span>)) &#123;</span><br><span class="line">    		list.remove(list.indexOf(<span class="number">2</span>));</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">while</span>(list.contains(<span class="number">3</span>)) &#123;</span><br><span class="line">    		list.remove(list.indexOf(<span class="number">3</span>));</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">while</span>(list.contains(<span class="number">5</span>)) &#123;</span><br><span class="line">    		list.remove(list.indexOf(<span class="number">5</span>));</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="comment">/**</span></span><br><span class="line"><span class="comment">    	 * 排除因子中是2,3,5三个因子的整数倍的丑数，比如12的因子有1,2,3,4,6,12，上面的步骤只能排除1,2,3,12。</span></span><br><span class="line"><span class="comment">    	 * 对于4,6没法排除，所以需要递归判断4,6,是否是丑数，若是就除去。</span></span><br><span class="line"><span class="comment">    	 */</span></span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;list.size();)&#123;</span><br><span class="line">    		<span class="keyword">if</span>(list.get(<span class="number">0</span>)%<span class="number">2</span>==<span class="number">0</span> || list.get(<span class="number">0</span>)%<span class="number">3</span>==<span class="number">0</span> || list.get(<span class="number">0</span>)%<span class="number">5</span>==<span class="number">0</span>) &#123;</span><br><span class="line">    			<span class="keyword">if</span>(isUglyNumber(list.get(<span class="number">0</span>))) &#123;</span><br><span class="line">    				list.remove(<span class="number">0</span>);</span><br><span class="line">    			&#125;</span><br><span class="line">    		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    			<span class="keyword">break</span>;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="comment">//移出2,3,5和1，以及符合条件的n本身以外，如果还有因子，则说明不是丑数，反之则是丑数</span></span><br><span class="line">    	<span class="keyword">if</span>(list.size()==<span class="number">0</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 产生给定整数n以内(包括n)的所有丑数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> uglyNumberList 存放丑数的arraylist</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> n</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">produceUglyNumber</span><span class="params">(ArrayList&lt;Integer&gt; uglyNumberList,<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) &#123;</span><br><span class="line">    		<span class="keyword">if</span>(isUglyNumber(i)) &#123;</span><br><span class="line">    			uglyNumberList.add(i);</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> n=<span class="number">1000</span>;</span><br><span class="line">		GetUglyNumber_Solution(n);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>　　但是实际实现中发现，丑数的增长速度远远大于其个数的增长，如果你想要得到第1500个丑数，你要获取到的丑数list中的最大值N至少得为859963392，而对这么大的数做for循环统计N以内的丑数，很耗费时间，我一开始就是用的这个方法，提交时提示超时，本地跑了十几秒才跑出来第1500个丑数859963392。毕竟是自己想出来的方法，不忍心就这么抛弃，所以想着改进算法，后来看到别人写的一个判断丑数的方法比我的要效率高，所以拿过来用了一下，该方法是我见过最简单易懂且效率高的判断丑数的方法，下面贴出来记录一下。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 判断一个数是不是丑数</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> n</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isUglyNumber</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">   	<span class="keyword">while</span>(n%<span class="number">2</span>==<span class="number">0</span>) &#123;</span><br><span class="line">   		n/=<span class="number">2</span>;</span><br><span class="line">   	&#125;</span><br><span class="line">   	</span><br><span class="line">   	<span class="keyword">while</span>(n%<span class="number">3</span>==<span class="number">0</span>) &#123;</span><br><span class="line">   		n/=<span class="number">3</span>;</span><br><span class="line">   	&#125;</span><br><span class="line">   	<span class="keyword">while</span>(n%<span class="number">5</span>==<span class="number">0</span>) &#123;</span><br><span class="line">   		n/=<span class="number">5</span>;</span><br><span class="line">   	&#125;</span><br><span class="line">   	<span class="keyword">return</span> (n==<span class="number">1</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<p>　　通过改进丑数判断以及查找算法，可以将输入1500的结果优化到十秒左右完成，还是太慢，效率太低。遂放弃该方法，开始考虑丑数生成的规律，从规律入手来尝试新的算法。先写出10以内的丑数，即1,2,3,4,5,6,8,9,10；可见除了1以外，每个数字都可以写成前几个数字x2,x3,x5的形式。比如2=1x2,3=1x3,4=2x2,5=1x5,6=2x3,8=4x2,9=3x3,10=2x5。可以估计后面的所有丑数都可以由前边的丑数乘以丑数因子2,3,5得到，所以考虑如下算法：</p>
-<ol>
-<li>首先确定第一个丑数为1，然后计算1x2,1x3,1x5的值，取出其中大于1的最小的数作为下一个丑数，此时得到的是2；</li>
-<li>完成第一步后，此时的丑数序列为1,2。分别计算1x2=2,1x3=3,1x5=5,2x2=4,2x3=6,2x5=10。再挑出其中大于2的值为3,5,4,6,10，取最小值3作为下一个丑数。</li>
-<li>以此类推……</li>
-<li>要计算第i个丑数，分别计算前i-1个丑数乘以2,3,5因子中的大于第i-1个丑数的最小值即可。</li>
-</ol>
-<p>java代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GetUglyNumber3</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">GetUglyNumber_Solution</span><span class="params">(<span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(index&lt;<span class="number">0</span>) &#123;</span><br><span class="line">        	<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(index==<span class="number">0</span>) &#123;</span><br><span class="line">        	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125; </span><br><span class="line">        <span class="keyword">if</span>(index==<span class="number">1</span>) &#123;</span><br><span class="line">        	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//定义存放挨个生成的丑数的数组,并添加第一个丑数1,至于为什么是1691，可以去我的博客找到答案https://irisqp.github.io</span></span><br><span class="line">        <span class="keyword">int</span> [] arr= <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">1691</span>];</span><br><span class="line">        arr[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> count=<span class="number">1</span>;</span><br><span class="line">        <span class="comment">//循环生成第index个丑数</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">        	<span class="keyword">int</span> m2=<span class="number">0</span>;</span><br><span class="line">        	<span class="keyword">int</span> m3=<span class="number">0</span>;</span><br><span class="line">        	<span class="keyword">int</span> m5=<span class="number">0</span>;</span><br><span class="line">        	<span class="comment">/**</span></span><br><span class="line"><span class="comment">        	 * 将最新的丑数之前的所有丑数*2,求出其中大于最新的丑数的最小值，将其赋给m2;</span></span><br><span class="line"><span class="comment">        	 */</span></span><br><span class="line">        	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;count;i++) &#123;</span><br><span class="line">        		<span class="keyword">if</span>(arr[i]*<span class="number">2</span>&gt;arr[count-<span class="number">1</span>]) &#123;</span><br><span class="line">        			m2=arr[i]*<span class="number">2</span>;</span><br><span class="line">        			<span class="keyword">break</span>;</span><br><span class="line">        		&#125;	</span><br><span class="line">        	&#125;</span><br><span class="line">        	<span class="comment">/**</span></span><br><span class="line"><span class="comment">        	 * 将最新的丑数之前的所有丑数*3,求出其中大于最新的丑数的最小值，将其赋给m3;</span></span><br><span class="line"><span class="comment">        	 */</span></span><br><span class="line">        	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;count;i++) &#123;</span><br><span class="line">        		<span class="keyword">if</span>(arr[i]*<span class="number">3</span>&gt;arr[count-<span class="number">1</span>]) &#123;</span><br><span class="line">        			m3=arr[i]*<span class="number">3</span>;</span><br><span class="line">        			<span class="keyword">break</span>;</span><br><span class="line">        		&#125;	</span><br><span class="line">        	&#125;</span><br><span class="line">        	<span class="comment">/**</span></span><br><span class="line"><span class="comment">        	 * 将最新的丑数之前的所有丑数*5,求出其中大于最新的丑数的最小值，将其赋给m5;</span></span><br><span class="line"><span class="comment">        	 */</span></span><br><span class="line">        	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;count;i++) &#123;</span><br><span class="line">        		<span class="keyword">if</span>(arr[i]*<span class="number">5</span>&gt;arr[count-<span class="number">1</span>]) &#123;</span><br><span class="line">        			m5=arr[i]*<span class="number">5</span>;</span><br><span class="line">        			<span class="keyword">break</span>;</span><br><span class="line">        		&#125;	</span><br><span class="line">        	&#125;</span><br><span class="line">        	<span class="comment">//求出m2,m3,m5中的最小值，作为下一个最新的丑数</span></span><br><span class="line">        	<span class="keyword">int</span> min=compare(m2,m3,m5);</span><br><span class="line">        	arr[count]=min;</span><br><span class="line">        	count++;</span><br><span class="line">        	<span class="comment">//如果生成的丑数个数达到给定的要求，则返回最新生成的这个丑数</span></span><br><span class="line">        	<span class="keyword">if</span>(count==index) &#123;</span><br><span class="line">        		<span class="keyword">return</span> arr[count-<span class="number">1</span>];</span><br><span class="line">        	&#125;</span><br><span class="line">        	</span><br><span class="line">        &#125;    </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 三个整数比较大小，返回最小的那个</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> a</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> b</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> c</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c)</span> </span>&#123;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span>(a&lt;=b) &#123;</span><br><span class="line">    		<span class="keyword">if</span>(c&lt;=a) &#123;</span><br><span class="line">    			<span class="keyword">return</span> c;</span><br><span class="line">    		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    			<span class="keyword">return</span> a;</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(c&gt;=b)&#123;</span><br><span class="line">    		<span class="keyword">return</span> b;</span><br><span class="line">    	&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    		<span class="keyword">return</span> c;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> n=<span class="number">1500</span>;</span><br><span class="line">		System.out.println(GetUglyNumber_Solution(n));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>　　此代码可以很快的计算出n比较大时的第n个丑数，在牛客网上通过的时间为48ms，因为它生成的每一个数都是丑数，省去了很多不必要的循环次数，至于为什么我定义的存放丑数的int数组大小为1691，是因为我经过测试后发现第1691个丑数的值为2125764000，而java中int型的可以表示的整数的最大值为2147483648 ，经过测试第1692个丑数就会超出这个范围，因为题目要求返回类型为int型，所以设置1691大小的数组完全够用了，避免了存储空间的浪费。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JVM</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">丑数</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">内存</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/04/30/寻找丑数/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/04/30/第一个只出现一次的字符/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          第一个只出现一次的字符
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/04/28/把数组排成最小的数/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">把数组排成最小的数</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -349,8 +234,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
