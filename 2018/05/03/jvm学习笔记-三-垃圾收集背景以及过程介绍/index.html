@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://irisqp.github.io">
   <title>jvm学习笔记(三)垃圾收集背景以及过程介绍 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="jvm笔记(三.垃圾收集背景及过程)1. 概述　　前面学习了java虚拟机的内存结构，我们可以发现对于程序计数器、虚拟机栈、本地方法栈这三个区域都是线程隔离的，它们随线程而生，也随线程而灭，所以不需要对这三个区域进行垃圾回收，它们执行完自己的方法或者线程结束，它们所占用的内存就自然跟着回收了。我们主要关注的是java堆和方法区这两块内存区域存放的对象实例以及类信息的回收。 2. 怎么判断对象是否需">
+  <meta name="description" content="jvm笔记(三.垃圾收集背景及过程)1. 概述　　前面学习了java虚拟机的内存结构，我们可以发现对于程序计数器、虚拟机栈、本地方法栈这三个区域都是线程隔离的，它们随线程而生，也随线程而灭，所以不需要对这三个区域进行垃圾回收，">
 <meta name="keywords" content="读书笔记,JVM,垃圾收集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jvm学习笔记(三)垃圾收集背景以及过程介绍">
 <meta property="og:url" content="https://irisqp.github.io/2018/05/03/jvm学习笔记-三-垃圾收集背景以及过程介绍/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="jvm笔记(三.垃圾收集背景及过程)1. 概述　　前面学习了java虚拟机的内存结构，我们可以发现对于程序计数器、虚拟机栈、本地方法栈这三个区域都是线程隔离的，它们随线程而生，也随线程而灭，所以不需要对这三个区域进行垃圾回收，它们执行完自己的方法或者线程结束，它们所占用的内存就自然跟着回收了。我们主要关注的是java堆和方法区这两块内存区域存放的对象实例以及类信息的回收。 2. 怎么判断对象是否需">
+<meta property="og:description" content="jvm笔记(三.垃圾收集背景及过程)1. 概述　　前面学习了java虚拟机的内存结构，我们可以发现对于程序计数器、虚拟机栈、本地方法栈这三个区域都是线程隔离的，它们随线程而生，也随线程而灭，所以不需要对这三个区域进行垃圾回收，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-03T14:37:49.734Z">
+<meta property="og:updated_time" content="2018-05-03T14:39:29.690Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jvm学习笔记(三)垃圾收集背景以及过程介绍">
-<meta name="twitter:description" content="jvm笔记(三.垃圾收集背景及过程)1. 概述　　前面学习了java虚拟机的内存结构，我们可以发现对于程序计数器、虚拟机栈、本地方法栈这三个区域都是线程隔离的，它们随线程而生，也随线程而灭，所以不需要对这三个区域进行垃圾回收，它们执行完自己的方法或者线程结束，它们所占用的内存就自然跟着回收了。我们主要关注的是java堆和方法区这两块内存区域存放的对象实例以及类信息的回收。 2. 怎么判断对象是否需">
+<meta name="twitter:description" content="jvm笔记(三.垃圾收集背景及过程)1. 概述　　前面学习了java虚拟机的内存结构，我们可以发现对于程序计数器、虚拟机栈、本地方法栈这三个区域都是线程隔离的，它们随线程而生，也随线程而灭，所以不需要对这三个区域进行垃圾回收，">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -175,7 +175,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="jvm笔记-三-垃圾收集背景及过程"><a href="#jvm笔记-三-垃圾收集背景及过程" class="headerlink" title="jvm笔记(三.垃圾收集背景及过程)"></a>jvm笔记(三.垃圾收集背景及过程)</h2><h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h3><p>　　前面学习了java虚拟机的内存结构，我们可以发现对于程序计数器、虚拟机栈、本地方法栈这三个区域都是线程隔离的，它们随线程而生，也随线程而灭，所以不需要对这三个区域进行垃圾回收，它们执行完自己的方法或者线程结束，它们所占用的内存就自然跟着回收了。我们主要关注的是java堆和方法区这两块内存区域存放的对象实例以及类信息的回收。</p>
+        <h2 id="jvm笔记-三-垃圾收集背景及过程"><a href="#jvm笔记-三-垃圾收集背景及过程" class="headerlink" title="jvm笔记(三.垃圾收集背景及过程)"></a>jvm笔记(三.垃圾收集背景及过程)</h2><h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h3><p>　　前面学习了java虚拟机的内存结构，我们可以发现对于程序计数器、虚拟机栈、本地方法栈这三个区域都是线程隔离的，它们随线程而生，也随线程而灭，所以不需要对这三个区域进行垃圾回收，</p>
+<a id="more"></a>
+<p>它们执行完自己的方法或者线程结束，它们所占用的内存就自然跟着回收了。我们主要关注的是java堆和方法区这两块内存区域存放的对象实例以及类信息的回收。</p>
 <h3 id="2-怎么判断对象是否需要被回收"><a href="#2-怎么判断对象是否需要被回收" class="headerlink" title="2. 怎么判断对象是否需要被回收"></a>2. 怎么判断对象是否需要被回收</h3><p>　　站在虚拟机的角度，我们需要回收什么样的对象呢，很显然是不再被使用的对象，或者一段时间内该对象的引用没有被别处调用，我们不妨称这些不再被引用的对象已经“死亡”，而还被引用着的对象不用回收。所以主要的条件是如何确定对象还有没有被其他地方引用。</p>
 <p>　　常见的引用判断算法有两种：<strong>引用计数法</strong>和<strong>可达性分析算法</strong>。</p>
 <p>　　引用计数法算法流程是这样的：给对象添加一个引用计数器，每当有一个地方引用它时，该计数器的值就加１；当引用失效时，计数器的值就减１；任何时刻计数器为０的对象就是不可能再被使用的对象。</p>
