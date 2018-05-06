@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>字符串的全排列问题 | irisqp的博客</title>
+  <title>Archives: 2018/5 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编程练习题目：输入一个字符串,按字典序打印出该字符串中字符的所有排列。例如输入字符串abc,则打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。思路：仔细读题，发现可分解为两步：　　1.对输入字符串做全排列；　　2.将排列后的字符串做字典排序。">
-<meta name="keywords" content="SwordToOffer,programming,Permutation">
-<meta property="og:type" content="article">
-<meta property="og:title" content="字符串的全排列问题">
-<meta property="og:url" content="https://irisqp.github.io/2018/04/26/字符串的全排列问题/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="irisqp的博客">
+<meta property="og:url" content="https://irisqp.github.io/archives/2018/05/page/2/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="编程练习题目：输入一个字符串,按字典序打印出该字符串中字符的所有排列。例如输入字符串abc,则打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。思路：仔细读题，发现可分解为两步：　　1.对输入字符串做全排列；　　2.将排列后的字符串做字典排序。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-27T04:23:38.683Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="字符串的全排列问题">
-<meta name="twitter:description" content="编程练习题目：输入一个字符串,按字典序打印出该字符串中字符的所有排列。例如输入字符串abc,则打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。思路：仔细读题，发现可分解为两步：　　1.对输入字符串做全排列；　　2.将排列后的字符串做字典排序。">
+<meta name="twitter:title" content="irisqp的博客">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -155,167 +150,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-字符串的全排列问题" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      字符串的全排列问题
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/05/02/jvm学习笔记-一-java内存区域详解/" class="archive-article-date">
+  	<time datetime="2018-05-02T11:41:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/05/02/jvm学习笔记-一-java内存区域详解/">jvm学习笔记(一)java内存区域详解</a>
     </h1>
   
 
-        
-        <a href="/2018/04/26/字符串的全排列问题/" class="archive-article-date">
-  	<time datetime="2018-04-26T12:14:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：输入一个字符串-按字典序打印出该字符串中字符的所有排列。例如输入字符串abc-则打印出由字符a-b-c所能排列出来的所有字符串abc-acb-bac-bca-cab和cba。"><a href="#题目：输入一个字符串-按字典序打印出该字符串中字符的所有排列。例如输入字符串abc-则打印出由字符a-b-c所能排列出来的所有字符串abc-acb-bac-bca-cab和cba。" class="headerlink" title="题目：输入一个字符串,按字典序打印出该字符串中字符的所有排列。例如输入字符串abc,则打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。"></a>题目：输入一个字符串,按字典序打印出该字符串中字符的所有排列。例如输入字符串abc,则打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。</h3><p><strong>思路</strong>：仔细读题，发现可分解为两步：<br>　　1.对输入字符串做全排列；<br>　　2.将排列后的字符串做字典排序。<br><a id="more"></a><br>　　<strong>全排列</strong>可以采用最常用的方法：比如“abcd”,先交换a和后面的每个字符，即可得到“bacd”,”cbad”,”dbca”。然后固定第一个字符，对剩下的字符做相同的遍历，即递归：比如对于”bacd”来说，固定b，然后交换a和a之后的字符，即可得到”bcad”和”bdca”，然后再递归，交换后边的子字符串。<br>　　此外还需考虑特殊情况，比如”aabc”,”aa”,这种情况可能产生重复的字符串，需要对返回的结果做删除重复的字符串处理。<br>　　<strong>心路历程</strong>：困扰了我两天的难题，终于在今天解决了，一开始看错题目，以为是在排列中也需要用字典序排列，结果写错了代码，输出结果错误后来才发现是要写一个全排列出来，然后再对结果集做字典排序。字典排序可以调用ArrayList中的sort方法轻松实现，所以此题的重点在于全排列。</p>
-<p>　　之前没有接触过全排列的算法，自己一开始用两层的嵌套for循环发现只能解决三个字符的问题，比如输入”abc”，但是如果输入”aabc”，两层嵌套for循环就远远不够用了，发现全排列应该要用递归解决，但是自己很难写出来，在网上查阅资料后发现了这个交换字符顺序，并在每个子字符串里递归调用的方法。自己写的时候一开始借助了很多辅助的list来维持或者记录某些不想让它改变的值，后来在一天午睡后突然灵光一现，既然不想让每次循环交换顺序的第一个元素发生改变，那在每次交换得到到字符串，将该字符串放入结果集list后，再按相同的顺序交换回去不就完了？这样瞬间解决了一个看似很无解的问题，说明只要用心想，总会有办法的。</p>
-<p>　　此外，在写交换值的swap函数时，发现了不能直接交换，比如:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> temp=a;</span><br><span class="line">	a=b;</span><br><span class="line">	b=temp</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>　　这样的代码是行不通的，因为java的函数参数是值传递，它传进来的a，b是a,b的值，不是a,b本身的引用，所以在函数块内虽然a,b的值交换了，但是一出函数体，函数体外调用该函数的a,b仍然不变。所以需要借助引用类型的数据，比如数组，来实现引用的传递，借此真正改变函数体外的a,b的值。<br>代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> [] arr,<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> temp=arr[a];</span><br><span class="line">	arr[a]=arr[b];</span><br><span class="line">	arr[b]=temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>java代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Permutation2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ArrayList&lt;String&gt; <span class="title">Permutation</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">    	ArrayList&lt;String&gt; list=<span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">    	<span class="keyword">if</span>(str==<span class="keyword">null</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="comment">//将str转为字符数组再将字符数组转为arraylist方便后续操作</span></span><br><span class="line">    	<span class="keyword">char</span> [] arr=str.toCharArray();</span><br><span class="line">    	ArrayList&lt;Character&gt; charlist=<span class="keyword">new</span> ArrayList&lt;Character&gt;();</span><br><span class="line">    	<span class="keyword">for</span>(Character c:arr) &#123;</span><br><span class="line">    		charlist.add(c);</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="comment">//得到所有排列序列</span></span><br><span class="line">    	pailie(list,charlist,<span class="number">0</span>);</span><br><span class="line">    	<span class="comment">//删除重复的序列</span></span><br><span class="line">    	ArrayList&lt;String&gt; flist=<span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;list.size();i++) &#123;</span><br><span class="line">    		str=list.get(i);</span><br><span class="line">    		flist.add(str);</span><br><span class="line">    		List&lt;String&gt; sublist = list.subList(i+<span class="number">1</span>, list.size());</span><br><span class="line">    		<span class="keyword">while</span>(sublist.contains(str)) &#123;</span><br><span class="line">    			sublist.remove(str);</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	flist.sort(<span class="keyword">null</span>);</span><br><span class="line">        <span class="keyword">return</span> flist;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 格式化字符串</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> pStr</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">formatStr</span><span class="params">(String pStr)</span> </span>&#123;</span><br><span class="line">    	pStr=pStr.replace(<span class="string">"]"</span>, <span class="string">""</span>);</span><br><span class="line">	    pStr=pStr.replace(<span class="string">"["</span>, <span class="string">""</span>);</span><br><span class="line">	    pStr=pStr.replace(<span class="string">","</span>, <span class="string">""</span>);</span><br><span class="line">	    pStr=pStr.replace(<span class="string">" "</span>, <span class="string">""</span>);</span><br><span class="line">	    <span class="keyword">return</span> pStr;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * swap函数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> charlist1</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> i</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> j</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(List&lt;Character&gt; charlist1,<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">    	</span><br><span class="line">    	Character temp=charlist1.get(i);</span><br><span class="line">    	charlist1.set(i, charlist1.get(j));</span><br><span class="line">    	charlist1.set(j, temp);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 全排列函数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> list</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> charlist</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> start</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">pailie</span><span class="params">(ArrayList&lt;String&gt; list,List&lt;Character&gt; charlist,<span class="keyword">int</span> start)</span> </span>&#123;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span>(charlist==<span class="keyword">null</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="comment">//先交换，交换后还得换回来，以保证下一次交换时start处位置的字符是第一次交换时的字符</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=start;i&lt;charlist.size();i++) &#123;</span><br><span class="line">			swap(charlist,start,i);</span><br><span class="line">			String tmstr=charlist.toString();</span><br><span class="line">			tmstr=formatStr(tmstr);</span><br><span class="line">			list.add(tmstr);</span><br><span class="line">			pailie(list,charlist,start+<span class="number">1</span>);</span><br><span class="line">			swap(charlist,start,i);</span><br><span class="line">    		</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		String s=<span class="string">"aabc"</span>;</span><br><span class="line">	</span><br><span class="line">		System.out.println(Permutation(s));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JVM</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Permutation</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">内存</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/04/26/字符串的全排列问题/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/04/27/数组中出现次数超过一半的数字/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数组中出现次数超过一半的数字
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/04/24/二叉排序树转双向链表/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">二叉排序树转双向链表</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2018/05/">&laquo; Prev</a><a class="page-number" href="/archives/2018/05/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -339,8 +238,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
