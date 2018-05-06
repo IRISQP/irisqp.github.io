@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>两个链表的第一个公共结点 | irisqp的博客</title>
+  <title>二叉树的深度 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编程练习题目：输入两个链表，找出它们的第一个公共结点。思路：很简单的一道题，用最笨的办法，取链表1的第一个节点phead1分别与链表2的所有结点比较，如果相等，则输出相等的结点，然后令phead1指向链表1的下一个结点，即两层while循环，因为长度未知，所以循环次数也未知，故用while比较合适。">
-<meta name="keywords" content="SwordToOffer,programming,链表">
+  <meta name="description" content="编程练习题目：输入一棵二叉树，求该树的深度。从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。思路：递归，注意需要比较左右子树的深度大小取最大值然后再加1(这个1是根，根不为0时显然有一层，所以需要加1)。">
+<meta name="keywords" content="SwordToOffer,programming,二叉树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="两个链表的第一个公共结点">
-<meta property="og:url" content="https://irisqp.github.io/2018/05/05/两个链表的第一个公共结点/index.html">
+<meta property="og:title" content="二叉树的深度">
+<meta property="og:url" content="https://irisqp.github.io/2018/05/06/二叉树的深度/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="编程练习题目：输入两个链表，找出它们的第一个公共结点。思路：很简单的一道题，用最笨的办法，取链表1的第一个节点phead1分别与链表2的所有结点比较，如果相等，则输出相等的结点，然后令phead1指向链表1的下一个结点，即两层while循环，因为长度未知，所以循环次数也未知，故用while比较合适。">
+<meta property="og:description" content="编程练习题目：输入一棵二叉树，求该树的深度。从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。思路：递归，注意需要比较左右子树的深度大小取最大值然后再加1(这个1是根，根不为0时显然有一层，所以需要加1)。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-05T14:57:49.301Z">
+<meta property="og:updated_time" content="2018-05-06T02:45:41.411Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="两个链表的第一个公共结点">
-<meta name="twitter:description" content="编程练习题目：输入两个链表，找出它们的第一个公共结点。思路：很简单的一道题，用最笨的办法，取链表1的第一个节点phead1分别与链表2的所有结点比较，如果相等，则输出相等的结点，然后令phead1指向链表1的下一个结点，即两层while循环，因为长度未知，所以循环次数也未知，故用while比较合适。">
+<meta name="twitter:title" content="二叉树的深度">
+<meta name="twitter:description" content="编程练习题目：输入一棵二叉树，求该树的深度。从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。思路：递归，注意需要比较左右子树的深度大小取最大值然后再加1(这个1是根，根不为0时显然有一层，所以需要加1)。">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -155,30 +155,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="两个链表的第一个公共结点hexo-两个链表的第一个公共结点" class="article article-type-两个链表的第一个公共结点hexo " itemscope itemprop="blogPost">
+            <article id="post-二叉树的深度" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      两个链表的第一个公共结点
+      二叉树的深度
     </h1>
   
 
         
-        <a href="/2018/05/05/两个链表的第一个公共结点/" class="archive-article-date">
-  	<time datetime="2018-05-05T14:44:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-05</time>
+        <a href="/2018/05/06/二叉树的深度/" class="archive-article-date">
+  	<time datetime="2018-05-06T02:41:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：输入两个链表，找出它们的第一个公共结点。"><a href="#题目：输入两个链表，找出它们的第一个公共结点。" class="headerlink" title="题目：输入两个链表，找出它们的第一个公共结点。"></a>题目：输入两个链表，找出它们的第一个公共结点。</h3><p>思路：很简单的一道题，用最笨的办法，取链表1的第一个节点phead1分别与链表2的所有结点比较，如果相等，则输出相等的结点，然后令phead1指向链表1的下一个结点，即两层while循环，因为长度未知，所以循环次数也未知，故用while比较合适。</p>
+        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：输入一棵二叉树，求该树的深度。从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。"><a href="#题目：输入一棵二叉树，求该树的深度。从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。" class="headerlink" title="题目：输入一棵二叉树，求该树的深度。从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。"></a>题目：输入一棵二叉树，求该树的深度。从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。</h3><p>思路：递归，注意需要比较左右子树的深度大小取最大值然后再加1(这个1是根，根不为0时显然有一层，所以需要加1)。</p>
 <a id="more"></a>
 <p>java代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FindFirstCommonNode</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">FindFirstCommonNode</span><span class="params">(ListNode pHead1, ListNode pHead2)</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span>(pHead1==<span class="keyword">null</span> || pHead2==<span class="keyword">null</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	ListNode temp=pHead2;</span><br><span class="line">    	<span class="keyword">while</span>(pHead1!=<span class="keyword">null</span>) &#123;</span><br><span class="line">    		</span><br><span class="line">    		<span class="keyword">while</span>(pHead2!=<span class="keyword">null</span>) &#123;</span><br><span class="line">    			<span class="keyword">if</span>(pHead1==pHead2) &#123;</span><br><span class="line">        			<span class="keyword">return</span> pHead1;</span><br><span class="line">        		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        			pHead2=pHead2.next;</span><br><span class="line">        		&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    		pHead2=temp; <span class="comment">//注意：每次全遍历后需要使phead2再回到链表2的头结点</span></span><br><span class="line">    		pHead1=pHead1.next;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeDepth</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	ArrayList&lt;Integer&gt; list=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">TreeDepth</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span>(root==<span class="keyword">null</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">int</span> left=TreeDepth(root.left);</span><br><span class="line">    	<span class="keyword">int</span> right=TreeDepth(root.right);</span><br><span class="line">    	<span class="keyword">int</span> max=<span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">if</span>(left&gt;right) &#123;</span><br><span class="line">    		max=left;</span><br><span class="line">    	&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    		max=right;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> max+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	TreeNode root=<span class="keyword">new</span> TreeNode(<span class="number">0</span>);</span><br><span class="line">		TreeNode node1=<span class="keyword">new</span> TreeNode(<span class="number">1</span>);</span><br><span class="line">		TreeNode node2=<span class="keyword">new</span> TreeNode(<span class="number">2</span>);</span><br><span class="line">		TreeNode node3=<span class="keyword">new</span> TreeNode(<span class="number">3</span>);</span><br><span class="line">		TreeNode node4=<span class="keyword">new</span> TreeNode(<span class="number">4</span>);</span><br><span class="line">		TreeNode node5=<span class="keyword">new</span> TreeNode(<span class="number">5</span>);</span><br><span class="line">		</span><br><span class="line">		root.left=node1;</span><br><span class="line">		root.right=node2;</span><br><span class="line">		node1.left=node3;</span><br><span class="line">		node1.right=node5;</span><br><span class="line">		node2.left=node4;</span><br><span class="line">		TreeDepth td=<span class="keyword">new</span> TreeDepth();</span><br><span class="line">		System.out.println(td.TreeDepth(root));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -200,7 +200,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">链表</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">二叉树</a>
         		</li>
       		
 		</ul>
@@ -256,7 +256,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/05/两个链表的第一个公共结点/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/06/二叉树的深度/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,18 +270,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/05/数字再排序数组中出现的次数/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数字再排序数组中出现的次数
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/05/数组中的逆序对/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">数组中的逆序对</div>
+    <a href="/2018/05/05/数字再排序数组中出现的次数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数字再排序数组中出现的次数</div>
       <i class="icon-circle-right"></i>
     </a>
   
