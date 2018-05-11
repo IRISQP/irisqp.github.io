@@ -6,23 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>jvm学习笔记(二)对象的创建与访问过程中各内存区域的变化 | irisqp的博客</title>
+  <title>对称的二叉树 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JVM笔记(二.对象的创建与访问)1.对象的创建　　首先，当虚拟机遇到一条new指令时，首先去检查这个指令的参数是否能在常量池中定位到一个类的符号引用(即类名)，并检查这个符号引用代表的类是否已经被加载、解析和初始化过。如果没有，则先执行类的加载。">
-<meta name="keywords" content="读书笔记,JVM,对象">
+  <meta name="description" content="编程练习题目：请实现一个函数，用来判断一颗二叉树是不是对称的。注意，如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。思路：很容易想到递归，但是要注意，这个地方的递归不能单单只考虑一个棵树的左右子节点是否值相同，而应该考虑的是他们的他们的子树是否对称。">
+<meta name="keywords" content="SwordToOffer,programming,二叉树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jvm学习笔记(二)对象的创建与访问过程中各内存区域的变化">
-<meta property="og:url" content="https://irisqp.github.io/2018/05/02/jvm学习笔记-二-对象的创建与访问过程中各内存区域的变化/index.html">
+<meta property="og:title" content="对称的二叉树">
+<meta property="og:url" content="https://irisqp.github.io/2018/05/11/对称的二叉树/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="JVM笔记(二.对象的创建与访问)1.对象的创建　　首先，当虚拟机遇到一条new指令时，首先去检查这个指令的参数是否能在常量池中定位到一个类的符号引用(即类名)，并检查这个符号引用代表的类是否已经被加载、解析和初始化过。如果没有，则先执行类的加载。">
+<meta property="og:description" content="编程练习题目：请实现一个函数，用来判断一颗二叉树是不是对称的。注意，如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。思路：很容易想到递归，但是要注意，这个地方的递归不能单单只考虑一个棵树的左右子节点是否值相同，而应该考虑的是他们的他们的子树是否对称。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://irisqp.github.io/image/noteimage/句柄访问对象.jpg">
-<meta property="og:image" content="https://irisqp.github.io/image/noteimage/直接指针访问对象.jpg">
-<meta property="og:updated_time" content="2018-05-02T14:47:15.674Z">
+<meta property="og:updated_time" content="2018-05-11T03:32:27.823Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jvm学习笔记(二)对象的创建与访问过程中各内存区域的变化">
-<meta name="twitter:description" content="JVM笔记(二.对象的创建与访问)1.对象的创建　　首先，当虚拟机遇到一条new指令时，首先去检查这个指令的参数是否能在常量池中定位到一个类的符号引用(即类名)，并检查这个符号引用代表的类是否已经被加载、解析和初始化过。如果没有，则先执行类的加载。">
-<meta name="twitter:image" content="https://irisqp.github.io/image/noteimage/句柄访问对象.jpg">
+<meta name="twitter:title" content="对称的二叉树">
+<meta name="twitter:description" content="编程练习题目：请实现一个函数，用来判断一颗二叉树是不是对称的。注意，如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。思路：很容易想到递归，但是要注意，这个地方的递归不能单单只考虑一个棵树的左右子节点是否值相同，而应该考虑的是他们的他们的子树是否对称。">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -158,47 +155,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jvm学习笔记-二-对象的创建与访问过程中各内存区域的变化" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-对称的二叉树" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      jvm学习笔记(二)对象的创建与访问过程中各内存区域的变化
+      对称的二叉树
     </h1>
   
 
         
-        <a href="/2018/05/02/jvm学习笔记-二-对象的创建与访问过程中各内存区域的变化/" class="archive-article-date">
-  	<time datetime="2018-05-02T13:35:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
+        <a href="/2018/05/11/对称的二叉树/" class="archive-article-date">
+  	<time datetime="2018-05-11T03:29:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="JVM笔记-二-对象的创建与访问"><a href="#JVM笔记-二-对象的创建与访问" class="headerlink" title="JVM笔记(二.对象的创建与访问)"></a>JVM笔记(二.对象的创建与访问)</h2><h3 id="1-对象的创建"><a href="#1-对象的创建" class="headerlink" title="1.对象的创建"></a>1.对象的创建</h3><p>　　首先，当虚拟机遇到一条new指令时，首先去检查这个指令的参数是否能在常量池中定位到一个类的符号引用(即类名)，并检查这个符号引用代表的类是否已经被加载、解析和初始化过。如果没有，则先执行类的加载。</p>
+        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：请实现一个函数，用来判断一颗二叉树是不是对称的。注意，如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。"><a href="#题目：请实现一个函数，用来判断一颗二叉树是不是对称的。注意，如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。" class="headerlink" title="题目：请实现一个函数，用来判断一颗二叉树是不是对称的。注意，如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。"></a>题目：请实现一个函数，用来判断一颗二叉树是不是对称的。注意，如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。</h3><p>思路：很容易想到递归，但是要注意，这个地方的递归不能单单只考虑一个棵树的左右子节点是否值相同，而应该考虑的是他们的他们的子树是否对称。</p>
 <a id="more"></a>
-<p>　　在类的加载检查通过后，合法了，就得给人家一个地方住，所以接下来要做的就是给新生对象分配内存。对象所需的内存大小在加载完成以后虚拟机就全部知道了，接下来就是划分内存的过程，基本上有这么两种方法：</p>
-<p>　　１.java堆中的内存是绝对规整的，用过的内存放一边，空闲的内存放另一边，中间放着一个指针作为分界点的指示器，那么分配内存的过程就是将该指针从分界点移动所需的内存大小的长度到空闲区域，这种分配方式叫做<strong>指针碰撞</strong>；</p>
-<p>　　２.如果java堆中的内存不是规整的，已经用过的和空闲的内存区域相互交错，那就没有办法用指针碰撞了，必须维护一个列表，记录哪些内存块可用，哪些内存块已经被使用，在分配的时候，从空闲的内存块中挑一块足够大的空间划分给对象实例，并更新列表上的记录，这种分配方式就叫做<strong>空闲列表</strong>。</p>
-<p>　　除了划分空间外，因为对象的创建是非常频繁的行为，所以需要对划分内存的行为考虑并发的情况，确保线程安全。解决方案有两种：一种是对分配空间的动作进行同步处理；另一种是把内存分配的动作按照线程划分在不同的空间之中进行，即每个线程在java堆中预先分配一小块内存TLAB，哪个线程要分配内存，就在哪个线程的TLAB上分配，互不干扰。</p>
-<p>　　内存分配完以后，需要对对象做初始化，将分配到的内存空间都初始化为零值(不包括对象头)，这一步操作保证了对象实例在java代码中可以不赋初值就使用。</p>
-<p>　　接下来虚拟机还要对对象做必要的设置，比如需要设置这个对象是哪个类的实例，如何才能找到类的元数据信息，对象的哈希码，对象的GC分代年龄等，这些信息存放在对象的对象头中。</p>
-<p>　　上述步骤都完成以后，对虚拟机来说，对象的创建就完毕了，但是对于程序员来说，对象的创建才刚刚开始，还需要自己做初始化的工作，将对象改装成自己想要的样子。</p>
-<h3 id="2-对象的内存布局"><a href="#2-对象的内存布局" class="headerlink" title="2.对象的内存布局"></a>2.对象的内存布局</h3><p>　　在虚拟机中，对象在内存中存储可以分为３块区域：对象头，实例数据和对齐填充。</p>
-<p>　　其中对象头包括两部分信息：一部分是对象自身的运行时数据，如GC年龄，锁状态标志等等；另一部分是类型指针，即对象指向它的类元数据的指针，虚拟机通过这个指针可以知道这个对象是哪个类的实例。</p>
-<p>　　实例数据部分是对象真正存储的有效信息，即代码中定义的各个类型的字段内容。</p>
-<p>　　至于对齐填充并不是必须存在，仅仅起着占位符的作用，比如HotSpot虚拟机自动内存管理系统的要求是对象的起始地址必须是8字节的整数倍，而对象头正好是8字节的倍数，所以当实例数据的部分没有对齐时，就需要对齐填充来补全。</p>
-<h3 id="3-对象的访问定位"><a href="#3-对象的访问定位" class="headerlink" title="3.对象的访问定位"></a>3.对象的访问定位</h3><p>　　对象的使用是通过掉用栈上的引用数据来操作具体对象的。目前主流的访问方式有通过句柄访问以及直接指针访问。</p>
-<p>　　１.句柄访问：java堆中划分出来一块内存作为句柄池，栈的引用中存储的就是对象的句柄地址，而句柄中又包含了对象的实例数据与类型数据各自的地址，即包含了对象的引用和类的引用。如下图</p>
-<p><img src="\image\noteimage\句柄访问对象.jpg" alt="句柄访问对象"></p>
-<p>　　２.直接指针：java堆中的对象实例数据中存放对象类型数据的指针，而栈的引用中存储的就是对象实例的地址。</p>
-<p><img src="\image\noteimage\直接指针访问对象.jpg" alt="直接指针访问对象"></p>
-<p>　　这两种访问方式各有优势，使用句柄的好处就在于栈中引用存放的是稳定的句柄地址，在对象被移动时只会改变句柄中实例数据的指针，而栈中的引用不需要修改。</p>
-<p>　　使用直接指针的好处就在于少了一步引用，速度更快。</p>
-
+<p>　　要判断两个节点的子树是否对称，比如根节点有两个子节点a,b，且a,b各自都含有左右子节点。则为了对称，必须在a与b的值相等的基础上使得a的左孩子与b的右孩子对称，且a的右孩子与b的左孩子对称，这是对称二叉树的最小模型。所以应该递归的是这种形式的函数，即输入两棵树，判断两棵树是否对称。然后再调用该函数判断根节点的左右子树是否对称即可。<br>java代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeIsSymmetrical</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">isSymmetrical</span><span class="params">(TreeNode pRoot)</span></span></span><br><span class="line"><span class="function">    </span>&#123;	</span><br><span class="line">    	<span class="keyword">if</span>(pRoot==<span class="keyword">null</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    	&#125;</span><br><span class="line"> </span><br><span class="line">    	<span class="keyword">return</span> help(pRoot.left,pRoot.right);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 辅助函数用来判断两棵树是不是对称</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> t1</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> t2</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">help</span><span class="params">(TreeNode t1,TreeNode t2)</span> </span>&#123;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span>(t1==<span class="keyword">null</span> &amp;&amp; t2==<span class="keyword">null</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span>(t1!=<span class="keyword">null</span> &amp;&amp; t2!=<span class="keyword">null</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span> ((t1.val==t2.val) &amp;&amp; help(t1.left,t2.right) &amp;&amp; help(t1.right,t2.left));</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -211,15 +191,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JVM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">对象</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">二叉树</a>
         		</li>
       		
 		</ul>
@@ -275,7 +255,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/02/jvm学习笔记-二-对象的创建与访问过程中各内存区域的变化/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/11/对称的二叉树/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -289,18 +269,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/03/jvm学习笔记-三-垃圾收集背景以及过程介绍/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          jvm学习笔记(三)垃圾收集背景以及过程介绍
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/02/jvm学习笔记-一-java内存区域详解/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">jvm学习笔记(一)java内存区域详解</div>
+    <a href="/2018/05/11/二叉树的下一个结点/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二叉树的下一个结点</div>
       <i class="icon-circle-right"></i>
     </a>
   
