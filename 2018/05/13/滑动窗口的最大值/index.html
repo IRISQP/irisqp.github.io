@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>链表中环的入口结点 | irisqp的博客</title>
+  <title>滑动窗口的最大值 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编程练习题目：一个链表中包含环，请找出该链表的环的入口结点。思路：首先想到了带环的链表的特性就是形成环的两个节点的关系是环尾节点的next指向环头结点。也就是说环尾结点的next指向的是之前已经遍历过得结点，这样就会形成环。">
+  <meta name="description" content="编程练习题目：给定一个数组和滑动窗口的大小，找出所有滑动窗口里数值的最大值。例如，如果输入数组{2,3,4,2,6,2,5,1}及滑动窗口的大小3，那么一共存在6个滑动窗口，他们的最大值分别为{4,4,6,6,6,5}； 针对数组{2,3,4,2,6,2,5,1}的滑动窗口有以下6个： {[2,3,4],2,6,2,5,1}， {2,[3,4,2],6,2,5,1}， {2,3,[4,2,6],2">
 <meta name="keywords" content="SwordToOffer,programming">
 <meta property="og:type" content="article">
-<meta property="og:title" content="链表中环的入口结点">
-<meta property="og:url" content="https://irisqp.github.io/2018/05/10/链表中环的入口结点/index.html">
+<meta property="og:title" content="滑动窗口的最大值">
+<meta property="og:url" content="https://irisqp.github.io/2018/05/13/滑动窗口的最大值/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="编程练习题目：一个链表中包含环，请找出该链表的环的入口结点。思路：首先想到了带环的链表的特性就是形成环的两个节点的关系是环尾节点的next指向环头结点。也就是说环尾结点的next指向的是之前已经遍历过得结点，这样就会形成环。">
+<meta property="og:description" content="编程练习题目：给定一个数组和滑动窗口的大小，找出所有滑动窗口里数值的最大值。例如，如果输入数组{2,3,4,2,6,2,5,1}及滑动窗口的大小3，那么一共存在6个滑动窗口，他们的最大值分别为{4,4,6,6,6,5}； 针对数组{2,3,4,2,6,2,5,1}的滑动窗口有以下6个： {[2,3,4],2,6,2,5,1}， {2,[3,4,2],6,2,5,1}， {2,3,[4,2,6],2">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-10T02:29:43.367Z">
+<meta property="og:updated_time" content="2018-05-13T11:25:44.460Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="链表中环的入口结点">
-<meta name="twitter:description" content="编程练习题目：一个链表中包含环，请找出该链表的环的入口结点。思路：首先想到了带环的链表的特性就是形成环的两个节点的关系是环尾节点的next指向环头结点。也就是说环尾结点的next指向的是之前已经遍历过得结点，这样就会形成环。">
+<meta name="twitter:title" content="滑动窗口的最大值">
+<meta name="twitter:description" content="编程练习题目：给定一个数组和滑动窗口的大小，找出所有滑动窗口里数值的最大值。例如，如果输入数组{2,3,4,2,6,2,5,1}及滑动窗口的大小3，那么一共存在6个滑动窗口，他们的最大值分别为{4,4,6,6,6,5}； 针对数组{2,3,4,2,6,2,5,1}的滑动窗口有以下6个： {[2,3,4],2,6,2,5,1}， {2,[3,4,2],6,2,5,1}， {2,3,[4,2,6],2">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -155,31 +155,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-链表中环的入口结点" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-滑动窗口的最大值" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      链表中环的入口结点
+      滑动窗口的最大值
     </h1>
   
 
         
-        <a href="/2018/05/10/链表中环的入口结点/" class="archive-article-date">
-  	<time datetime="2018-05-10T02:26:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-10</time>
+        <a href="/2018/05/13/滑动窗口的最大值/" class="archive-article-date">
+  	<time datetime="2018-05-13T11:20:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：一个链表中包含环，请找出该链表的环的入口结点。"><a href="#题目：一个链表中包含环，请找出该链表的环的入口结点。" class="headerlink" title="题目：一个链表中包含环，请找出该链表的环的入口结点。"></a>题目：一个链表中包含环，请找出该链表的环的入口结点。</h3><p>思路：首先想到了带环的链表的特性就是形成环的两个节点的关系是环尾节点的next指向环头结点。也就是说环尾结点的next指向的是之前已经遍历过得结点，这样就会形成环。</p>
-<a id="more"></a>
-<p>　　主要思想掌握了，接下来编程就很简单了，我们想到需要引入一个盛装listnode的容器以便后续的遍历判断，很容易想到Arraylist。注意：用Aarraylist盛装带环的链表时需要考虑如何避免陷入死循环，给循环设立出口。</p>
-<p>java代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EntryNodeOfLoop</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ListNode <span class="title">EntryNodeOfLoop</span><span class="params">(ListNode pHead)</span></span>&#123;</span><br><span class="line">    	ArrayList&lt;ListNode&gt; list=<span class="keyword">new</span> ArrayList&lt;ListNode&gt;();</span><br><span class="line">        <span class="comment">//注意，要装入一个带环的链表，需要给循环设置跳出，不然会陷入死循环。</span></span><br><span class="line">    	<span class="keyword">while</span>(pHead!=<span class="keyword">null</span>) &#123;</span><br><span class="line">        	list.add(pHead);</span><br><span class="line">        	<span class="keyword">if</span>(list.contains(pHead.next)) &#123;</span><br><span class="line">        		<span class="keyword">break</span>;</span><br><span class="line">        	&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        		pHead=pHead.next;</span><br><span class="line">        	&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;list.size();i++) &#123;</span><br><span class="line">        	<span class="keyword">for</span>(<span class="keyword">int</span> j=i;j&gt;=<span class="number">0</span>;j--) &#123;</span><br><span class="line">        		<span class="keyword">if</span>(list.get(i).next==list.get(j)) &#123;</span><br><span class="line">        			<span class="keyword">return</span> list.get(j);</span><br><span class="line">        		&#125;</span><br><span class="line">        	&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	ListNode l1=<span class="keyword">new</span> ListNode(<span class="number">1</span>);</span><br><span class="line">		ListNode l2=<span class="keyword">new</span> ListNode(<span class="number">2</span>);</span><br><span class="line">		ListNode l3=<span class="keyword">new</span> ListNode(<span class="number">3</span>);</span><br><span class="line">		</span><br><span class="line">		l1.next=l2;</span><br><span class="line">		l2.next=l3;</span><br><span class="line">		l3.next=l1;</span><br><span class="line">		</span><br><span class="line">		System.out.println(EntryNodeOfLoop(l1).val);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：给定一个数组和滑动窗口的大小，找出所有滑动窗口里数值的最大值。例如，如果输入数组-2-3-4-2-6-2-5-1-及滑动窗口的大小3，那么一共存在6个滑动窗口，他们的最大值分别为-4-4-6-6-6-5-；-针对数组-2-3-4-2-6-2-5-1-的滑动窗口有以下6个：-2-3-4-2-6-2-5-1-，-2-3-4-2-6-2-5-1-，-2-3-4-2-6-2-5-1-，-2-3-4-2-6-2-5-1-，-2-3-4-2-6-2-5-1-，-2-3-4-2-6-2-5-1-。"><a href="#题目：给定一个数组和滑动窗口的大小，找出所有滑动窗口里数值的最大值。例如，如果输入数组-2-3-4-2-6-2-5-1-及滑动窗口的大小3，那么一共存在6个滑动窗口，他们的最大值分别为-4-4-6-6-6-5-；-针对数组-2-3-4-2-6-2-5-1-的滑动窗口有以下6个：-2-3-4-2-6-2-5-1-，-2-3-4-2-6-2-5-1-，-2-3-4-2-6-2-5-1-，-2-3-4-2-6-2-5-1-，-2-3-4-2-6-2-5-1-，-2-3-4-2-6-2-5-1-。" class="headerlink" title="题目：给定一个数组和滑动窗口的大小，找出所有滑动窗口里数值的最大值。例如，如果输入数组{2,3,4,2,6,2,5,1}及滑动窗口的大小3，那么一共存在6个滑动窗口，他们的最大值分别为{4,4,6,6,6,5}； 针对数组{2,3,4,2,6,2,5,1}的滑动窗口有以下6个： {[2,3,4],2,6,2,5,1}， {2,[3,4,2],6,2,5,1}， {2,3,[4,2,6],2,5,1}， {2,3,4,[2,6,2],5,1}， {2,3,4,2,[6,2,5],1}， {2,3,4,2,6,[2,5,1]}。"></a>题目：给定一个数组和滑动窗口的大小，找出所有滑动窗口里数值的最大值。例如，如果输入数组{2,3,4,2,6,2,5,1}及滑动窗口的大小3，那么一共存在6个滑动窗口，他们的最大值分别为{4,4,6,6,6,5}； 针对数组{2,3,4,2,6,2,5,1}的滑动窗口有以下6个： {[2,3,4],2,6,2,5,1}， {2,[3,4,2],6,2,5,1}， {2,3,[4,2,6],2,5,1}， {2,3,4,[2,6,2],5,1}， {2,3,4,2,[6,2,5],1}， {2,3,4,2,6,[2,5,1]}。</h3><a id="more"></a>
+<p>思路：读懂题目的话就应该很简单了，首先滑动窗口的size和数组的length之间的关系是length-size+1就是滑动窗口的个数。要注意一开始就能想到特殊情况：如滑动窗口的size为0或者大于数组长度时应该返回空的list。一般情况，如果符合的话就需要在每个滑动窗口里做排序，求得最大值。</p>
+<p>　　这里可以借助ArrayList这个容器，构造滑动窗口可以用subList方法，注意使用该方法时的两个<strong>陷阱</strong>：</p>
+<p>　　1.list.sublist(a,b)真正截取的区间是左闭右开的，即若a为0，b为1，此时只截取到了list.get(0)这一个数，但右边界可以溢出1，这是为了可以截取到最后一个数，即b可以取到list.size()这个值;</p>
+<p>　　2.对截取到的子串做操作时，<strong>原始的list也会随之改变</strong>，为了不想让原始的list改变，需要采取<strong>new</strong>操作，例如：List<integer> hplist=new ArrayList<integer>(list.subList(a, b))。搞懂了上面全部，这道题就很简单了。<br>java代码如下：</integer></integer></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MaxInWindows</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ArrayList&lt;Integer&gt; <span class="title">maxInWindows</span><span class="params">(<span class="keyword">int</span> [] num, <span class="keyword">int</span> size)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; tmplist=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">if</span>(size&gt;num.length || size==<span class="number">0</span>) &#123;</span><br><span class="line">        	<span class="keyword">return</span> tmplist;</span><br><span class="line">        &#125;</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> c:num) &#123;</span><br><span class="line">    		tmplist.add(c);</span><br><span class="line">    	&#125;</span><br><span class="line">        ArrayList&lt;Integer&gt; reslist=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;num.length-size+<span class="number">1</span>;i++) &#123;</span><br><span class="line">        	<span class="comment">//为了保证对hplist操作时，原始的tmplist不发生任何改变</span></span><br><span class="line">        	List&lt;Integer&gt; hplist=<span class="keyword">new</span> ArrayList&lt;Integer&gt;(tmplist.subList(i, i+size));</span><br><span class="line">        	</span><br><span class="line">        	hplist.sort(<span class="keyword">null</span>);</span><br><span class="line">        	<span class="keyword">int</span> max=hplist.get(size-<span class="number">1</span>);</span><br><span class="line">        	reslist.add(max);</span><br><span class="line">        &#125;</span><br><span class="line">    	<span class="keyword">return</span> reslist;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> [] arr= &#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">1</span>&#125;;</span><br><span class="line">		System.out.println(maxInWindows(arr,<span class="number">3</span>));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -252,7 +253,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/10/链表中环的入口结点/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/13/滑动窗口的最大值/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -266,18 +267,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/10/删除链表中的重复结点/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          删除链表中的重复结点
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/10/字符流中第一个不重复的字符/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">字符流中第一个不重复的字符</div>
+    <a href="/2018/05/13/数据流中的中位数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据流中的中位数</div>
       <i class="icon-circle-right"></i>
     </a>
   
