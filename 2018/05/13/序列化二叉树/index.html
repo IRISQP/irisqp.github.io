@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>jvm学习笔记(三)垃圾收集背景以及过程介绍 | irisqp的博客</title>
+  <title>序列化二叉树 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="jvm笔记(三.垃圾收集背景及过程)1. 概述　　前面学习了java虚拟机的内存结构，我们可以发现对于程序计数器、虚拟机栈、本地方法栈这三个区域都是线程隔离的，它们随线程而生，也随线程而灭，所以不需要对这三个区域进行垃圾回收，">
-<meta name="keywords" content="读书笔记,JVM,垃圾收集">
+  <meta name="description" content="编程练习题目：请实现两个函数，分别用来序列化和反序列化二叉树思路：序列化二叉树即将二叉树转换为某一表达存入永久存储设备，比如硬盘上，反序列化就是将硬盘上代表二叉树的文件利用程序读入，并将一模一样的二叉树在内存中再次重现。">
+<meta name="keywords" content="SwordToOffer,programming,二叉树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jvm学习笔记(三)垃圾收集背景以及过程介绍">
-<meta property="og:url" content="https://irisqp.github.io/2018/05/03/jvm学习笔记-三-垃圾收集背景以及过程介绍/index.html">
+<meta property="og:title" content="序列化二叉树">
+<meta property="og:url" content="https://irisqp.github.io/2018/05/13/序列化二叉树/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="jvm笔记(三.垃圾收集背景及过程)1. 概述　　前面学习了java虚拟机的内存结构，我们可以发现对于程序计数器、虚拟机栈、本地方法栈这三个区域都是线程隔离的，它们随线程而生，也随线程而灭，所以不需要对这三个区域进行垃圾回收，">
+<meta property="og:description" content="编程练习题目：请实现两个函数，分别用来序列化和反序列化二叉树思路：序列化二叉树即将二叉树转换为某一表达存入永久存储设备，比如硬盘上，反序列化就是将硬盘上代表二叉树的文件利用程序读入，并将一模一样的二叉树在内存中再次重现。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-03T14:39:29.690Z">
+<meta property="og:updated_time" content="2018-05-13T08:31:35.063Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jvm学习笔记(三)垃圾收集背景以及过程介绍">
-<meta name="twitter:description" content="jvm笔记(三.垃圾收集背景及过程)1. 概述　　前面学习了java虚拟机的内存结构，我们可以发现对于程序计数器、虚拟机栈、本地方法栈这三个区域都是线程隔离的，它们随线程而生，也随线程而灭，所以不需要对这三个区域进行垃圾回收，">
+<meta name="twitter:title" content="序列化二叉树">
+<meta name="twitter:description" content="编程练习题目：请实现两个函数，分别用来序列化和反序列化二叉树思路：序列化二叉树即将二叉树转换为某一表达存入永久存储设备，比如硬盘上，反序列化就是将硬盘上代表二叉树的文件利用程序读入，并将一模一样的二叉树在内存中再次重现。">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -155,42 +155,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jvm学习笔记-三-垃圾收集背景以及过程介绍" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-序列化二叉树" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      jvm学习笔记(三)垃圾收集背景以及过程介绍
+      序列化二叉树
     </h1>
   
 
         
-        <a href="/2018/05/03/jvm学习笔记-三-垃圾收集背景以及过程介绍/" class="archive-article-date">
-  	<time datetime="2018-05-03T13:33:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-03</time>
+        <a href="/2018/05/13/序列化二叉树/" class="archive-article-date">
+  	<time datetime="2018-05-13T08:29:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="jvm笔记-三-垃圾收集背景及过程"><a href="#jvm笔记-三-垃圾收集背景及过程" class="headerlink" title="jvm笔记(三.垃圾收集背景及过程)"></a>jvm笔记(三.垃圾收集背景及过程)</h2><h3 id="1-概述"><a href="#1-概述" class="headerlink" title="1. 概述"></a>1. 概述</h3><p>　　前面学习了java虚拟机的内存结构，我们可以发现对于程序计数器、虚拟机栈、本地方法栈这三个区域都是线程隔离的，它们随线程而生，也随线程而灭，所以不需要对这三个区域进行垃圾回收，</p>
+        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：请实现两个函数，分别用来序列化和反序列化二叉树"><a href="#题目：请实现两个函数，分别用来序列化和反序列化二叉树" class="headerlink" title="题目：请实现两个函数，分别用来序列化和反序列化二叉树"></a>题目：请实现两个函数，分别用来序列化和反序列化二叉树</h3><p>思路：序列化二叉树即将二叉树转换为某一表达存入永久存储设备，比如硬盘上，反序列化就是将硬盘上代表二叉树的文件利用程序读入，并将一模一样的二叉树在内存中再次重现。</p>
 <a id="more"></a>
-<p>它们执行完自己的方法或者线程结束，它们所占用的内存就自然跟着回收了。我们主要关注的是java堆和方法区这两块内存区域存放的对象实例以及类信息的回收。</p>
-<h3 id="2-怎么判断对象是否需要被回收"><a href="#2-怎么判断对象是否需要被回收" class="headerlink" title="2. 怎么判断对象是否需要被回收"></a>2. 怎么判断对象是否需要被回收</h3><p>　　站在虚拟机的角度，我们需要回收什么样的对象呢，很显然是不再被使用的对象，或者一段时间内该对象的引用没有被别处调用，我们不妨称这些不再被引用的对象已经“死亡”，而还被引用着的对象不用回收。所以主要的条件是如何确定对象还有没有被其他地方引用。</p>
-<p>　　常见的引用判断算法有两种：<strong>引用计数法</strong>和<strong>可达性分析算法</strong>。</p>
-<p>　　引用计数法算法流程是这样的：给对象添加一个引用计数器，每当有一个地方引用它时，该计数器的值就加１；当引用失效时，计数器的值就减１；任何时刻计数器为０的对象就是不可能再被使用的对象。</p>
-<p>　　可达性分析法的基本思路是通过一系列“GC Roots”对象作为起始点，从这些节点开时往下搜索，搜索所经过的路径称为引用链，就像一颗树结构一样，多个GC Roots构成的引用链可以称之为森林，当一个对象到GC Roots没有任何引用链相连，即该对象到GC Roots不可达时，它们就会被判定为时可以回收的对象。可以作为GC Roots的对象有：虚拟机栈中引用的对象，方法区中类静态属性引用的对象，方法区中常量引用的对象以及本地方法栈中JNI引用的对象。</p>
-<p>　　引用的级别对垃圾回收器来说也很重要，级别越高的引用，被回收的可能性越低。引用的级别可以分为以下四种：</p>
-<p>　　１.强引用：新new一个对象的这种代码就是强引用，比如Object obj=new Object();只要强引用还存在，垃圾收集器就永远不会回收掉被引用的对象；</p>
-<p>　　2.软引用：用来描述一些还有用但是非必须的对象。比如在上面的代码之后再新加这一行就是软引用SoftReference<object> sf = new SoftReference<object>(obj);软引用关联着的对象，在系统将要发生内存溢出异常之前，将会把这些对象列进回收范围内进行二次回收。</object></object></p>
-<p>　　3.弱引用：弱引用的强度比软引用还要弱，将2里边的代码换成这个WeakReference<object> wf = new WeakReference<object>(obj);就可以将该对象变为弱引用。被弱引用关联的对象，在发生下次垃圾收集前，不管内存是否足够，都会被垃圾收集器回收。</object></object></p>
-<p>　　4.虚引用：虚引用是最弱的一种关系，无法通过一个虚引用来取得一个对象实例，该引用存在的目的只有一个就是能够在对象被收集器回收时取到一个系统通知。实现方法同样是在1的代码之后添加这样一行代码PhantomReference<object> pf = new PhantomReference<object>(obj)。</object></object></p>
-<h3 id="3-对象死亡的过程"><a href="#3-对象死亡的过程" class="headerlink" title="3.对象死亡的过程"></a>3.对象死亡的过程</h3><p>　　对象的一般死亡过程需要经历至少两次标记过程，也可以说有“缓刑”阶段。详细过程如下：如果对象在经过可达性分析后发现自身到GC Roots不可达，则它会被第一次标记并且第一次筛选，筛选的条件是此对象是否有必要执行finalize()方法。当对象没有覆盖finalize()方法，或者finalize方法已经被虚拟机调用过，虚拟机将这两种情况都视为“没有必要执行”。如果这个对象被判定为有必要执行finalize方法，则将该对象放入一个F-Queue的队列中，并在之后通过一个finalizer线程去执行它，稍后垃圾收集器将会对该队列中的对象进行二次小规模标记，如果队列中的对象想要活下去，就必须在这个时候与引用链上的得对象关联上，那它就会被移除该队列。如果该对象这时候还没有逃脱，那就会被真的回收。</p>
-<h3 id="4-方法区的回收"><a href="#4-方法区的回收" class="headerlink" title="4.方法区的回收"></a>4.方法区的回收</h3><p>　　方法区的回收主要包括两部分：废弃常量和无用的类。废弃常量就是常量池中虽然有该常量但是当前系统中没有任何一个地方在引用该常量，则该常量就会被回收。无用的类的要求很苛刻：该类的所有实例都被回收且加载该类的ClassLoader已经被回收，并且该类对应的java.lang.Class对象没有在任何地方被引用，无法在任何地方通过反射访问该类的方法。</p>
-<p>　　</p>
-
+<p>　　题目中给出的序列化后的格式是一个字符串，所以能想到用二叉树的某一遍历结果转为符合条件的字符串即完成了二叉树的序列化，为了方便起见。我们采用了层序遍历，将为空的结点的序列化字符设为“#”，并将每个节点间用逗号隔开。反序列化的时候采用相反的思想重现二叉树即可。<br>java代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.Queue;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SerializeTree</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 层序遍历来形成序列化的二叉树字符串，用#来表示空</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> root</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> String <span class="title">Serialize</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        StringBuilder sb=<span class="keyword">new</span> StringBuilder();</span><br><span class="line">        Queue&lt;TreeNode&gt; treeQueue=<span class="keyword">new</span> LinkedList&lt;TreeNode&gt;();</span><br><span class="line">        <span class="keyword">if</span>(root!=<span class="keyword">null</span>) &#123;</span><br><span class="line">        	treeQueue.add(root);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!treeQueue.isEmpty()) &#123;</span><br><span class="line">    		TreeNode node=treeQueue.poll();</span><br><span class="line">    		<span class="keyword">if</span>(node!=<span class="keyword">null</span>) &#123;</span><br><span class="line">    			sb.append(node.val+<span class="string">","</span>);</span><br><span class="line">        		treeQueue.add(node.left);</span><br><span class="line">        		treeQueue.add(node.right);</span><br><span class="line">    		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    			sb.append(<span class="string">"#"</span>+<span class="string">","</span>);</span><br><span class="line">    		&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(sb.length()!=<span class="number">0</span>) &#123;</span><br><span class="line">        	sb.deleteCharAt(sb.length()-<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    	<span class="keyword">return</span> sb.toString();</span><br><span class="line">  &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 反序列化二叉树，注意二叉树层序遍历序列中的父子关系的规律</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> str</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> TreeNode <span class="title">Deserialize</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span>(str==<span class="keyword">null</span> ||str.length()==<span class="number">0</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	String [] nodes=str.split(<span class="string">","</span>);</span><br><span class="line">    	TreeNode [] treeNodes=<span class="keyword">new</span> TreeNode[nodes.length];</span><br><span class="line">    	<span class="comment">//将不为#的字符转换为不为空的二叉树结点</span></span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nodes.length;i++) &#123;</span><br><span class="line">    		<span class="keyword">if</span>(!nodes[i].equals(<span class="string">"#"</span>)) &#123;</span><br><span class="line">    			treeNodes[i]=<span class="keyword">new</span> TreeNode(Integer.valueOf(nodes[i]));</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="comment">//根据层序遍历的规则，添加结点间的父子关系</span></span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">1</span>;j&lt;treeNodes.length;i++) &#123;</span><br><span class="line">    		<span class="keyword">if</span>(treeNodes[i]!=<span class="keyword">null</span>) &#123;</span><br><span class="line">    			treeNodes[i].left=treeNodes[j++];</span><br><span class="line">        		treeNodes[i].right=treeNodes[j++];</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> treeNodes[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">  	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	  	TreeNode root=<span class="keyword">new</span> TreeNode(<span class="number">0</span>);</span><br><span class="line">  		TreeNode node1=<span class="keyword">new</span> TreeNode(<span class="number">1</span>);</span><br><span class="line">		TreeNode node2=<span class="keyword">new</span> TreeNode(<span class="number">2</span>);</span><br><span class="line">		TreeNode node3=<span class="keyword">new</span> TreeNode(<span class="number">3</span>);</span><br><span class="line">		TreeNode node4=<span class="keyword">new</span> TreeNode(<span class="number">4</span>);</span><br><span class="line">		TreeNode node5=<span class="keyword">new</span> TreeNode(<span class="number">5</span>);</span><br><span class="line">		</span><br><span class="line">		root.left=node1;</span><br><span class="line">		root.right=node2;</span><br><span class="line">		node1.left=node3;</span><br><span class="line">		node1.right=<span class="keyword">null</span>;</span><br><span class="line">		node2.left=node5;</span><br><span class="line">		String s=Serialize(root);</span><br><span class="line">		System.out.println(s);</span><br><span class="line">		System.out.println(Deserialize(s).val);</span><br><span class="line">  	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -203,15 +191,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JVM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">垃圾收集</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">二叉树</a>
         		</li>
       		
 		</ul>
@@ -267,7 +255,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/03/jvm学习笔记-三-垃圾收集背景以及过程介绍/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/13/序列化二叉树/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -281,18 +269,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/05/数组中的逆序对/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数组中的逆序对
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/02/jvm学习笔记-二-对象的创建与访问过程中各内存区域的变化/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">jvm学习笔记(二)对象的创建与访问过程中各内存区域的变化</div>
+    <a href="/2018/05/13/把二叉树打印成多行/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">把二叉树打印成多行</div>
       <i class="icon-circle-right"></i>
     </a>
   
