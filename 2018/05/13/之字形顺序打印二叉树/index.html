@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>求1+2+3+...n | irisqp的博客</title>
+  <title>之字形顺序打印二叉树 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编程练习题目：求1+2+3+…+n，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。思路：因为不能用循环，所以递归求解即可，代码很简单。">
-<meta name="keywords" content="SwordToOffer,programming">
+  <meta name="description" content="编程练习题目：请实现一个函数按照之字形打印二叉树，即第一行按照从左到右的顺序打印，第二层按照从右至左的顺序打印，第三行按照从左到右的顺序打印，其他行以此类推。思路：利用之前写好的层序遍历打印代码，将层数控制加入即可，注意偶数层翻转即可。">
+<meta name="keywords" content="SwordToOffer,programming,二叉树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="求1+2+3+...n">
-<meta property="og:url" content="https://irisqp.github.io/2018/05/08/求1-2-3-n/index.html">
+<meta property="og:title" content="之字形顺序打印二叉树">
+<meta property="og:url" content="https://irisqp.github.io/2018/05/13/之字形顺序打印二叉树/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="编程练习题目：求1+2+3+…+n，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。思路：因为不能用循环，所以递归求解即可，代码很简单。">
+<meta property="og:description" content="编程练习题目：请实现一个函数按照之字形打印二叉树，即第一行按照从左到右的顺序打印，第二层按照从右至左的顺序打印，第三行按照从左到右的顺序打印，其他行以此类推。思路：利用之前写好的层序遍历打印代码，将层数控制加入即可，注意偶数层翻转即可。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-08T02:50:11.957Z">
+<meta property="og:updated_time" content="2018-05-13T06:14:03.489Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="求1+2+3+...n">
-<meta name="twitter:description" content="编程练习题目：求1+2+3+…+n，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。思路：因为不能用循环，所以递归求解即可，代码很简单。">
+<meta name="twitter:title" content="之字形顺序打印二叉树">
+<meta name="twitter:description" content="编程练习题目：请实现一个函数按照之字形打印二叉树，即第一行按照从左到右的顺序打印，第二层按照从右至左的顺序打印，第三行按照从左到右的顺序打印，其他行以此类推。思路：利用之前写好的层序遍历打印代码，将层数控制加入即可，注意偶数层翻转即可。">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -155,27 +155,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-求1-2-3-n" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-之字形顺序打印二叉树" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      求1+2+3+...n
+      之字形顺序打印二叉树
     </h1>
   
 
         
-        <a href="/2018/05/08/求1-2-3-n/" class="archive-article-date">
-  	<time datetime="2018-05-08T02:47:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-08</time>
+        <a href="/2018/05/13/之字形顺序打印二叉树/" class="archive-article-date">
+  	<time datetime="2018-05-13T06:12:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：求1-2-3-…-n，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A-B-C）。"><a href="#题目：求1-2-3-…-n，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A-B-C）。" class="headerlink" title="题目：求1+2+3+…+n，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。"></a>题目：求1+2+3+…+n，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。</h3><p>思路：因为不能用循环，所以递归求解即可，代码很简单。<br><a id="more"></a><br>java代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Sum_Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Sum_Solution</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">if</span>(n==<span class="number">1</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">if</span>(n&gt;<span class="number">1</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span> sum=n+Sum_Solution(n-<span class="number">1</span>);</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	System.out.println(Sum_Solution(-<span class="number">1</span>));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：请实现一个函数按照之字形打印二叉树，即第一行按照从左到右的顺序打印，第二层按照从右至左的顺序打印，第三行按照从左到右的顺序打印，其他行以此类推。"><a href="#题目：请实现一个函数按照之字形打印二叉树，即第一行按照从左到右的顺序打印，第二层按照从右至左的顺序打印，第三行按照从左到右的顺序打印，其他行以此类推。" class="headerlink" title="题目：请实现一个函数按照之字形打印二叉树，即第一行按照从左到右的顺序打印，第二层按照从右至左的顺序打印，第三行按照从左到右的顺序打印，其他行以此类推。"></a>题目：请实现一个函数按照之字形打印二叉树，即第一行按照从左到右的顺序打印，第二层按照从右至左的顺序打印，第三行按照从左到右的顺序打印，其他行以此类推。</h3><p>思路：利用之前写好的层序遍历打印代码，将层数控制加入即可，注意偶数层翻转即可。<br><a id="more"></a><br>java代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.Queue;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ZigZagPrint</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 统计层数，最后判断是不是偶数层，偶数层调用reverse方法</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> pRoot</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	 <span class="keyword">public</span> <span class="keyword">static</span> ArrayList&lt;ArrayList&lt;Integer&gt; &gt; Print(TreeNode pRoot) &#123;</span><br><span class="line">		 </span><br><span class="line">		 ArrayList&lt;ArrayList&lt;Integer&gt;&gt; reslist=<span class="keyword">new</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt;();</span><br><span class="line">		 Queue&lt;TreeNode&gt; treeQueue=<span class="keyword">new</span> LinkedList&lt;TreeNode&gt;();</span><br><span class="line">		 <span class="keyword">if</span> (pRoot==<span class="keyword">null</span>) &#123;</span><br><span class="line">			 <span class="keyword">return</span> reslist;</span><br><span class="line">		 &#125;</span><br><span class="line">		 treeQueue.add(pRoot);</span><br><span class="line">		 <span class="keyword">int</span> level=<span class="number">0</span>;</span><br><span class="line">		 <span class="keyword">while</span>(!treeQueue.isEmpty()) &#123;</span><br><span class="line">			 level++;</span><br><span class="line">			 ArrayList&lt;Integer&gt; valList=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">			 <span class="keyword">int</span> len=treeQueue.size();</span><br><span class="line">			 </span><br><span class="line">			 <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++) &#123;</span><br><span class="line">				 TreeNode node=treeQueue.poll();</span><br><span class="line">				 valList.add(node.val);</span><br><span class="line">		    	 <span class="keyword">if</span>(node.left!=<span class="keyword">null</span>) &#123;</span><br><span class="line">		    		 treeQueue.add(node.left);</span><br><span class="line">		    	 &#125;</span><br><span class="line">		    	 <span class="keyword">if</span>(node.right!=<span class="keyword">null</span>) &#123;</span><br><span class="line">		    		 treeQueue.add(node.right);</span><br><span class="line">		    	 &#125;</span><br><span class="line">			 &#125;</span><br><span class="line">			 </span><br><span class="line">			 <span class="keyword">if</span>(level%<span class="number">2</span>==<span class="number">0</span>) &#123;</span><br><span class="line">				 Collections.reverse(valList);</span><br><span class="line">			 &#125;</span><br><span class="line">			 </span><br><span class="line">			 reslist.add(valList);</span><br><span class="line">		 &#125;</span><br><span class="line">		 <span class="keyword">return</span> reslist;</span><br><span class="line">	 &#125;</span><br><span class="line">	 <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		 TreeNode root=<span class="keyword">new</span> TreeNode(<span class="number">0</span>);</span><br><span class="line">			TreeNode node1=<span class="keyword">new</span> TreeNode(<span class="number">1</span>);</span><br><span class="line">			TreeNode node2=<span class="keyword">new</span> TreeNode(<span class="number">2</span>);</span><br><span class="line">			TreeNode node3=<span class="keyword">new</span> TreeNode(<span class="number">3</span>);</span><br><span class="line">			TreeNode node4=<span class="keyword">new</span> TreeNode(<span class="number">4</span>);</span><br><span class="line">			TreeNode node5=<span class="keyword">new</span> TreeNode(<span class="number">5</span>);</span><br><span class="line">			</span><br><span class="line">			root.left=node1;</span><br><span class="line">			root.right=node2;</span><br><span class="line">			node1.left=node3;</span><br><span class="line">			node1.right=node4;</span><br><span class="line">			node2.left=node5;</span><br><span class="line">			System.out.println(Print(root));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -194,6 +194,10 @@
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">二叉树</a>
         		</li>
       		
 		</ul>
@@ -249,7 +253,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/08/求1-2-3-n/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/13/之字形顺序打印二叉树/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -263,18 +267,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/08/不能使用四则运算的加法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          不能使用四则运算的加法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/07/孩子们的游戏-圆圈中最后剩下的数/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">孩子们的游戏(圆圈中最后剩下的数)</div>
+    <a href="/2018/05/11/对称的二叉树/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">对称的二叉树</div>
       <i class="icon-circle-right"></i>
     </a>
   
