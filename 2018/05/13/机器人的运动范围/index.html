@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>jvm学习笔记(一)java内存区域详解 | irisqp的博客</title>
+  <title>机器人的运动范围 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JVM笔记(一.java内存区域详解)1. java内存区域概述　　对于熟悉java的人来说，都知道java将内存控制的权力交给了Java虚拟机，不需要像c,c++一样需要自己分配管理内存。这样虽然带来了方便，但如果出现了内存泄露等问题，如果不熟悉JVM的内存">
-<meta name="keywords" content="读书笔记,JVM,内存">
+  <meta name="description" content="编程练习题目：地上有一个m行和n列的方格。一个机器人从坐标0,0的格子开始移动，每一次只能向左，右，上，下四个方向移动一格，但是不能进入行坐标和列坐标的数位之和大于k的格子。 例如，当k为18时，机器人能够进入方格（35,37），因为3+5+3+7 = 18。但是，它不能进入方格（35,38），因为3+5+3+8 = 19。请问该机器人能够达到多少个格子？">
+<meta name="keywords" content="SwordToOffer,programming,回溯法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jvm学习笔记(一)java内存区域详解">
-<meta property="og:url" content="https://irisqp.github.io/2018/05/02/jvm学习笔记-一-java内存区域详解/index.html">
+<meta property="og:title" content="机器人的运动范围">
+<meta property="og:url" content="https://irisqp.github.io/2018/05/13/机器人的运动范围/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="JVM笔记(一.java内存区域详解)1. java内存区域概述　　对于熟悉java的人来说，都知道java将内存控制的权力交给了Java虚拟机，不需要像c,c++一样需要自己分配管理内存。这样虽然带来了方便，但如果出现了内存泄露等问题，如果不熟悉JVM的内存">
+<meta property="og:description" content="编程练习题目：地上有一个m行和n列的方格。一个机器人从坐标0,0的格子开始移动，每一次只能向左，右，上，下四个方向移动一格，但是不能进入行坐标和列坐标的数位之和大于k的格子。 例如，当k为18时，机器人能够进入方格（35,37），因为3+5+3+7 = 18。但是，它不能进入方格（35,38），因为3+5+3+8 = 19。请问该机器人能够达到多少个格子？">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://irisqp.github.io/image/noteimage/jvm内存图解.jpg">
-<meta property="og:updated_time" content="2018-05-02T13:30:13.342Z">
+<meta property="og:updated_time" content="2018-05-13T15:48:08.833Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jvm学习笔记(一)java内存区域详解">
-<meta name="twitter:description" content="JVM笔记(一.java内存区域详解)1. java内存区域概述　　对于熟悉java的人来说，都知道java将内存控制的权力交给了Java虚拟机，不需要像c,c++一样需要自己分配管理内存。这样虽然带来了方便，但如果出现了内存泄露等问题，如果不熟悉JVM的内存">
-<meta name="twitter:image" content="https://irisqp.github.io/image/noteimage/jvm内存图解.jpg">
+<meta name="twitter:title" content="机器人的运动范围">
+<meta name="twitter:description" content="编程练习题目：地上有一个m行和n列的方格。一个机器人从坐标0,0的格子开始移动，每一次只能向左，右，上，下四个方向移动一格，但是不能进入行坐标和列坐标的数位之和大于k的格子。 例如，当k为18时，机器人能够进入方格（35,37），因为3+5+3+7 = 18。但是，它不能进入方格（35,38），因为3+5+3+8 = 19。请问该机器人能够达到多少个格子？">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -157,44 +155,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jvm学习笔记-一-java内存区域详解" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-机器人的运动范围" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      jvm学习笔记(一)java内存区域详解
+      机器人的运动范围
     </h1>
   
 
         
-        <a href="/2018/05/02/jvm学习笔记-一-java内存区域详解/" class="archive-article-date">
-  	<time datetime="2018-05-02T11:41:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
+        <a href="/2018/05/13/机器人的运动范围/" class="archive-article-date">
+  	<time datetime="2018-05-13T15:44:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="JVM笔记-一-java内存区域详解"><a href="#JVM笔记-一-java内存区域详解" class="headerlink" title="JVM笔记(一.java内存区域详解)"></a>JVM笔记(一.java内存区域详解)</h2><h3 id="1-java内存区域概述"><a href="#1-java内存区域概述" class="headerlink" title="1. java内存区域概述"></a>1. java内存区域概述</h3><p>　　对于熟悉java的人来说，都知道java将内存控制的权力交给了Java虚拟机，不需要像c,c++一样需要自己分配管理内存。这样虽然带来了方便，但如果出现了内存泄露等问题，如果不熟悉JVM的内存</p>
-<a id="more"></a>
-<p>管理机制就很难定位到到底是哪里出了问题。以下简要介绍一下java虚拟机内存的各个区域。</p>
-<h3 id="2-运行时数据区域"><a href="#2-运行时数据区域" class="headerlink" title="2. 运行时数据区域"></a>2. 运行时数据区域</h3><p>　　java虚拟机在执行java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。如下图所示</p>
-<p><img src="\image\noteimage\jvm内存图解.jpg" alt="jvm内存图解"></p>
-<p>其中方法区和堆是线程共享的数据区，其余的都是线程隔离的数据区。</p>
-<p>下面分别介绍这几个区域</p>
-<h4 id="2-1-程序计数器"><a href="#2-1-程序计数器" class="headerlink" title="2.1 程序计数器"></a>2.1 程序计数器</h4><p>　　程序计数器是一块较小的内存空间，顾名思义可知它就是当前线程所执行的字节码的行号指示器，虚拟机工作时通过改变这个计数器的值来选取下一条需要执行的字节码指令，java多线程是通过轮流切换分配时间的方式来实现的，在任何一个确定的时刻，一个处理器只会执行一条线程中的指令，因此，需要给每个线程单独配备程序计数器，且各个线程间的程序计数器互不影响，所以程序计数器的内存区域是线程私有的内存。此外，如果线程正在执行的是Native方法，则这个计数器的值为空。因为所谓的<strong>Native方法</strong>就是在java程序中调用非java的代码，通常是更靠近底层的c或者c++代码，所以很显然程序计数器是jvm的，它只负责维护java代码的执行行号，而没有办法去维护其他代码的字节码行号。</p>
-<h4 id="2-2-java虚拟机栈"><a href="#2-2-java虚拟机栈" class="headerlink" title="2.2 java虚拟机栈"></a>2.2 java虚拟机栈</h4><p>　　java虚拟机栈描述的是java方法执行的内存模型：每个方法在执行的同时，都会生成一个<strong>栈帧</strong>用于存储局部变量表、操作数栈、动态链接，方法出口灯信息。每个方法从调用直到执行完成的过程，就对应着一个栈帧在虚拟机栈中入栈出栈的过程。由这个定义可知，虚拟机栈也是线程私有的，它的生命周期和线程相同。这个区域会出现两种异常状况:StackOverflowError异常和OutOfMemoryError异常，前者抛出的情况是线程请求的栈深度大于虚拟机所允许的深度，后者抛出的情况是固定长度的虚拟机栈在扩展时无法申请到足够的内存。</p>
-<h4 id="2-3-本地方法栈"><a href="#2-3-本地方法栈" class="headerlink" title="2.3 本地方法栈"></a>2.3 本地方法栈</h4><p>　　本地方法栈与虚拟机栈的作用基本一样，唯一的区别在于虚拟机栈为虚拟机执行的java方法服务，而本地方法栈是为虚拟机使用的Native方法所服务。与虚拟机栈一样，本地方法栈也会抛出:StackOverflowError异常和OutOfMemoryError异常。</p>
-<h4 id="2-4-java堆"><a href="#2-4-java堆" class="headerlink" title="2.4 java堆"></a>2.4 java堆</h4><p>　　通常java堆就是java虚拟机所管理的内存中最大的一块，它被所有线程共享，在虚拟机启动时创建。java堆的主要作用就是存放对象实例，几乎所有的对象实例都放在这块内存区域。因为所有的对象实例都在堆内，所以堆内存也是java垃圾收集器管理的主要区域，有时候被称作“GC堆”。</p>
-<p>　　从内存回收的角度来看java堆，可以把它分为新生代和老年代。</p>
-<p>　　从内存分配的角度来看java堆，java堆中可能划分出多个线程私有的分配缓冲区TLAB(Thread Local Allocation Buffer)。</p>
-<p>　　此外，java堆可以处于物理上不连续的内存空间，只要逻辑上是连续的即可，就像磁盘空间一样。当堆中再也没有内存完成实例的分配，而且堆再也无法扩展的时候，将会抛出OutOfMemoryError异常。</p>
-<h4 id="2-5-方法区"><a href="#2-5-方法区" class="headerlink" title="2.5 方法区"></a>2.5 方法区</h4><p>　　方法区与java堆一样是一个线程共享的内存区域，它用于存储已经被虚拟机加载的类信息，常量，静态变量等数据。常见的就是存储类，即class文件。方法区和java堆一样不需要连续的内存，只要逻辑连续即可。此外，方法区还可以选择不实现垃圾回收，因为它存储的是类的信息以及一些常量，对这些数据的回收的频率还是比较低的，但也不能不回收。</p>
-<p>　　方法区里有一块很重要的区域叫<strong>运行时常量池</strong>，顾名思义可知这块内存区域主要存放的是编译期生成的各种字面量和符号引用。运行时常量池相对于Class文件常量池的一个重要特征就是它具备动态性，在运行期间也能将新的常量放进常量池中，常见的例子有String类的intern()方法。所谓的intern()方法就是在常量池中查找是否存在调用该方法的字符串常量，如不存在，则在常量池中创建该字符串常量并返回它的引用；如存在，则返回池中的字符串。</p>
-<h3 id="3-直接内存"><a href="#3-直接内存" class="headerlink" title="3.直接内存"></a>3.直接内存</h3><p>　　首先明确直接内存并不是虚拟机运行时数据区的一部分，也不是java虚拟机规范中定义的内存区域，但这部分内存在使用NIO(New Input/Output)类时被频繁的使用，并且也可能导致OutOfMemoryError异常出现。NIO是一种基于通道(Channel)与缓冲区（Buffer）的I/O 方式，它可以使用native 函数库直接分配堆外内存，然后通过一个存储在Java堆中的DirectByteBuffer 对象作为这块内存的引用进行操作。这样能在一些场景中显著提高性能，因为避免了在Java堆和Native堆中来回复制数据。</p>
-<p>　　需要注意的是本机内存的分配不会受到java堆大小的限制，不要忘记配置直接内存，防止发生异常。</p>
+        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：地上有一个m行和n列的方格。一个机器人从坐标0-0的格子开始移动，每一次只能向左，右，上，下四个方向移动一格，但是不能进入行坐标和列坐标的数位之和大于k的格子。-例如，当k为18时，机器人能够进入方格（35-37），因为3-5-3-7-18。但是，它不能进入方格（35-38），因为3-5-3-8-19。请问该机器人能够达到多少个格子？"><a href="#题目：地上有一个m行和n列的方格。一个机器人从坐标0-0的格子开始移动，每一次只能向左，右，上，下四个方向移动一格，但是不能进入行坐标和列坐标的数位之和大于k的格子。-例如，当k为18时，机器人能够进入方格（35-37），因为3-5-3-7-18。但是，它不能进入方格（35-38），因为3-5-3-8-19。请问该机器人能够达到多少个格子？" class="headerlink" title="题目：地上有一个m行和n列的方格。一个机器人从坐标0,0的格子开始移动，每一次只能向左，右，上，下四个方向移动一格，但是不能进入行坐标和列坐标的数位之和大于k的格子。 例如，当k为18时，机器人能够进入方格（35,37），因为3+5+3+7 = 18。但是，它不能进入方格（35,38），因为3+5+3+8 = 19。请问该机器人能够达到多少个格子？"></a>题目：地上有一个m行和n列的方格。一个机器人从坐标0,0的格子开始移动，每一次只能向左，右，上，下四个方向移动一格，但是不能进入行坐标和列坐标的数位之和大于k的格子。 例如，当k为18时，机器人能够进入方格（35,37），因为3+5+3+7 = 18。但是，它不能进入方格（35,38），因为3+5+3+8 = 19。请问该机器人能够达到多少个格子？</h3><a id="more"></a>
+<p>思路：机器人的走法有很多，每个坐标处都可以朝四个方向走，由阈值来圈定它的范围，因为路径是任意的，所以有多少种走法很难全部统计出来，只知道边界条件，内部的可能有很多，很容易想到回溯法，当机器人走到大于阈值的地方时回到上一步还在阈值内的坐标处，再朝剩下的方向走，直到再次出界，再退回，如此重复，记录它走过的格子，最后将所有满足情况的格子数相加返回即可。回溯法的思想很复杂，很难理解，还需好好消化。<br>　　要注意的点：坐标的转化，我采取了数字转字符串再转回数字的方法来处理坐标的位数和的计算，还有边界条件的判断。<br>java代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MovingCount</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 回溯法：通过</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> threshold</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> rows</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> cols</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">movingCount</span><span class="params">(<span class="keyword">int</span> threshold, <span class="keyword">int</span> rows, <span class="keyword">int</span> cols)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">boolean</span> [] flag=<span class="keyword">new</span> <span class="keyword">boolean</span>[rows*cols];</span><br><span class="line">    	<span class="keyword">return</span> cango(threshold,<span class="number">0</span>,<span class="number">0</span>,rows,cols,flag);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 辅助函数用来统计还能继续走的格子数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> threshold 阈值</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> i 当前位置的行号</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> j 当前位置的列号</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> rows 矩阵的行</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> cols 矩阵的列</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> flag 记录格子是否已经走过</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">cango</span><span class="params">(<span class="keyword">int</span> threshold, <span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> rows, <span class="keyword">int</span> cols, <span class="keyword">boolean</span>[] flag)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> index=i*cols+j;</span><br><span class="line">		<span class="keyword">int</span> indexSum=transform(i,j);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(i&lt;<span class="number">0</span> || j&lt;<span class="number">0</span> || indexSum&gt;threshold || i&gt;=rows || j&gt;=cols || flag[index]==<span class="keyword">true</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		flag[index]=<span class="keyword">true</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>+cango(threshold,i-<span class="number">1</span>,j,rows,cols,flag)</span><br><span class="line">				+cango(threshold,i+<span class="number">1</span>,j,rows,cols,flag)</span><br><span class="line">				+cango(threshold,i,j-<span class="number">1</span>,rows,cols,flag)</span><br><span class="line">				+cango(threshold,i,j+<span class="number">1</span>,rows,cols,flag);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 用来将坐标值转换为可以和阈值相比较的位数相加的和，a,b为坐标值</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> a </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> b</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">transform</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(a&lt;<span class="number">0</span> || b&lt;<span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		String s=String.valueOf(a);</span><br><span class="line">		String s1=String.valueOf(b);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">char</span>[] arr=s.toCharArray();</span><br><span class="line">		<span class="keyword">char</span>[] arr1=s1.toCharArray();</span><br><span class="line">		<span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">		ArrayList&lt;Integer&gt; list=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		<span class="comment">//将分割开的位数分别加入到list中</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++) &#123;</span><br><span class="line">			list.add(Integer.parseInt(arr[i]+<span class="string">""</span>));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;arr1.length;j++) &#123;</span><br><span class="line">			list.add(Integer.parseInt(arr1[j]+<span class="string">""</span>));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> h:list) &#123;</span><br><span class="line">			sum+=h;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> sum;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		System.out.println(movingCount(<span class="number">8</span>, <span class="number">3</span>, <span class="number">3</span>));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -208,15 +190,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JVM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">内存</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">回溯法</a>
         		</li>
       		
 		</ul>
@@ -272,7 +254,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/02/jvm学习笔记-一-java内存区域详解/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/13/机器人的运动范围/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -286,18 +268,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/02/jvm学习笔记-二-对象的创建与访问过程中各内存区域的变化/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          jvm学习笔记(二)对象的创建与访问过程中各内存区域的变化
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/04/30/第一个只出现一次的字符/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第一个只出现一次的字符</div>
+    <a href="/2018/05/13/矩阵中的路径/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">矩阵中的路径</div>
       <i class="icon-circle-right"></i>
     </a>
   

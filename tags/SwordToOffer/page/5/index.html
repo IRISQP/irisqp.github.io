@@ -6,22 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>jvm学习笔记(一)java内存区域详解 | irisqp的博客</title>
+  <title>Tag: SwordToOffer | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JVM笔记(一.java内存区域详解)1. java内存区域概述　　对于熟悉java的人来说，都知道java将内存控制的权力交给了Java虚拟机，不需要像c,c++一样需要自己分配管理内存。这样虽然带来了方便，但如果出现了内存泄露等问题，如果不熟悉JVM的内存">
-<meta name="keywords" content="读书笔记,JVM,内存">
-<meta property="og:type" content="article">
-<meta property="og:title" content="jvm学习笔记(一)java内存区域详解">
-<meta property="og:url" content="https://irisqp.github.io/2018/05/02/jvm学习笔记-一-java内存区域详解/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="irisqp的博客">
+<meta property="og:url" content="https://irisqp.github.io/tags/SwordToOffer/page/5/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="JVM笔记(一.java内存区域详解)1. java内存区域概述　　对于熟悉java的人来说，都知道java将内存控制的权力交给了Java虚拟机，不需要像c,c++一样需要自己分配管理内存。这样虽然带来了方便，但如果出现了内存泄露等问题，如果不熟悉JVM的内存">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://irisqp.github.io/image/noteimage/jvm内存图解.jpg">
-<meta property="og:updated_time" content="2018-05-02T13:30:13.342Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jvm学习笔记(一)java内存区域详解">
-<meta name="twitter:description" content="JVM笔记(一.java内存区域详解)1. java内存区域概述　　对于熟悉java的人来说，都知道java将内存控制的权力交给了Java虚拟机，不需要像c,c++一样需要自己分配管理内存。这样虽然带来了方便，但如果出现了内存泄露等问题，如果不熟悉JVM的内存">
-<meta name="twitter:image" content="https://irisqp.github.io/image/noteimage/jvm内存图解.jpg">
+<meta name="twitter:title" content="irisqp的博客">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -157,179 +150,67 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jvm学习笔记-一-java内存区域详解" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      jvm学习笔记(一)java内存区域详解
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/04/24/二叉排序树转双向链表/" class="archive-article-date">
+  	<time datetime="2018-04-24T13:55:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/04/24/二叉排序树转双向链表/">二叉排序树转双向链表</a>
     </h1>
   
 
-        
-        <a href="/2018/05/02/jvm学习笔记-一-java内存区域详解/" class="archive-article-date">
-  	<time datetime="2018-05-02T11:41:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="JVM笔记-一-java内存区域详解"><a href="#JVM笔记-一-java内存区域详解" class="headerlink" title="JVM笔记(一.java内存区域详解)"></a>JVM笔记(一.java内存区域详解)</h2><h3 id="1-java内存区域概述"><a href="#1-java内存区域概述" class="headerlink" title="1. java内存区域概述"></a>1. java内存区域概述</h3><p>　　对于熟悉java的人来说，都知道java将内存控制的权力交给了Java虚拟机，不需要像c,c++一样需要自己分配管理内存。这样虽然带来了方便，但如果出现了内存泄露等问题，如果不熟悉JVM的内存</p>
-<a id="more"></a>
-<p>管理机制就很难定位到到底是哪里出了问题。以下简要介绍一下java虚拟机内存的各个区域。</p>
-<h3 id="2-运行时数据区域"><a href="#2-运行时数据区域" class="headerlink" title="2. 运行时数据区域"></a>2. 运行时数据区域</h3><p>　　java虚拟机在执行java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。如下图所示</p>
-<p><img src="\image\noteimage\jvm内存图解.jpg" alt="jvm内存图解"></p>
-<p>其中方法区和堆是线程共享的数据区，其余的都是线程隔离的数据区。</p>
-<p>下面分别介绍这几个区域</p>
-<h4 id="2-1-程序计数器"><a href="#2-1-程序计数器" class="headerlink" title="2.1 程序计数器"></a>2.1 程序计数器</h4><p>　　程序计数器是一块较小的内存空间，顾名思义可知它就是当前线程所执行的字节码的行号指示器，虚拟机工作时通过改变这个计数器的值来选取下一条需要执行的字节码指令，java多线程是通过轮流切换分配时间的方式来实现的，在任何一个确定的时刻，一个处理器只会执行一条线程中的指令，因此，需要给每个线程单独配备程序计数器，且各个线程间的程序计数器互不影响，所以程序计数器的内存区域是线程私有的内存。此外，如果线程正在执行的是Native方法，则这个计数器的值为空。因为所谓的<strong>Native方法</strong>就是在java程序中调用非java的代码，通常是更靠近底层的c或者c++代码，所以很显然程序计数器是jvm的，它只负责维护java代码的执行行号，而没有办法去维护其他代码的字节码行号。</p>
-<h4 id="2-2-java虚拟机栈"><a href="#2-2-java虚拟机栈" class="headerlink" title="2.2 java虚拟机栈"></a>2.2 java虚拟机栈</h4><p>　　java虚拟机栈描述的是java方法执行的内存模型：每个方法在执行的同时，都会生成一个<strong>栈帧</strong>用于存储局部变量表、操作数栈、动态链接，方法出口灯信息。每个方法从调用直到执行完成的过程，就对应着一个栈帧在虚拟机栈中入栈出栈的过程。由这个定义可知，虚拟机栈也是线程私有的，它的生命周期和线程相同。这个区域会出现两种异常状况:StackOverflowError异常和OutOfMemoryError异常，前者抛出的情况是线程请求的栈深度大于虚拟机所允许的深度，后者抛出的情况是固定长度的虚拟机栈在扩展时无法申请到足够的内存。</p>
-<h4 id="2-3-本地方法栈"><a href="#2-3-本地方法栈" class="headerlink" title="2.3 本地方法栈"></a>2.3 本地方法栈</h4><p>　　本地方法栈与虚拟机栈的作用基本一样，唯一的区别在于虚拟机栈为虚拟机执行的java方法服务，而本地方法栈是为虚拟机使用的Native方法所服务。与虚拟机栈一样，本地方法栈也会抛出:StackOverflowError异常和OutOfMemoryError异常。</p>
-<h4 id="2-4-java堆"><a href="#2-4-java堆" class="headerlink" title="2.4 java堆"></a>2.4 java堆</h4><p>　　通常java堆就是java虚拟机所管理的内存中最大的一块，它被所有线程共享，在虚拟机启动时创建。java堆的主要作用就是存放对象实例，几乎所有的对象实例都放在这块内存区域。因为所有的对象实例都在堆内，所以堆内存也是java垃圾收集器管理的主要区域，有时候被称作“GC堆”。</p>
-<p>　　从内存回收的角度来看java堆，可以把它分为新生代和老年代。</p>
-<p>　　从内存分配的角度来看java堆，java堆中可能划分出多个线程私有的分配缓冲区TLAB(Thread Local Allocation Buffer)。</p>
-<p>　　此外，java堆可以处于物理上不连续的内存空间，只要逻辑上是连续的即可，就像磁盘空间一样。当堆中再也没有内存完成实例的分配，而且堆再也无法扩展的时候，将会抛出OutOfMemoryError异常。</p>
-<h4 id="2-5-方法区"><a href="#2-5-方法区" class="headerlink" title="2.5 方法区"></a>2.5 方法区</h4><p>　　方法区与java堆一样是一个线程共享的内存区域，它用于存储已经被虚拟机加载的类信息，常量，静态变量等数据。常见的就是存储类，即class文件。方法区和java堆一样不需要连续的内存，只要逻辑连续即可。此外，方法区还可以选择不实现垃圾回收，因为它存储的是类的信息以及一些常量，对这些数据的回收的频率还是比较低的，但也不能不回收。</p>
-<p>　　方法区里有一块很重要的区域叫<strong>运行时常量池</strong>，顾名思义可知这块内存区域主要存放的是编译期生成的各种字面量和符号引用。运行时常量池相对于Class文件常量池的一个重要特征就是它具备动态性，在运行期间也能将新的常量放进常量池中，常见的例子有String类的intern()方法。所谓的intern()方法就是在常量池中查找是否存在调用该方法的字符串常量，如不存在，则在常量池中创建该字符串常量并返回它的引用；如存在，则返回池中的字符串。</p>
-<h3 id="3-直接内存"><a href="#3-直接内存" class="headerlink" title="3.直接内存"></a>3.直接内存</h3><p>　　首先明确直接内存并不是虚拟机运行时数据区的一部分，也不是java虚拟机规范中定义的内存区域，但这部分内存在使用NIO(New Input/Output)类时被频繁的使用，并且也可能导致OutOfMemoryError异常出现。NIO是一种基于通道(Channel)与缓冲区（Buffer）的I/O 方式，它可以使用native 函数库直接分配堆外内存，然后通过一个存储在Java堆中的DirectByteBuffer 对象作为这块内存的引用进行操作。这样能在一些场景中显著提高性能，因为避免了在Java堆和Native堆中来回复制数据。</p>
-<p>　　需要注意的是本机内存的分配不会受到java堆大小的限制，不要忘记配置直接内存，防止发生异常。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JVM</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">内存</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/02/jvm学习笔记-一-java内存区域详解/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/05/02/jvm学习笔记-二-对象的创建与访问过程中各内存区域的变化/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          jvm学习笔记(二)对象的创建与访问过程中各内存区域的变化
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/04/30/第一个只出现一次的字符/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第一个只出现一次的字符</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/tags/SwordToOffer/page/4/">&laquo; Prev</a><a class="page-number" href="/tags/SwordToOffer/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/SwordToOffer/page/3/">3</a><a class="page-number" href="/tags/SwordToOffer/page/4/">4</a><span class="page-number current">5</span>
+    </nav>
   
 
 
@@ -353,9 +234,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
