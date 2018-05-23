@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>Tag: JVM | irisqp的博客</title>
+  <title>JSP学习笔记 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="irisqp的博客">
-<meta property="og:url" content="https://irisqp.github.io/tags/JVM/index.html">
+  <meta name="description" content="学习笔记JavaWeb之JSP1.什么是JSP　　JSP全名为Java Server Pages，中文名叫java服务器页面。就是在html代码嵌套java代码,本质上就是一个servlet,运行在服务器,接受请求,处理业务逻辑,生成动态内容。 ２.JSP脚本jsp三个脚本:        &amp;lt;%…%&amp;gt; java片段            生成在jsp的service方法中">
+<meta name="keywords" content="JSP,JavaWeb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSP学习笔记">
+<meta property="og:url" content="https://irisqp.github.io/2018/05/23/JSP学习笔记/index.html">
 <meta property="og:site_name" content="irisqp的博客">
+<meta property="og:description" content="学习笔记JavaWeb之JSP1.什么是JSP　　JSP全名为Java Server Pages，中文名叫java服务器页面。就是在html代码嵌套java代码,本质上就是一个servlet,运行在服务器,接受请求,处理业务逻辑,生成动态内容。 ２.JSP脚本jsp三个脚本:        &amp;lt;%…%&amp;gt; java片段            生成在jsp的service方法中">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-23T02:02:11.682Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="irisqp的博客">
+<meta name="twitter:title" content="JSP学习笔记">
+<meta name="twitter:description" content="学习笔记JavaWeb之JSP1.什么是JSP　　JSP全名为Java Server Pages，中文名叫java服务器页面。就是在html代码嵌套java代码,本质上就是一个servlet,运行在服务器,接受请求,处理业务逻辑,生成动态内容。 ２.JSP脚本jsp三个脚本:        &amp;lt;%…%&amp;gt; java片段            生成在jsp的service方法中">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -150,160 +155,182 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JSP学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JSP学习笔记
+    </h1>
+  
+
+        
+        <a href="/2018/05/23/JSP学习笔记/" class="archive-article-date">
+  	<time datetime="2018-05-23T01:35:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-23</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="JavaWeb之JSP"><a href="#JavaWeb之JSP" class="headerlink" title="JavaWeb之JSP"></a>JavaWeb之JSP</h3><h4 id="1-什么是JSP"><a href="#1-什么是JSP" class="headerlink" title="1.什么是JSP"></a>1.什么是JSP</h4><p>　　JSP全名为Java Server Pages，中文名叫java<a href="https://baike.baidu.com/item/%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener">服务器</a>页面。就是在html代码嵌套java代码,本质上就是一个servlet,运行在服务器,接受请求,处理业务逻辑,生成动态内容。</p>
+<h4 id="２-JSP脚本"><a href="#２-JSP脚本" class="headerlink" title="２.JSP脚本"></a>２.JSP脚本</h4><p>jsp三个脚本:<br>        &lt;%…%&gt; java片段<br>            生成在jsp的service方法中<br>        &lt;%=…%&gt; 输出表达式 相当于out.print();<br>            生成service方法中<br>            不能”;”结尾<br>        &lt;%!…%&gt; 声明成员</p>
+<h4 id="3-JSP指令"><a href="#3-JSP指令" class="headerlink" title="3.JSP指令"></a>3.JSP指令</h4><p>作用:声明jsp页面的一些属性和动作<br>    格式:<br>        &lt;%@指令名称 属性=”值” 属性=”值”%&gt;<br>    jsp指令的分类:<br>        page:主要声明jsp页面的一些属性<br>        include:静态包含.<br>        taglib:导入标签库<br>    注意:<br>        一个页面中可以出现多个指令<br>        指令可以放在任意位置,一般都放在jsp页面最上面.</p>
+<p>page指令:<br>        重要属性:3个<br>            contentType:设置响应流的编码,及通知浏览器用什么编码打开.设置文件的mimetype<br>            pageEncoding:设置页面的编码<br>            import:导入所需要的包<br>            contentType和pageEncoding联系:<br>                若两者都出现的时候,各自使用各自的编码<br>                若只出现一者,两个都使用出现的这个编码<br>                若两者都不出现,使用服务器默认的编码 tomcat7使用的iso-8859-1</p>
+<p>include指令:<br>        静态包含,就是将其他页面或者servlet的内容包含进来,一起进行编译运行.生成一个java文件.<br>        格式:<br>            &lt;%@include file=”相对路径或者是内部路径” %&gt;<br>        例如:<br>            &lt;%@include file=”/jsp/include/i1.jsp” %&gt;</p>
+<p>taglib指令:导入标签库<br>        格式:<br>             &lt;%@taglib prefix=”前缀名” uri=”名称空间” %&gt;<br>        若导入之后<br>            &lt;前缀名:标签 .. &gt;<br>        例如:<br>            &lt;c:if test=””&gt;输出内容&lt;/c:if&gt;</p>
+<h4 id="4-JSP的内置对象"><a href="#4-JSP的内置对象" class="headerlink" title="4.JSP的内置对象"></a>4.JSP的内置对象</h4><p>在jsp页面上可以直接使用的对象<br>        内置对象            类型<br>        out                JspWriter<br>        request            HttpServletRequest<br>        response        HttpServletResponse<br>        session            HttpSession</p>
+<p>​        exception        Throwable</p>
+<p>​        page            Servlet(this)<br>        config            ServletConfig<br>        application        ServletContext<br>        pageContext        PageContext</p>
+<p>jsp的域对象:理解<br>        application        整个项目<br>        session            一次会话<br>        request            一次请求<br>        pageContext        一个页面<br>    pagecontext作用:理解<br>        1.域对象<br>            xxxAttribute()<br>        2.操作其他域对象<br>            方法:<br>                xxxAttribute(…,int scope);<br>                    scope取值:<br>                        APPLICATION_SCOPE<br>                        SESSION_SCOPE<br>                        REQUEST_SCOPE<br>                        PAGE_SCOPE<br>        3.获取其他的内置对象<br>            getXxx()<br>            注意:<br>                getRequest():获取request内置对象<br>        4.便捷查找,<br>            findAttribute(String key):<br>                依次从pagecontext,request,session,application四个域中,查找相应的属性,若查找到了返回值,且结束该次查找<br>                若查找不到,返回一个null</p>
+<h4 id="5-使用el表达式来简化JSP的编写"><a href="#5-使用el表达式来简化JSP的编写" class="headerlink" title="5.使用el表达式来简化JSP的编写"></a>5.使用el表达式来简化JSP的编写</h4><p>用来替代&lt;%=..%&gt;<br>    作用:<br>        1.获取域中数据 ★<br>        2.执行运算 ★<br>        3.获取常见的web对象<br>        4.调用java的方法<br>    格式:<br>        ${el表达式}</p>
+<p>1.获取域中数据:★<br>    注意:★<br>        若属性名中出现了”.”|”+”|”-“等特殊符号,需要使用scope获取<br>            例如:<br>                ${requestScope[“arr.age”] }<br>    获取简单数据<br>        ${pageScope|requestScope|sessionScope|applicationScope.属性名}<br>        以后经常使用:<br>            ${属性名}:依次从<strong>pageContext,request,session,application</strong>查找指定属性,若查找到返回值,结束该次查找<br>                若查找不到,返回””<br>    获取复杂数据<br>        获取数组中的数据<br>            ${域中的名称[index]}<br>        获取list中的数据<br>            ${域中的名称[index]}<br>        获取map中的数据<br>            ${域中的名称.键名}</p>
+<p>2.执行运算:<br>    四则运算 关系(&gt;..) 逻辑(&amp;&amp; ||)<br>    注意:<br>        +:只能进行加法运算,字符串形式数字可以进行加法运算.<br>        empty:判断一个容器的长度是否为0(array set list map),还可以判断一个对象是否为空<br>            ${empty 域中的对象名称}<br>        三元运算符</p>
+<p>3.EL常用的对象：11个.</p>
+<p>​    ${pageScope}</p>
+<p>​    ${requestScope}</p>
+<p>​    ${sessionScope}</p>
+<p>​    ${applicationScope}</p>
+<p>​    ${ param }          :相当于request.getParameter();</p>
+<p>​    ${ paramValues }    :相当于request.getParameterValues();</p>
+<p>​    ${ header }         :获得请求头 一个key对应一个value</p>
+<p>​    ${ headerValues }   :获得请求头 一个key对应多个value </p>
+<p>​    ${ initParam }      :获得初始化参数</p>
+<p>​    ${ cookie }         :获得Cookie的信息</p>
+<p>​    ${pageContext}      :相当于pageContext对象.</p>
+<h4 id="6-JSTL-JSP-Standard-Tag-Library"><a href="#6-JSTL-JSP-Standard-Tag-Library" class="headerlink" title="6.JSTL(JSP Standard Tag Library)"></a>6.JSTL(JSP Standard Tag Library)</h4><p>jsp标准的标签库语言<br>    apache推出的<br>    用来替代java脚本<br>    使用步骤:<br>        1.导入jar包 (jstl.jar和standard.jar)<br>        2.在页面上导入标签库<br>            &lt;%@taglib prefix=”” uri=””%&gt;<br>            例如:<br>                &lt;%@taglib prefix=”c” uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> %&gt;</p>
+<p>jstl的分类:<br>        core:核心类库 ★<br>        fmt:格式化|国际化<br>        xml:过时了<br>        sql:过时了<br>        函数库:很少使用<br>    core:掌握<br>        ★c:if<br>        ★c:forEach<br>        c:set 往域中设置值<br>        c:choose c:when c:otherwise 分支</p>
+<p>★c:if 判断<br>        &lt;c:if test=”${el表达式}”&gt;满足的时候输出的内容&lt;/c:if&gt;<br>        例如:<br>            &lt;c:if test=”${3&gt;4 }”&gt;<br>                3大于4<br>            &lt;/c:if&gt;<br>            &lt;c:if test=”${3&lt;=4 }”&gt;<br>                3不大于4<br>            &lt;/c:if&gt;</p>
+<p>★c:forEach 循环<br>        格式1:<br>             &lt;c:forEach begin=”从那里开始” end=”到那里结束” step=”步长” var=”给变量起个名字” varStatus=”循环状态变量”&gt;<br>                ${i }–${vs.count }–${vs.current }<br><br>             &lt;/c:forEach&gt;</p>
+<p>varStatus:用来记录循环的状态<br>                常用的属性:<br>                    count:记录次数<br>                    current:当前遍历的内容</p>
+<p>例如:<br>            &lt;c:forEach begin=”1” end=”20” step=”2” var=”i” varStatus=”vs”&gt;<br>                ${i }–${vs.count }–${vs.current }<br><br>            &lt;/c:forEach&gt;</p>
+<p>​        格式2:<br>            &lt;c:forEach items=”${el获取域中的容器}” var=”n”&gt;<br>                ${n }<br>            &lt;/c:forEach&gt;</p>
+<p>​        例如:<br>                //遍历list<br>                &lt;c:forEach items=”${list }” var=”n”&gt;<br>                    ${n }<br>                &lt;/c:forEach&gt;</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/03/jvm学习笔记-三-垃圾收集背景以及过程介绍/" class="archive-article-date">
-  	<time datetime="2018-05-03T13:33:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/03/jvm学习笔记-三-垃圾收集背景以及过程介绍/">jvm学习笔记(三)垃圾收集背景以及过程介绍</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JSP</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JVM</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">垃圾收集</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaWeb</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/23/JSP学习笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/02/jvm学习笔记-二-对象的创建与访问过程中各内存区域的变化/" class="archive-article-date">
-  	<time datetime="2018-05-02T13:35:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/13/机器人的运动范围/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">机器人的运动范围</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/02/jvm学习笔记-二-对象的创建与访问过程中各内存区域的变化/">jvm学习笔记(二)对象的创建与访问过程中各内存区域的变化</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JVM</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">对象</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/02/jvm学习笔记-一-java内存区域详解/" class="archive-article-date">
-  	<time datetime="2018-05-02T11:41:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/02/jvm学习笔记-一-java内存区域详解/">jvm学习笔记(一)java内存区域详解</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JVM</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">内存</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -326,9 +353,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
