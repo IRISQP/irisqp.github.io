@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://irisqp.github.io">
   <title>MVC设计模式以及事务简介 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习笔记JavaWeb之MVC设计模式&amp;amp;事务1.什么是MVC　　MVC是模型(model)－视图(view)－控制器(controller)的缩写，是一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。 JavaEE开发中通常将一个应用分成：WEB层，业务层，持久层。 ​    M">
+  <meta name="description" content="学习笔记JavaWeb之MVC设计模式&amp;amp;事务1.什么是MVC　　MVC是模型(model)－视图(view)－控制器(controller)的缩写，是一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。">
 <meta name="keywords" content="MVC,事务">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MVC设计模式以及事务简介">
 <meta property="og:url" content="https://irisqp.github.io/2018/05/23/MVC设计模式以及事务简介/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="学习笔记JavaWeb之MVC设计模式&amp;amp;事务1.什么是MVC　　MVC是模型(model)－视图(view)－控制器(controller)的缩写，是一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。 JavaEE开发中通常将一个应用分成：WEB层，业务层，持久层。 ​    M">
+<meta property="og:description" content="学习笔记JavaWeb之MVC设计模式&amp;amp;事务1.什么是MVC　　MVC是模型(model)－视图(view)－控制器(controller)的缩写，是一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-23T02:26:25.467Z">
+<meta property="og:updated_time" content="2018-05-24T03:23:51.580Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MVC设计模式以及事务简介">
-<meta name="twitter:description" content="学习笔记JavaWeb之MVC设计模式&amp;amp;事务1.什么是MVC　　MVC是模型(model)－视图(view)－控制器(controller)的缩写，是一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。 JavaEE开发中通常将一个应用分成：WEB层，业务层，持久层。 ​    M">
+<meta name="twitter:description" content="学习笔记JavaWeb之MVC设计模式&amp;amp;事务1.什么是MVC　　MVC是模型(model)－视图(view)－控制器(controller)的缩写，是一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -176,6 +176,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="JavaWeb之MVC设计模式-amp-事务"><a href="#JavaWeb之MVC设计模式-amp-事务" class="headerlink" title="JavaWeb之MVC设计模式&amp;事务"></a>JavaWeb之MVC设计模式&amp;事务</h3><h4 id="1-什么是MVC"><a href="#1-什么是MVC" class="headerlink" title="1.什么是MVC"></a>1.什么是MVC</h4><p>　　MVC是模型(model)－视图(view)－控制器(controller)的缩写，是一种软件设计典范，用一种业务逻辑、数据、界面显示分离的方法组织代码，将业务逻辑聚集到一个部件里面，在改进和个性化定制界面及用户交互的同时，不需要重新编写业务逻辑。</p>
+<a id="more"></a>
 <p>JavaEE开发中通常将一个应用分成：WEB层，业务层，持久层。</p>
 <p>​    M:model 模型 作用:主要是封装数据,封装对数据的访问；<br>    V:view     视图 作用:主要是用来展示数据 一般是jsp担任的；<br>    C:ctrl    控制 作用:接受请求,找到相应的javabean完成业务逻辑。</p>
 <h4 id="2-事务"><a href="#2-事务" class="headerlink" title="2.事务"></a>2.事务</h4><p>　　什么是事务:事务指的是逻辑上的一组操作,组成这组操作的各个单元要么全都成功,要么全都失败。</p>

@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://irisqp.github.io">
   <title>JSP学习笔记 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习笔记JavaWeb之JSP1.什么是JSP　　JSP全名为Java Server Pages，中文名叫java服务器页面。就是在html代码嵌套java代码,本质上就是一个servlet,运行在服务器,接受请求,处理业务逻辑,生成动态内容。 ２.JSP脚本jsp三个脚本:        &amp;lt;%…%&amp;gt; java片段            生成在jsp的service方法中">
+  <meta name="description" content="学习笔记JavaWeb之JSP1.什么是JSP　　JSP全名为Java Server Pages，中文名叫java服务器页面。就是在html代码嵌套java代码,本质上就是一个servlet,运行在服务器,接受请求,处理业务逻辑,生成动态内容。">
 <meta name="keywords" content="JSP,JavaWeb">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JSP学习笔记">
 <meta property="og:url" content="https://irisqp.github.io/2018/05/23/JSP学习笔记/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="学习笔记JavaWeb之JSP1.什么是JSP　　JSP全名为Java Server Pages，中文名叫java服务器页面。就是在html代码嵌套java代码,本质上就是一个servlet,运行在服务器,接受请求,处理业务逻辑,生成动态内容。 ２.JSP脚本jsp三个脚本:        &amp;lt;%…%&amp;gt; java片段            生成在jsp的service方法中">
+<meta property="og:description" content="学习笔记JavaWeb之JSP1.什么是JSP　　JSP全名为Java Server Pages，中文名叫java服务器页面。就是在html代码嵌套java代码,本质上就是一个servlet,运行在服务器,接受请求,处理业务逻辑,生成动态内容。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-23T02:02:11.682Z">
+<meta property="og:updated_time" content="2018-05-24T03:24:04.399Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSP学习笔记">
-<meta name="twitter:description" content="学习笔记JavaWeb之JSP1.什么是JSP　　JSP全名为Java Server Pages，中文名叫java服务器页面。就是在html代码嵌套java代码,本质上就是一个servlet,运行在服务器,接受请求,处理业务逻辑,生成动态内容。 ２.JSP脚本jsp三个脚本:        &amp;lt;%…%&amp;gt; java片段            生成在jsp的service方法中">
+<meta name="twitter:description" content="学习笔记JavaWeb之JSP1.什么是JSP　　JSP全名为Java Server Pages，中文名叫java服务器页面。就是在html代码嵌套java代码,本质上就是一个servlet,运行在服务器,接受请求,处理业务逻辑,生成动态内容。">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -176,6 +176,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h2><h3 id="JavaWeb之JSP"><a href="#JavaWeb之JSP" class="headerlink" title="JavaWeb之JSP"></a>JavaWeb之JSP</h3><h4 id="1-什么是JSP"><a href="#1-什么是JSP" class="headerlink" title="1.什么是JSP"></a>1.什么是JSP</h4><p>　　JSP全名为Java Server Pages，中文名叫java<a href="https://baike.baidu.com/item/%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener">服务器</a>页面。就是在html代码嵌套java代码,本质上就是一个servlet,运行在服务器,接受请求,处理业务逻辑,生成动态内容。</p>
+<a id="more"></a>
 <h4 id="２-JSP脚本"><a href="#２-JSP脚本" class="headerlink" title="２.JSP脚本"></a>２.JSP脚本</h4><p>jsp三个脚本:<br>        &lt;%…%&gt; java片段<br>            生成在jsp的service方法中<br>        &lt;%=…%&gt; 输出表达式 相当于out.print();<br>            生成service方法中<br>            不能”;”结尾<br>        &lt;%!…%&gt; 声明成员</p>
 <h4 id="3-JSP指令"><a href="#3-JSP指令" class="headerlink" title="3.JSP指令"></a>3.JSP指令</h4><p>作用:声明jsp页面的一些属性和动作<br>    格式:<br>        &lt;%@指令名称 属性=”值” 属性=”值”%&gt;<br>    jsp指令的分类:<br>        page:主要声明jsp页面的一些属性<br>        include:静态包含.<br>        taglib:导入标签库<br>    注意:<br>        一个页面中可以出现多个指令<br>        指令可以放在任意位置,一般都放在jsp页面最上面.</p>
 <p>page指令:<br>        重要属性:3个<br>            contentType:设置响应流的编码,及通知浏览器用什么编码打开.设置文件的mimetype<br>            pageEncoding:设置页面的编码<br>            import:导入所需要的包<br>            contentType和pageEncoding联系:<br>                若两者都出现的时候,各自使用各自的编码<br>                若只出现一者,两个都使用出现的这个编码<br>                若两者都不出现,使用服务器默认的编码 tomcat7使用的iso-8859-1</p>
