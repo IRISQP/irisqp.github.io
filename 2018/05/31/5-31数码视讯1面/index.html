@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>Archives | irisqp的博客</title>
+  <title>5.31数码视讯1面 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="irisqp的博客">
-<meta property="og:url" content="https://irisqp.github.io/archives/page/3/index.html">
+  <meta name="description" content="5.31数码视讯1面：1.如何创建一个可以动态添加任意个属性的表。　　利用两张表：第一张表只需要添加一个字段：比如id。第二张表可以拿第一张表中的id作为外键，新增两个字段key和value，这样就可以添加任意多个属性了。">
+<meta name="keywords" content="面经">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5.31数码视讯1面">
+<meta property="og:url" content="https://irisqp.github.io/2018/05/31/5-31数码视讯1面/index.html">
 <meta property="og:site_name" content="irisqp的博客">
+<meta property="og:description" content="5.31数码视讯1面：1.如何创建一个可以动态添加任意个属性的表。　　利用两张表：第一张表只需要添加一个字段：比如id。第二张表可以拿第一张表中的id作为外键，新增两个字段key和value，这样就可以添加任意多个属性了。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-31T09:01:02.314Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="irisqp的博客">
+<meta name="twitter:title" content="5.31数码视讯1面">
+<meta name="twitter:description" content="5.31数码视讯1面：1.如何创建一个可以动态添加任意个属性的表。　　利用两张表：第一张表只需要添加一个字段：比如id。第二张表可以拿第一张表中的id作为外键，新增两个字段key和value，这样就可以添加任意多个属性了。">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -150,453 +155,176 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-5-31数码视讯1面" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      5.31数码视讯1面
+    </h1>
+  
+
+        
+        <a href="/2018/05/31/5-31数码视讯1面/" class="archive-article-date">
+  	<time datetime="2018-05-31T08:58:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-31</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="5-31数码视讯1面："><a href="#5-31数码视讯1面：" class="headerlink" title="5.31数码视讯1面："></a>5.31数码视讯1面：</h2><h3 id="1-如何创建一个可以动态添加任意个属性的表。"><a href="#1-如何创建一个可以动态添加任意个属性的表。" class="headerlink" title="1.如何创建一个可以动态添加任意个属性的表。"></a>1.如何创建一个可以动态添加任意个属性的表。</h3><p>　　利用两张表：第一张表只需要添加一个字段：比如id。第二张表可以拿第一张表中的id作为外键，新增两个字段key和value，这样就可以添加任意多个属性了。</p>
+<a id="more"></a>
+<h3 id="2-SSH框架和SSM框架的区别"><a href="#2-SSH框架和SSM框架的区别" class="headerlink" title="2.SSH框架和SSM框架的区别"></a>2.SSH框架和SSM框架的区别</h3><p>　　主要区别在Hibernate和Mybatis上，Hibernate是一个更加重量级一点，封装更充分的框架。且Hibernate框架是一个完全的orm框架，建立了完整的对象与表的关系映射。操作对象就是操作表结构，数据库无关性更好。而Mybatis框架是一个不完全的orm框架，没有建立完整的对象与表的关系映射，是一个更轻量级的框架，可以使用原生的sql语句进行数据库的增删改查操作。</p>
+<h3 id="３-javaweb中乱码问题如何解决"><a href="#３-javaweb中乱码问题如何解决" class="headerlink" title="３.javaweb中乱码问题如何解决"></a>３.javaweb中乱码问题如何解决</h3><p>第一类：前台参数传输至服务端后乱码</p>
+<ol>
+<li>get请求参数中文发送到服务器端乱码</li>
+<li>post请求参数中文发送到服务器乱码</li>
+</ol>
+<p>第二类：服务端响应到达浏览器后乱码</p>
+<p>   3.在jsp页面中，中文显示乱码</p>
+<p>解决方式，不管哪一端出现问题，统一编码格式即可，一般统一采用UTF-8。</p>
+<h2 id="4-java的垃圾回收机制"><a href="#4-java的垃圾回收机制" class="headerlink" title="4.java的垃圾回收机制"></a>4.java的垃圾回收机制</h2><p>答得不好。垃圾回收(Garbage Collection GC)的主要作用是回收程序中不再使用的内存。在c/c++中，完全由开发人员来管理内存的分配与释放，如果忘记或错误的释放内存，往往会导致程序不正常甚至崩溃。java中提供垃圾收集器可以自动的检测对象的作用域，可以自动地把不再被使用的存储空间释放掉。具体来说，垃圾收集器主要完成3个任务：分配内存、确保被引用对象的内存不被错误的回收以及回收不再被引用的对象的内存空间。</p>
+<h2 id="5-有没有用过过滤器，讲一下过滤器"><a href="#5-有没有用过过滤器，讲一下过滤器" class="headerlink" title="5.有没有用过过滤器，讲一下过滤器"></a>5.有没有用过过滤器，讲一下过滤器</h2><p>过滤器，主要用来过滤请求，可以实现某些应用场景，比如自动登录，解决网站乱码等功能。</p>
+<h4 id="5-1过滤器介绍"><a href="#5-1过滤器介绍" class="headerlink" title="5.1过滤器介绍"></a>5.1过滤器介绍</h4><p><strong>编写filter步骤:</strong><br>    1.编写一个类<br>        a.实现filter接口<br>        b.重写方法<br>    2.编写配置文件<br>        a.注册filter<br>        b.绑定路径<br>    3.测试</p>
+<p><strong>★Filter接口的方法:</strong><br>    init(FilterConfig config):初始化操作<br>    doFilter(ServletRequest request, ServletResponse response, FilterChain chain):处理业务逻辑<br>    destroy() :销毁操作<br><strong>★filter的生命周期(了解)</strong><br>    filter单实例多线程<br>    filter在服务器启动的时候 服务器创建filter 调用init方法 实现初始化操作<br>    请求来的时候,创建一个线程 根据路径调用dofilter 执行业务逻辑<br>    当filter被移除的时候或者服务器正常关闭的时候 调用destory方法 执行销毁操作.<br><strong>★FilterChain:过滤链</strong><br>    通过chain的dofilter方法,可以将请求放行到下一个过滤器,直到最后一个过滤器放行才可以访问到servlet|jsp<br>    doFilter()放行方法<br>★<strong>url-pattern配置</strong><br>    3种<br>    完全匹配    必须以”/“ 开始  例如: /a/b<br>    目录匹配    必须以”/“ 开始 以”<em>“结束  例如:/a/b/</em><br>    后缀名匹配    以”<em>.”开始 以字符结束   例如 :  </em>.jsp  <em>.do  </em>.action<br>例如:<br>    afilter  路径  /*<br>    bFilter  路径  /demo4<br>★一个资源有可能被多个过滤器匹配成功,多个过滤器的执行顺序是按照web.xml中filter-mapping的顺序执行的</p>
+<h4 id="5-2自动登录解决办法"><a href="#5-2自动登录解决办法" class="headerlink" title="5.2自动登录解决办法"></a>5.2自动登录解决办法</h4><ol>
+<li>登录的功能的基础上实现的自动登录.</li>
+<li>在登录的页面中勾选自动登录的复选框.点击提交.</li>
+<li>在提交的Servlet中,在登录成功的地方记住用户名和密码.</li>
+<li>在下次访问首页的时候带着Cookie过来.</li>
+<li>编写一个过滤器:</li>
+<li>获得Cookie的信息.</li>
+<li>查找指定的名称的Cookie.</li>
+<li>拿到Cookie以后获得用户名和密码</li>
+<li>在去数据库进行查询.</li>
+<li>能查询到,将用户的信息存入到session.放行.</li>
+<li>不能查询到,跳转其他的页面.</li>
+</ol>
+<p>5.3解决字符乱码的问题</p>
+<p><strong>需求:</strong><br>    以前我们开发的时候若有参数,第一步都是设置编码,才不会出现乱码,通过过滤器设置,到servlet或者jsp上的时候已经没有乱码问题<br><strong>技术分析:</strong><br>    filter 配置路径/* 过滤器的第一个位置<br>    在filter中重写getParameter(加强)<br><strong>步骤分析:</strong><br>    我们只需要在filter中 对request进行加强(例如:只对request.getParameter()进行加强)</p>
+<p>方法加强:<br>        1.继承(获取构造器)<br>        2.装饰者模式(静态代理)<br>        3.动态代理<br>    装饰者书写步骤:<br>        1.要求装饰者和被装饰者实现同一个接口或者继承同一个类<br>        2.装饰者中要有被装饰者的引用<br>        3.对需要加强方法进行加强<br>        4.对不需要加强的方法调用原来的方法即可<br>    加强request.getParameter(String key)<br>        首先请求的方式不同,处理的方式也不同<br>            获取请求的方法<br>            若是get请求<br>                new String(value.getBytes(“iso8859-1”),”utf-8”);<br>            若是post请求<br>                只需要设置一句话<br>                request.setCharacterEncoding(“utf-8”);</p>
+<p>最后将包装过的request对象(MyRequest)传递给servlet即可</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-n">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/08/数组中重复的数字/" class="archive-article-date">
-  	<time datetime="2018-05-08T10:51:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/08/数组中重复的数字/">数组中重复的数字</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面经</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/31/5-31数码视讯1面/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/08/把字符串转换成整数/" class="archive-article-date">
-  	<time datetime="2018-05-08T09:25:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/28/统计回文/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">统计回文</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/08/把字符串转换成整数/">把字符串转换成整数</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/08/不能使用四则运算的加法/" class="archive-article-date">
-  	<time datetime="2018-05-08T03:15:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/08/不能使用四则运算的加法/">不能使用四则运算的加法</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/08/求1-2-3-n/" class="archive-article-date">
-  	<time datetime="2018-05-08T02:47:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/08/求1-2-3-n/">求1+2+3+...n</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/07/孩子们的游戏-圆圈中最后剩下的数/" class="archive-article-date">
-  	<time datetime="2018-05-07T15:38:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/07/孩子们的游戏-圆圈中最后剩下的数/">孩子们的游戏(圆圈中最后剩下的数)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/07/扑克牌顺子/" class="archive-article-date">
-  	<time datetime="2018-05-07T02:31:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/07/扑克牌顺子/">扑克牌顺子</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/06/翻转单词顺序列/" class="archive-article-date">
-  	<time datetime="2018-05-06T12:46:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/06/翻转单词顺序列/">翻转单词顺序列</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">翻转单词列</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-n">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/06/左旋转字符串/" class="archive-article-date">
-  	<time datetime="2018-05-06T11:45:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/06/左旋转字符串/">左旋转字符串</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">字符串</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/06/和为s的两个数字/" class="archive-article-date">
-  	<time datetime="2018-05-06T09:56:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/06/和为s的两个数字/">和为s的两个数字</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/06/和为s的连续正数序列/" class="archive-article-date">
-  	<time datetime="2018-05-06T08:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/06/和为s的连续正数序列/">和为s的连续正数序列</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/4/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -620,8 +348,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
