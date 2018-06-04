@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>孩子们的游戏(圆圈中最后剩下的数) | irisqp的博客</title>
+  <title>插入排序 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编程练习题目：每年六一儿童节,牛客都会准备一些小礼物去看望孤儿院的小朋友,今年亦是如此。HF作为牛客的资深元老,自然也准备了一些小游戏。其中,有个游戏是这样的:首先,让小朋友们围成一个大圈。然后,他随机指定一个数m,让编号为0的小朋友开始报数。每次喊到m-1的那个小朋友要出列唱首歌,然后可以在礼品箱中任意的挑选礼物,并且不再回到圈中,从他的下一个小朋友开始,继续0…m-1报数….这样下去….直到剩">
-<meta name="keywords" content="SwordToOffer,programming">
+  <meta name="description" content="插入排序 基本思想：玩扑克牌或者打麻将时将新拿到的牌插入已经从大到小排好序的序列中，使其保持排序不变。">
+<meta name="keywords" content="排序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="孩子们的游戏(圆圈中最后剩下的数)">
-<meta property="og:url" content="https://irisqp.github.io/2018/05/07/孩子们的游戏-圆圈中最后剩下的数/index.html">
+<meta property="og:title" content="插入排序">
+<meta property="og:url" content="https://irisqp.github.io/2018/06/04/插入排序/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="编程练习题目：每年六一儿童节,牛客都会准备一些小礼物去看望孤儿院的小朋友,今年亦是如此。HF作为牛客的资深元老,自然也准备了一些小游戏。其中,有个游戏是这样的:首先,让小朋友们围成一个大圈。然后,他随机指定一个数m,让编号为0的小朋友开始报数。每次喊到m-1的那个小朋友要出列唱首歌,然后可以在礼品箱中任意的挑选礼物,并且不再回到圈中,从他的下一个小朋友开始,继续0…m-1报数….这样下去….直到剩">
+<meta property="og:description" content="插入排序 基本思想：玩扑克牌或者打麻将时将新拿到的牌插入已经从大到小排好序的序列中，使其保持排序不变。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-07T15:42:19.931Z">
+<meta property="og:updated_time" content="2018-06-04T12:42:39.814Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="孩子们的游戏(圆圈中最后剩下的数)">
-<meta name="twitter:description" content="编程练习题目：每年六一儿童节,牛客都会准备一些小礼物去看望孤儿院的小朋友,今年亦是如此。HF作为牛客的资深元老,自然也准备了一些小游戏。其中,有个游戏是这样的:首先,让小朋友们围成一个大圈。然后,他随机指定一个数m,让编号为0的小朋友开始报数。每次喊到m-1的那个小朋友要出列唱首歌,然后可以在礼品箱中任意的挑选礼物,并且不再回到圈中,从他的下一个小朋友开始,继续0…m-1报数….这样下去….直到剩">
+<meta name="twitter:title" content="插入排序">
+<meta name="twitter:description" content="插入排序 基本思想：玩扑克牌或者打麻将时将新拿到的牌插入已经从大到小排好序的序列中，使其保持排序不变。">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -155,30 +155,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-孩子们的游戏-圆圈中最后剩下的数" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-插入排序" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      孩子们的游戏(圆圈中最后剩下的数)
+      插入排序
     </h1>
   
 
         
-        <a href="/2018/05/07/孩子们的游戏-圆圈中最后剩下的数/" class="archive-article-date">
-  	<time datetime="2018-05-07T15:38:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-07</time>
+        <a href="/2018/06/04/插入排序/" class="archive-article-date">
+  	<time datetime="2018-06-04T12:26:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：每年六一儿童节-牛客都会准备一些小礼物去看望孤儿院的小朋友-今年亦是如此。HF作为牛客的资深元老-自然也准备了一些小游戏。其中-有个游戏是这样的-首先-让小朋友们围成一个大圈。然后-他随机指定一个数m-让编号为0的小朋友开始报数。每次喊到m-1的那个小朋友要出列唱首歌-然后可以在礼品箱中任意的挑选礼物-并且不再回到圈中-从他的下一个小朋友开始-继续0…m-1报数…-这样下去…-直到剩下最后一个小朋友-可以不用表演-并且拿到牛客名贵的“名侦探柯南”典藏版-名额有限哦-。请你试着想下-哪个小朋友会得到这份礼品呢？-注：小朋友的编号是从0到n-1"><a href="#题目：每年六一儿童节-牛客都会准备一些小礼物去看望孤儿院的小朋友-今年亦是如此。HF作为牛客的资深元老-自然也准备了一些小游戏。其中-有个游戏是这样的-首先-让小朋友们围成一个大圈。然后-他随机指定一个数m-让编号为0的小朋友开始报数。每次喊到m-1的那个小朋友要出列唱首歌-然后可以在礼品箱中任意的挑选礼物-并且不再回到圈中-从他的下一个小朋友开始-继续0…m-1报数…-这样下去…-直到剩下最后一个小朋友-可以不用表演-并且拿到牛客名贵的“名侦探柯南”典藏版-名额有限哦-。请你试着想下-哪个小朋友会得到这份礼品呢？-注：小朋友的编号是从0到n-1" class="headerlink" title="题目：每年六一儿童节,牛客都会准备一些小礼物去看望孤儿院的小朋友,今年亦是如此。HF作为牛客的资深元老,自然也准备了一些小游戏。其中,有个游戏是这样的:首先,让小朋友们围成一个大圈。然后,他随机指定一个数m,让编号为0的小朋友开始报数。每次喊到m-1的那个小朋友要出列唱首歌,然后可以在礼品箱中任意的挑选礼物,并且不再回到圈中,从他的下一个小朋友开始,继续0…m-1报数….这样下去….直到剩下最后一个小朋友,可以不用表演,并且拿到牛客名贵的“名侦探柯南”典藏版(名额有限哦!!^_^)。请你试着想下,哪个小朋友会得到这份礼品呢？(注：小朋友的编号是从0到n-1)"></a>题目：每年六一儿童节,牛客都会准备一些小礼物去看望孤儿院的小朋友,今年亦是如此。HF作为牛客的资深元老,自然也准备了一些小游戏。其中,有个游戏是这样的:首先,让小朋友们围成一个大圈。然后,他随机指定一个数m,让编号为0的小朋友开始报数。每次喊到m-1的那个小朋友要出列唱首歌,然后可以在礼品箱中任意的挑选礼物,并且不再回到圈中,从他的下一个小朋友开始,继续0…m-1报数….这样下去….直到剩下最后一个小朋友,可以不用表演,并且拿到牛客名贵的“名侦探柯南”典藏版(名额有限哦!!^_^)。请你试着想下,哪个小朋友会得到这份礼品呢？(注：小朋友的编号是从0到n-1)</h3><a id="more"></a>
-<p>思路：想到用循环链表来做，但是觉得构造这个循环链表太麻烦，所以就另辟蹊径。想到了用ArrayList来模拟这个抽小朋友的过程。</p>
-<p>　　算法的主要思路如下：利用Arraylist来盛装所有代表小朋友编号的数字，即0,1,…n。然后通过m来确定需要移出的编号，再利用subList来<strong>重新构建</strong>移除特定编号后的新的list。例如：n=5,m=3.则第一个要移除的是[0,1,2,3,4]中的[2],但是我们只关注最后一个得大奖的小朋友，所以这个移除的元素不是我们关注的重点。重点是移除后需要构建新的list，利用sublist方法，将2后边的元素截取2为[3,4]，2前边的元素截取为[0,1]，则新的list就是这两个list的拼接 即[3,4,0,1]这样对这个新的list再做递归的截取即可。注意：当m%n==0时截取方法会有稍许改动，以及当list只剩两个元素时可用特定方法简单判断出谁是最幸运的那个小朋友。<br> java代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LastRemaining</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">LastRemaining_Solution</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">if</span>(n==<span class="number">0</span> || m==<span class="number">0</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="comment">//盛装代表小朋友的编号</span></span><br><span class="line">    	List&lt;Integer&gt; arrlist=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++) &#123;</span><br><span class="line">    		arrlist.add(i);</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    	<span class="comment">//调用helper函数来计算最后一个获得大奖的小朋友的编号</span></span><br><span class="line">    	i=Helper(n,m,arrlist);</span><br><span class="line">    	<span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 算法的主要思想：利用Arraylist来盛装所有代表小朋友编号的数字，即0,1,...n。然后通过m来确定需要移出的编号，再利用subList来重新构建移除特定编号后的新的list。</span></span><br><span class="line"><span class="comment">     * 例如：n=5,m=3.则第一个要移除的是[0,1,2,3,4]中的[2],但是我们只关注最后一个得大奖的小朋友，所以这个移除的元素不是我们关注的重点。</span></span><br><span class="line"><span class="comment">     * 重点是移除后需要构建新的list，利用sublist方法，将2后边的元素截取2为[3,4]，2前边的元素截取为[0,1]，则新的list就是这两个list的拼接</span></span><br><span class="line"><span class="comment">     * 即[3,4,0,1]这样对这个新的list再做递归的截取即可。注意：当m%n==0时截取方法会有稍许改动，以及当list只剩两个元素时可用特定方法</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> n 小朋友的数量</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> m 设置的报到数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> list 辅助的ArrayList</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span>  <span class="title">Helper</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> m,List&lt;Integer&gt; list)</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span> flag=m%n;</span><br><span class="line">    	<span class="keyword">int</span> r=<span class="number">0</span>; <span class="comment">//定义返回的结果，注意每一层递归都要返回</span></span><br><span class="line">    	<span class="comment">/**</span></span><br><span class="line"><span class="comment">    	 * 注意：当list中只含有两个元素时就不需要截取list了，因为这就像小时候玩过得点兵点将一样，只剩两个小朋友，非此即彼</span></span><br><span class="line"><span class="comment">    	 * 而到底是哪一个，只和m是不是偶数有关系，如果m是偶数，那么倒数第二个移除的元素就是list中的第二个元素，所以剩下的</span></span><br><span class="line"><span class="comment">    	 * 第一个元素就是那个最后获得大奖的小朋友的编号，奇数反之。</span></span><br><span class="line"><span class="comment">    	 */</span></span><br><span class="line">    	<span class="keyword">if</span>(list.size()==<span class="number">2</span>) &#123;</span><br><span class="line">    		<span class="keyword">if</span>(m%<span class="number">2</span>==<span class="number">0</span>) &#123;</span><br><span class="line">   			 	r= list.get(<span class="number">0</span>);</span><br><span class="line">   			 </span><br><span class="line">   		 	&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">   		 		r= list.get(<span class="number">1</span>);</span><br><span class="line">   		 	&#125;</span><br><span class="line">    		flag=-<span class="number">1</span>; <span class="comment">//为了让下面的flag==0不再执行，因为m=10,n=2时满足flag==0，但是很显然这个地方是递归的最后，我们不希望再执行后面的代码。</span></span><br><span class="line">    		<span class="keyword">return</span> r;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="comment">/**</span></span><br><span class="line"><span class="comment">    	 * 当m%n==0时，即比如m==n的情况</span></span><br><span class="line"><span class="comment">    	 * 例如m=n=5,此时的list是[0,1,2,3,4]，因为m=5,所以此时需要移除的元素是最后一个，所得到的下一个list是[0,1,2,3,]</span></span><br><span class="line"><span class="comment">    	 * 截取算法和常规情况有稍许不同</span></span><br><span class="line"><span class="comment">    	 */</span></span><br><span class="line">    	<span class="keyword">if</span>(flag==<span class="number">0</span>) &#123;</span><br><span class="line">    		List&lt;Integer&gt; helplistr=list.subList(n, n);</span><br><span class="line">        	List&lt;Integer&gt; helplistl=list.subList(<span class="number">0</span>, n-<span class="number">1</span>);</span><br><span class="line">        	helplistr.addAll(helplistl);</span><br><span class="line">        	r=Helper(helplistr.size(),m,helplistr);</span><br><span class="line">        	<span class="keyword">return</span> r;</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span>(list.size()&gt;<span class="number">2</span>) &#123;</span><br><span class="line">    		List&lt;Integer&gt; helplistr=list.subList(flag, n);</span><br><span class="line">            List&lt;Integer&gt; helplistl=list.subList(<span class="number">0</span>, flag-<span class="number">1</span>);</span><br><span class="line">            helplistr.addAll(helplistl);</span><br><span class="line">            r=Helper(helplistr.size(),m,helplistr);</span><br><span class="line">            <span class="keyword">return</span> r;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> r;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	LastRemaining lr=<span class="keyword">new</span> LastRemaining();</span><br><span class="line">    	<span class="keyword">int</span> r=lr.LastRemaining_Solution(<span class="number">5</span>, <span class="number">10</span>);</span><br><span class="line">    	System.out.println(r);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>插入排序</p>
+<p>基本思想：玩扑克牌或者打麻将时将新拿到的牌插入已经从大到小排好序的序列中，使其保持排序不变。</p>
+<a id="more"></a>
+<p>详细步骤对于一个要采用插入排序来排序的数组来说，首先要将数组分成前后两段，前边的是已经有序的数组，后边的是待排序的数组，将待排序数组的首个数字取出来，插入已经排好序的前段中合适位置即可。插入排序法的时间复杂度是O(n2)，但是相比冒泡排序和选择排序来说，性能更优，因为插入排序实际复杂度是n2/4，而冒泡和选择排序均是n2/2。</p>
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertSort</span><span class="params">(<span class="keyword">int</span> [] nums)</span> </span>&#123;</span><br><span class="line">	 <span class="comment">//从1开始是待排序数组，第0个元素肯定有序，因为前边只有一个元素</span></span><br><span class="line">	 <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;nums.length;i++) &#123;</span><br><span class="line">		 <span class="keyword">int</span> temp=nums[i];</span><br><span class="line">		 <span class="keyword">int</span> j; <span class="comment">//初始化有序数组的下标</span></span><br><span class="line">		 <span class="comment">//当要插入的元素小于有序数组中的某些元素时，将这些元素往后挪一位</span></span><br><span class="line">		 <span class="keyword">for</span>(j=i-<span class="number">1</span>;j&gt;=<span class="number">0</span> &amp;&amp; temp&lt;nums[j]; j--) &#123;</span><br><span class="line">			 nums[j+<span class="number">1</span>]=nums[j];</span><br><span class="line">		 &#125;</span><br><span class="line">		 <span class="comment">//当插入的元素大于或者等于有序数组中的元素时，将该位置的元素值设为插入元素的值</span></span><br><span class="line">		 nums[j+<span class="number">1</span>]=temp;</span><br><span class="line">	 &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -192,11 +194,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">排序</a>
         		</li>
       		
 		</ul>
@@ -252,7 +250,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/07/孩子们的游戏-圆圈中最后剩下的数/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/06/04/插入排序/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -266,18 +264,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/08/求1-2-3-n/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          求1+2+3+...n
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/07/扑克牌顺子/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">扑克牌顺子</div>
+    <a href="/2018/06/04/选择排序/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">选择排序</div>
       <i class="icon-circle-right"></i>
     </a>
   
