@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="irisqp的博客">
 <meta property="og:description" content="数数并说 报数序列是指一个整数序列，按照其中的整数的顺序进行报数，得到下一个数。其前五项如下：">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-12T13:25:26.730Z">
+<meta property="og:updated_time" content="2018-06-12T14:21:25.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Count and Say">
 <meta name="twitter:description" content="数数并说 报数序列是指一个整数序列，按照其中的整数的顺序进行报数，得到下一个数。其前五项如下：">
@@ -186,7 +186,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: 1</span><br><span class="line">输出: &quot;1&quot;</span><br></pre></td></tr></table></figure>
 <p><strong>示例 2:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: 4</span><br><span class="line">输出: &quot;1211&quot;</span><br></pre></td></tr></table></figure>
-<p>思路：屎一样的题干描述，看了好几遍都不理解题意，去看了英文原版的leetcode题目，发现英文的描述也是too weak。好在国外的leetcode网站可以查看每道题的discuss，终于在一个<a href="https://www.geeksforgeeks.org/look-and-say-sequence/这样的链接下找出了这道题到底想要说个啥。下面主要解释下题意：" target="_blank" rel="noopener">https://www.geeksforgeeks.org/look-and-say-sequence/这样的链接下找出了这道题到底想要说个啥。下面主要解释下题意：</a></p>
+<p>思路：屎一样的题干描述，看了好几遍都不理解题意，去看了英文原版的leetcode题目，发现英文的描述也是too weak。好在国外的leetcode网站可以查看每道题的discuss，终于在一个<a href="https://www.geeksforgeeks.org/look-and-say-sequence/" target="_blank" rel="noopener">https://www.geeksforgeeks.org/look-and-say-sequence/</a> 这样的链接下找出了这道题到底想要说个啥。下面主要解释下题意：</p>
 <p>　　首先，给了第一个字符串：”1”，我们可以读做”一个1”，转换成数字就是11，然后这个”11”就被当做了第二个字符串，这样第三个字符串就是去读这个”11”,读作”两个1“，即”21”。然后再读这个”21”为”一个2一个1”，用数字表示就是”1211”，依此类推就可以得到第n个字符串是什么了。</p>
 <p>　　理解题意以后，这道题就不难解了。题目是给定了n去求第n个，因为有规律，且第n个字符串是什么取决于第n-1个字符串，所以想到了递归。</p>
 <p>代码如下:</p>
