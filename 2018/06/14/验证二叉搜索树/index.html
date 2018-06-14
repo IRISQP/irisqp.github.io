@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>序列化二叉树 | irisqp的博客</title>
+  <title>验证二叉搜索树 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编程练习题目：请实现两个函数，分别用来序列化和反序列化二叉树思路：序列化二叉树即将二叉树转换为某一表达存入永久存储设备，比如硬盘上，反序列化就是将硬盘上代表二叉树的文件利用程序读入，并将一模一样的二叉树在内存中再次重现。">
-<meta name="keywords" content="SwordToOffer,programming,二叉树">
+  <meta name="description" content="验证二叉搜索树给定一个二叉树，判断其是否是一个有效的二叉搜索树。">
+<meta name="keywords" content="LeetCode,Primary,Tree">
 <meta property="og:type" content="article">
-<meta property="og:title" content="序列化二叉树">
-<meta property="og:url" content="https://irisqp.github.io/2018/05/13/序列化二叉树/index.html">
+<meta property="og:title" content="验证二叉搜索树">
+<meta property="og:url" content="https://irisqp.github.io/2018/06/14/验证二叉搜索树/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="编程练习题目：请实现两个函数，分别用来序列化和反序列化二叉树思路：序列化二叉树即将二叉树转换为某一表达存入永久存储设备，比如硬盘上，反序列化就是将硬盘上代表二叉树的文件利用程序读入，并将一模一样的二叉树在内存中再次重现。">
+<meta property="og:description" content="验证二叉搜索树给定一个二叉树，判断其是否是一个有效的二叉搜索树。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-13T08:31:35.063Z">
+<meta property="og:updated_time" content="2018-06-14T04:16:10.281Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="序列化二叉树">
-<meta name="twitter:description" content="编程练习题目：请实现两个函数，分别用来序列化和反序列化二叉树思路：序列化二叉树即将二叉树转换为某一表达存入永久存储设备，比如硬盘上，反序列化就是将硬盘上代表二叉树的文件利用程序读入，并将一模一样的二叉树在内存中再次重现。">
+<meta name="twitter:title" content="验证二叉搜索树">
+<meta name="twitter:description" content="验证二叉搜索树给定一个二叉树，判断其是否是一个有效的二叉搜索树。">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -155,30 +155,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-序列化二叉树" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-验证二叉搜索树" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      序列化二叉树
+      验证二叉搜索树
     </h1>
   
 
         
-        <a href="/2018/05/13/序列化二叉树/" class="archive-article-date">
-  	<time datetime="2018-05-13T08:29:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-13</time>
+        <a href="/2018/06/14/验证二叉搜索树/" class="archive-article-date">
+  	<time datetime="2018-06-14T04:10:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：请实现两个函数，分别用来序列化和反序列化二叉树"><a href="#题目：请实现两个函数，分别用来序列化和反序列化二叉树" class="headerlink" title="题目：请实现两个函数，分别用来序列化和反序列化二叉树"></a>题目：请实现两个函数，分别用来序列化和反序列化二叉树</h3><p>思路：序列化二叉树即将二叉树转换为某一表达存入永久存储设备，比如硬盘上，反序列化就是将硬盘上代表二叉树的文件利用程序读入，并将一模一样的二叉树在内存中再次重现。</p>
+        <h2 id="验证二叉搜索树"><a href="#验证二叉搜索树" class="headerlink" title="验证二叉搜索树"></a>验证二叉搜索树</h2><p>给定一个二叉树，判断其是否是一个有效的二叉搜索树。</p>
 <a id="more"></a>
-<p>　　题目中给出的序列化后的格式是一个字符串，所以能想到用二叉树的某一遍历结果转为符合条件的字符串即完成了二叉树的序列化，为了方便起见。我们采用了层序遍历，将为空的结点的序列化字符设为“#”，并将每个节点间用逗号隔开。反序列化的时候采用相反的思想重现二叉树即可。<br>java代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.Queue;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SerializeTree</span> </span>&#123;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 层序遍历来形成序列化的二叉树字符串，用#来表示空</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> root</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> String <span class="title">Serialize</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        StringBuilder sb=<span class="keyword">new</span> StringBuilder();</span><br><span class="line">        Queue&lt;TreeNode&gt; treeQueue=<span class="keyword">new</span> LinkedList&lt;TreeNode&gt;();</span><br><span class="line">        <span class="keyword">if</span>(root!=<span class="keyword">null</span>) &#123;</span><br><span class="line">        	treeQueue.add(root);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!treeQueue.isEmpty()) &#123;</span><br><span class="line">    		TreeNode node=treeQueue.poll();</span><br><span class="line">    		<span class="keyword">if</span>(node!=<span class="keyword">null</span>) &#123;</span><br><span class="line">    			sb.append(node.val+<span class="string">","</span>);</span><br><span class="line">        		treeQueue.add(node.left);</span><br><span class="line">        		treeQueue.add(node.right);</span><br><span class="line">    		&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    			sb.append(<span class="string">"#"</span>+<span class="string">","</span>);</span><br><span class="line">    		&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(sb.length()!=<span class="number">0</span>) &#123;</span><br><span class="line">        	sb.deleteCharAt(sb.length()-<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    	<span class="keyword">return</span> sb.toString();</span><br><span class="line">  &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 反序列化二叉树，注意二叉树层序遍历序列中的父子关系的规律</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> str</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> TreeNode <span class="title">Deserialize</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span>(str==<span class="keyword">null</span> ||str.length()==<span class="number">0</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	String [] nodes=str.split(<span class="string">","</span>);</span><br><span class="line">    	TreeNode [] treeNodes=<span class="keyword">new</span> TreeNode[nodes.length];</span><br><span class="line">    	<span class="comment">//将不为#的字符转换为不为空的二叉树结点</span></span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nodes.length;i++) &#123;</span><br><span class="line">    		<span class="keyword">if</span>(!nodes[i].equals(<span class="string">"#"</span>)) &#123;</span><br><span class="line">    			treeNodes[i]=<span class="keyword">new</span> TreeNode(Integer.valueOf(nodes[i]));</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="comment">//根据层序遍历的规则，添加结点间的父子关系</span></span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">1</span>;j&lt;treeNodes.length;i++) &#123;</span><br><span class="line">    		<span class="keyword">if</span>(treeNodes[i]!=<span class="keyword">null</span>) &#123;</span><br><span class="line">    			treeNodes[i].left=treeNodes[j++];</span><br><span class="line">        		treeNodes[i].right=treeNodes[j++];</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> treeNodes[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">  	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	  	TreeNode root=<span class="keyword">new</span> TreeNode(<span class="number">0</span>);</span><br><span class="line">  		TreeNode node1=<span class="keyword">new</span> TreeNode(<span class="number">1</span>);</span><br><span class="line">		TreeNode node2=<span class="keyword">new</span> TreeNode(<span class="number">2</span>);</span><br><span class="line">		TreeNode node3=<span class="keyword">new</span> TreeNode(<span class="number">3</span>);</span><br><span class="line">		TreeNode node4=<span class="keyword">new</span> TreeNode(<span class="number">4</span>);</span><br><span class="line">		TreeNode node5=<span class="keyword">new</span> TreeNode(<span class="number">5</span>);</span><br><span class="line">		</span><br><span class="line">		root.left=node1;</span><br><span class="line">		root.right=node2;</span><br><span class="line">		node1.left=node3;</span><br><span class="line">		node1.right=<span class="keyword">null</span>;</span><br><span class="line">		node2.left=node5;</span><br><span class="line">		String s=Serialize(root);</span><br><span class="line">		System.out.println(s);</span><br><span class="line">		System.out.println(Deserialize(s).val);</span><br><span class="line">  	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一个二叉搜索树具有如下特征：</p>
+<ul>
+<li>节点的左子树只包含<strong>小于</strong>当前节点的数。</li>
+<li>节点的右子树只包含<strong>大于</strong>当前节点的数。</li>
+<li>所有左子树和右子树自身必须也是二叉搜索树。</li>
+</ul>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">    2</span><br><span class="line">   / \</span><br><span class="line">  1   3</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">输入:</span><br><span class="line">    5</span><br><span class="line">   / \</span><br><span class="line">  1   4</span><br><span class="line">     / \</span><br><span class="line">    3   6</span><br><span class="line">输出: false</span><br><span class="line">解释: 输入为: [5,1,4,null,null,3,6]。</span><br><span class="line">     根节点的值为 5 ，但是其右子节点值为 4 。</span><br></pre></td></tr></table></figure>
+<p>思路：一开始想到了类似于求二叉树的最大深度时的递归办法，但是后来发现自己写的递归有bug，只能确保子树为二叉排序树，但是确不能保证所有右子树中的节点值大于根节点，所有左子树中的值小于根节点，因为根节点的值没有传下去。后来看到了一个很好的思路：因为二叉搜索树的中序遍历结果是一个递增的序列，所以我们先利用中序遍历获取二叉搜索树的中序遍历序列，然后判断该序列是否递增即可，若递增，则肯定为二叉搜索树，反之则不是二叉搜索树。</p>
+<p>java代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    ArrayList&lt;Integer&gt; list=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValidBST</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//为了确保序列至少有两个元素，才能比较</span></span><br><span class="line">        <span class="keyword">if</span>(root.left==<span class="keyword">null</span> &amp;&amp; root.right==<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        inorder(root);</span><br><span class="line">        <span class="keyword">int</span> len=list.size();</span><br><span class="line">        <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len-<span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(list.get(i)&lt;list.get(i+<span class="number">1</span>))&#123;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(count==len-<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//中序遍历</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inorder</span><span class="params">(TreeNode root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        inorder(root.left);</span><br><span class="line">        list.add(root.val);</span><br><span class="line">        inorder(root.right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -191,15 +203,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Primary</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">二叉树</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Tree</a>
         		</li>
       		
 		</ul>
@@ -255,7 +267,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/13/序列化二叉树/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/06/14/验证二叉搜索树/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -269,18 +281,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/13/二叉搜索树的第k个结点/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          二叉搜索树的第k个结点
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/13/把二叉树打印成多行/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">把二叉树打印成多行</div>
+    <a href="/2018/06/14/二叉树的最大深度/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二叉树的最大深度</div>
       <i class="icon-circle-right"></i>
     </a>
   
