@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>颠倒整数 | irisqp的博客</title>
+  <title>LeetCode(DP)Maximum Subarray | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="颠倒整数给定一个 32 位有符号整数，将整数中的数字进行反转。">
-<meta name="keywords" content="LeetCode,字符串">
+  <meta name="description" content="Maximum SubarrayGiven an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.">
+<meta name="keywords" content="LeetCode,Dynamic Programming,Primary">
 <meta property="og:type" content="article">
-<meta property="og:title" content="颠倒整数">
-<meta property="og:url" content="https://irisqp.github.io/2018/06/11/颠倒整数/index.html">
+<meta property="og:title" content="LeetCode(DP)Maximum Subarray">
+<meta property="og:url" content="https://irisqp.github.io/2018/06/15/LeetCode-DP-Maximum-Subarray/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="颠倒整数给定一个 32 位有符号整数，将整数中的数字进行反转。">
+<meta property="og:description" content="Maximum SubarrayGiven an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-11T07:56:50.326Z">
+<meta property="og:updated_time" content="2018-06-15T15:08:52.171Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="颠倒整数">
-<meta name="twitter:description" content="颠倒整数给定一个 32 位有符号整数，将整数中的数字进行反转。">
+<meta name="twitter:title" content="LeetCode(DP)Maximum Subarray">
+<meta name="twitter:description" content="Maximum SubarrayGiven an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -155,40 +155,47 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-颠倒整数" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-LeetCode-DP-Maximum-Subarray" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      颠倒整数
+      LeetCode(DP)Maximum Subarray
     </h1>
   
 
         
-        <a href="/2018/06/11/颠倒整数/" class="archive-article-date">
-  	<time datetime="2018-06-11T07:43:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-11</time>
+        <a href="/2018/06/15/LeetCode-DP-Maximum-Subarray/" class="archive-article-date">
+  	<time datetime="2018-06-15T13:57:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="颠倒整数"><a href="#颠倒整数" class="headerlink" title="颠倒整数"></a>颠倒整数</h2><p>给定一个 32 位有符号整数，将整数中的数字进行反转。</p>
+        <h2 id="Maximum-Subarray"><a href="#Maximum-Subarray" class="headerlink" title="Maximum Subarray"></a>Maximum Subarray</h2><p>Given an integer array <code>nums</code>, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.</p>
 <a id="more"></a>
-<p><strong>示例 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: 123</span><br><span class="line">输出: 321</span><br></pre></td></tr></table></figure>
-<p> <strong>示例 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: -123</span><br><span class="line">输出: -321</span><br></pre></td></tr></table></figure>
-<p><strong>示例 3:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: 120</span><br><span class="line">输出: 21</span><br></pre></td></tr></table></figure>
-<p><strong>注意:</strong></p>
-<p>假设我们的环境只能存储 32 位有符号整数，其数值范围是 [−231,  231 − 1]。根据这个假设，如果反转后的整数溢出，则返回 0。</p>
-<p>思路：利用字符串来做转换的桥梁，将整数转为字符串，再利用字符串中StringBuilder类的reverse方法做翻转即可。注意溢出的问题，可以先将输入整数放宽到long类型，在转换完成后将long借用字符串转换为int型，然后判断，将大于MAX_VALUE和小于MIN_VALUE的返回值设为0即可。java代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">		Long result=(<span class="keyword">long</span>) <span class="number">0</span>;</span><br><span class="line">        String s=String.valueOf(x);</span><br><span class="line">        <span class="keyword">int</span> len=s.length();</span><br><span class="line">        StringBuilder sb=<span class="keyword">new</span> StringBuilder(s);</span><br><span class="line">        <span class="comment">//当不含负号时，直接反转</span></span><br><span class="line">        <span class="keyword">if</span>(sb.charAt(<span class="number">0</span>)!=<span class="string">'-'</span>) &#123;</span><br><span class="line">        	sb.reverse();</span><br><span class="line">        	String rs=sb.toString();</span><br><span class="line">        	result=Long.valueOf(rs);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//当含有负号时，将负号之后的字符串反转后再insert一个负号</span></span><br><span class="line">        <span class="keyword">if</span>(sb.charAt(<span class="number">0</span>)==<span class="string">'-'</span>) &#123;</span><br><span class="line">        	StringBuilder temp=<span class="keyword">new</span> StringBuilder(sb.substring(<span class="number">1</span>,len));</span><br><span class="line">        	temp.reverse();</span><br><span class="line">        	temp.insert(<span class="number">0</span>, <span class="string">'-'</span>);</span><br><span class="line">        	String st=temp.toString();</span><br><span class="line">        	result=Long.valueOf(st);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(result&gt;Integer.MAX_VALUE || result&lt;Integer.MIN_VALUE) &#123;</span><br><span class="line">        	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//借用字符串来做long到int型的转变</span></span><br><span class="line">        String rs=String.valueOf(result);</span><br><span class="line">        <span class="keyword">int</span> r=Integer.valueOf(rs);</span><br><span class="line">        <span class="keyword">return</span> r;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>也可以借助之前做过的reverseString的题目的函数来解，java代码如下</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">		Long result=(<span class="keyword">long</span>) <span class="number">0</span>;</span><br><span class="line">        String s=String.valueOf(x);</span><br><span class="line">        <span class="keyword">int</span> len=s.length();</span><br><span class="line">        <span class="comment">//当不含负号时，直接反转</span></span><br><span class="line">        <span class="keyword">if</span>(s.charAt(<span class="number">0</span>)!=<span class="string">'-'</span>) &#123;</span><br><span class="line">        	s=reverseString(s);</span><br><span class="line">        	result=Long.valueOf(s);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//当含有负号时，将负号之后的字符串反转后再insert一个负号</span></span><br><span class="line">        <span class="keyword">if</span>(s.charAt(<span class="number">0</span>)==<span class="string">'-'</span>) &#123;</span><br><span class="line">        	String temp=<span class="keyword">new</span> String(s.substring(<span class="number">1</span>, len));</span><br><span class="line">        	temp=reverseString(temp);</span><br><span class="line">        	temp=<span class="string">"-"</span>+temp;</span><br><span class="line">        	result=Long.valueOf(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(result&gt;Integer.MAX_VALUE || result&lt;Integer.MIN_VALUE) &#123;</span><br><span class="line">        	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//借用字符串来做long到int型的转变</span></span><br><span class="line">        String rs=String.valueOf(result);</span><br><span class="line">        <span class="keyword">int</span> r=Integer.valueOf(rs);</span><br><span class="line">        <span class="keyword">return</span> r;</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">reverseString</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">	       <span class="keyword">int</span> len=s.length();</span><br><span class="line">	       <span class="keyword">char</span>[] charArray = s.toCharArray();</span><br><span class="line">	       <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len/<span class="number">2</span>;i++) &#123;</span><br><span class="line">	    	   <span class="keyword">char</span> temp=<span class="string">' '</span>;</span><br><span class="line">	    	   temp=charArray[i];</span><br><span class="line">	    	   charArray[i]=charArray[len-<span class="number">1</span>-i];</span><br><span class="line">	    	   charArray[len-<span class="number">1</span>-i]=temp;</span><br><span class="line">	       &#125;</span><br><span class="line">	       <span class="comment">//直接将char[]数组转换成String输出的最好的办法</span></span><br><span class="line">	       String rs=String.valueOf(charArray);</span><br><span class="line">	       <span class="keyword">return</span> rs;</span><br><span class="line">	  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: [-2,1,-3,4,-1,2,1,-5,4],</span><br><span class="line">Output: 6</span><br><span class="line">Explanation: [4,-1,2,1] has the largest sum = 6.</span><br></pre></td></tr></table></figure>
+<p><strong>Follow up:</strong></p>
+<p>If you have figured out the O(<em>n</em>) solution, try coding another solution using the divide and conquer approach, which is more subtle.</p>
+<p>思路：首先能想到的肯定是枚举，利用两层for循环来计算所有可能出现的子序列的和，然后每次比较都要更新最大值的取值，不要最后获得了全部的序列和以后再排序，那样复杂度太高，通过不了，最好在每次比较后就更新最大值，最大值的<strong>初始值取Integer.MIN_VALUE</strong>最可靠，因为考虑到可能出现所有的数字都为负，且接近int型的最小值的情况。</p>
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//正向枚举</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len=nums.length;</span><br><span class="line">        <span class="keyword">int</span> max=Integer.MIN_VALUE;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i;j&lt;len;j++)&#123;</span><br><span class="line">                sum+=nums[j];</span><br><span class="line">                max=Math.max(sum,max);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>　　上述算法虽然可以解决问题，但是时间复杂度为O(N2)，我们得想办法优化，想到利用动态规划，但是动态规划需要子问题的迭代性够强，目前上述算法的规律性不够明显，我们是每次都是正向查找最大值，<strong>正向找不到规律时试着反方向找一下</strong>。我们写出反向查找的代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//反向查找</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len=nums.length;</span><br><span class="line">        <span class="keyword">int</span> max=Integer.MIN_VALUE;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i;j&gt;=<span class="number">0</span>;j--)&#123;</span><br><span class="line">                sum+=nums[j];</span><br><span class="line">                max=Math.max(sum,max);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们假设有这样一个数组nums[]= {-1, 2, 3, -4}. 则上述算法的运行步骤就如下。</p>
+<ul>
+<li>for i = 0 ⇒ max( sum(-1) )</li>
+<li>for i = 1 ⇒ max ( sum(2), sum(2, -1) )</li>
+<li>for i = 2 ⇒ max ( sum(3), sum(3, 2), sum(3, 2, -1) )</li>
+<li>for i = 3 ⇒ max ( sum(-4), sum(-4, 3), sum(-4, 3, 2), sum(-4, 3, 2, -1) )</li>
+</ul>
+<p>　　容易发现，每一次迭代时求得的都是以此次迭代的位置为终点的子数组的最大和，比如i=3时所求得的max就是以nums[３]结尾的所有子数组和的最大值。这样我们如果将每个以nums[i]结尾的子数组的最大和存下来记做dp[i]，这样在计算dp[i+1]的时候，可以这样简化:　 如果dp[i]大于0，那么以A[i+1]结尾的子数组的最大和dp[i+1]必然等于nums[i+1]+dp[i] ，因为nums[i+1]为必加项，且dp[i]大于0，所以这个值肯定会更大；反之，若dp[i]&lt;=0，则我们只取nums[i+1]当做dp[i+1]的值即可。</p>
+<p>这样，我们就得到了一个可以迭代的子问题，即求出以nums[i]结尾的子数组的最大和dp[i]。然后再在这些dp[i]中找到最大值就是所求最大连续子序列之和。代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//动态规划算法</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len=nums.length;</span><br><span class="line">        <span class="keyword">int</span> [] dp=<span class="keyword">new</span> <span class="keyword">int</span> [len];</span><br><span class="line">        dp[<span class="number">0</span>]=nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> max=dp[<span class="number">0</span>];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(dp[i-<span class="number">1</span>]&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                dp[i]=dp[i-<span class="number">1</span>]+nums[i];</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                dp[i]=nums[i];</span><br><span class="line">            &#125;</span><br><span class="line">            max=Math.max(max,dp[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -206,7 +213,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">字符串</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Dynamic Programming</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Primary</a>
         		</li>
       		
 		</ul>
@@ -262,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/06/11/颠倒整数/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/06/15/LeetCode-DP-Maximum-Subarray/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -276,18 +287,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/06/11/字符串中的第一个唯一字符/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          字符串中的第一个唯一字符
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/06/11/反转字符串/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">反转字符串</div>
+    <a href="/2018/06/15/LeetCode-DP-Best-Time-to-Buy-and-Sell-Stock/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LeetCode(DP)Best Time to Buy and Sell Stock</div>
       <i class="icon-circle-right"></i>
     </a>
   
