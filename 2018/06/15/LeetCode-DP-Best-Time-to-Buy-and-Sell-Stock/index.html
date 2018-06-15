@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>和为s的两个数字 | irisqp的博客</title>
+  <title>LeetCode(DP)Best Time to Buy and Sell Stock | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编程练习题目：输入一个递增排序的数组和一个数字S，在数组中查找两个数，是的他们的和正好是S，如果有多对数字的和等于S，输出两个数的乘积最小的。输出描述：对应每个测试案例，输出两个数，小的先输出。">
-<meta name="keywords" content="SwordToOffer,programming">
+  <meta name="description" content="Best Time to Buy and Sell StockSay you have an array for which the ith element is the price of a given stock on day i.">
+<meta name="keywords" content="LeetCode,Dynamic Programming,Primary">
 <meta property="og:type" content="article">
-<meta property="og:title" content="和为s的两个数字">
-<meta property="og:url" content="https://irisqp.github.io/2018/05/06/和为s的两个数字/index.html">
+<meta property="og:title" content="LeetCode(DP)Best Time to Buy and Sell Stock">
+<meta property="og:url" content="https://irisqp.github.io/2018/06/15/LeetCode-DP-Best-Time-to-Buy-and-Sell-Stock/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="编程练习题目：输入一个递增排序的数组和一个数字S，在数组中查找两个数，是的他们的和正好是S，如果有多对数字的和等于S，输出两个数的乘积最小的。输出描述：对应每个测试案例，输出两个数，小的先输出。">
+<meta property="og:description" content="Best Time to Buy and Sell StockSay you have an array for which the ith element is the price of a given stock on day i.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-06T09:59:54.890Z">
+<meta property="og:updated_time" content="2018-06-15T09:29:56.168Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="和为s的两个数字">
-<meta name="twitter:description" content="编程练习题目：输入一个递增排序的数组和一个数字S，在数组中查找两个数，是的他们的和正好是S，如果有多对数字的和等于S，输出两个数的乘积最小的。输出描述：对应每个测试案例，输出两个数，小的先输出。">
+<meta name="twitter:title" content="LeetCode(DP)Best Time to Buy and Sell Stock">
+<meta name="twitter:description" content="Best Time to Buy and Sell StockSay you have an array for which the ith element is the price of a given stock on day i.">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -155,28 +155,39 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-和为s的两个数字" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-LeetCode-DP-Best-Time-to-Buy-and-Sell-Stock" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      和为s的两个数字
+      LeetCode(DP)Best Time to Buy and Sell Stock
     </h1>
   
 
         
-        <a href="/2018/05/06/和为s的两个数字/" class="archive-article-date">
-  	<time datetime="2018-05-06T09:56:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-06</time>
+        <a href="/2018/06/15/LeetCode-DP-Best-Time-to-Buy-and-Sell-Stock/" class="archive-article-date">
+  	<time datetime="2018-06-15T08:44:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：输入一个递增排序的数组和一个数字S，在数组中查找两个数，是的他们的和正好是S，如果有多对数字的和等于S，输出两个数的乘积最小的。"><a href="#题目：输入一个递增排序的数组和一个数字S，在数组中查找两个数，是的他们的和正好是S，如果有多对数字的和等于S，输出两个数的乘积最小的。" class="headerlink" title="题目：输入一个递增排序的数组和一个数字S，在数组中查找两个数，是的他们的和正好是S，如果有多对数字的和等于S，输出两个数的乘积最小的。"></a>题目：输入一个递增排序的数组和一个数字S，在数组中查找两个数，是的他们的和正好是S，如果有多对数字的和等于S，输出两个数的乘积最小的。</h3><h4 id="输出描述：对应每个测试案例，输出两个数，小的先输出。"><a href="#输出描述：对应每个测试案例，输出两个数，小的先输出。" class="headerlink" title="输出描述：对应每个测试案例，输出两个数，小的先输出。"></a>输出描述：对应每个测试案例，输出两个数，小的先输出。</h4><a id="more"></a>
-<p>思路：看似简单但稍许有些复杂的题，难点在于后面的判断符合条件的结果集中乘积最小的结果集的判断。首先求出数组中满足两个数组元素相加等于sum的所有元素对，用ArrayList盛装它们，利用两层for循环即可解决。接着需要求出，如果有多个满足条件的元素对，求出它们中乘积最小的那个作为返回值返回。我采用了将结果集装入一个ArrayList中并命名为reslist，并求出它们的每一对的乘积，再放入另一个叫做minlist的ArrayList中，这样可以保证这两个ArrayList对应的下标是一致的。然后借助一个辅助的cpList将minlist复制并排好序，取得其中的最小值m，然后再在minlist中找到这个最小值m对应的下标值，即是结果集reslist中对应下标处的结果，取出来返回即可。<br><strong>注意</strong>：需要考虑没有符合条件的元素时的特殊情况的处理。<br>java代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FindNumbersWithSum</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ArrayList&lt;Integer&gt; <span class="title">FindNumbersWithSum</span><span class="params">(<span class="keyword">int</span> [] array,<span class="keyword">int</span> sum)</span> </span>&#123;</span><br><span class="line">		ArrayList&lt;ArrayList&lt;Integer&gt;&gt; reslist=<span class="keyword">new</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt;();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;array.length-<span class="number">1</span>;i++) &#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;array.length;j++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(array[i]+array[j]==sum) &#123;</span><br><span class="line">					ArrayList&lt;Integer&gt; res=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">					res.add(array[i]);</span><br><span class="line">					res.add(array[j]);</span><br><span class="line">					reslist.add(res);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//如果数组中没有符合条件的值则返回一个空的结果集</span></span><br><span class="line">		<span class="keyword">if</span>(reslist.size()==<span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//计算结果集中每个res中两个数乘积的值</span></span><br><span class="line">		ArrayList&lt;Integer&gt; minlist=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;reslist.size();i++) &#123;</span><br><span class="line">			<span class="keyword">int</span> min=reslist.get(i).get(<span class="number">0</span>)*reslist.get(i).get(<span class="number">1</span>);</span><br><span class="line">			minlist.add(min);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//利用cplist进行复制并排序得到乘积最小的min</span></span><br><span class="line">		ArrayList&lt;Integer&gt; cplist=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> c:minlist) &#123;</span><br><span class="line">			cplist.add(c);</span><br><span class="line">		&#125;</span><br><span class="line">		cplist.sort(<span class="keyword">null</span>);</span><br><span class="line">		<span class="comment">//返回乘积最小的min在minlist中的位置，也就是结果集reslist中需要输出的那个位置的res</span></span><br><span class="line">		<span class="keyword">int</span> m=minlist.indexOf(cplist.get(<span class="number">0</span>));</span><br><span class="line">		<span class="keyword">return</span> reslist.get(m);</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> [] array= &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">9</span>&#125;;</span><br><span class="line">		<span class="keyword">int</span> sum=<span class="number">18</span>;</span><br><span class="line">		System.out.println(FindNumbersWithSum(array,<span class="number">19</span>));</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h2 id="Best-Time-to-Buy-and-Sell-Stock"><a href="#Best-Time-to-Buy-and-Sell-Stock" class="headerlink" title="Best Time to Buy and Sell Stock"></a>Best Time to Buy and Sell Stock</h2><p>Say you have an array for which the <em>i</em>th element is the price of a given stock on day <em>i</em>.</p>
+<a id="more"></a>
+<p>If you were only permitted to complete at <strong>most one transaction</strong> (i.e.,  buy one and sell one share of the stock), design an algorithm to find  the maximum profit.</p>
+<p>Note that you cannot sell a stock before you buy one.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: [7,1,5,3,6,4]</span><br><span class="line">Output: 5</span><br><span class="line">Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.</span><br><span class="line">             Not 7-1 = 6, as selling price needs to be larger than buying price.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: [7,6,4,3,1]</span><br><span class="line">Output: 0</span><br><span class="line">Explanation: In this case, no transaction is done, i.e. max profit = 0.</span><br></pre></td></tr></table></figure>
+<p>思路：重点是“一次买卖”，想要找到一次买卖股票的最大利润，题目只要求返回最大利润，但是其实因为我们更关心一次买入一次卖出的最大利润，所以理论上返回最大利润以及买入卖出的时机应该更合理，为了解决这样的问题，我们需要保存每次产生利润的利润值以及买入卖出的时机，考虑到这两个数值的关联性，想到用map来装这些数据，随后返回最大利润即可，如有必要，也可返回获得最大利润时的买入，卖出时机。</p>
+<p>java代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">    		<span class="keyword">int</span> profit=<span class="number">0</span>;</span><br><span class="line">	        HashMap&lt;Integer,<span class="keyword">int</span> []&gt; proMap=<span class="keyword">new</span> HashMap&lt;Integer,<span class="keyword">int</span> []&gt;();</span><br><span class="line">	        <span class="keyword">int</span> len=prices.length;</span><br><span class="line">        	<span class="comment">//防止数组越界的处理</span></span><br><span class="line">	        <span class="keyword">if</span>(prices.length==<span class="number">2</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(prices[<span class="number">0</span>]&lt;prices[<span class="number">1</span>])&#123;</span><br><span class="line">                    <span class="keyword">return</span> prices[<span class="number">1</span>]-prices[<span class="number">0</span>];</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        	<span class="comment">//找到第一个后者大于前者的点，然后计算利润</span></span><br><span class="line">	        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len-<span class="number">1</span>;i++)&#123;</span><br><span class="line">	            <span class="keyword">if</span>(prices[i]&lt;prices[i+<span class="number">1</span>])&#123;</span><br><span class="line">	                <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;len;j++)&#123;</span><br><span class="line">	                	<span class="keyword">if</span>(prices[j]&gt;prices[i]) &#123;</span><br><span class="line">	                		profit=prices[j]-prices[i];</span><br><span class="line">	     	                <span class="keyword">int</span> [] arr=<span class="keyword">new</span> <span class="keyword">int</span> [<span class="number">2</span>];</span><br><span class="line">	     	                arr[<span class="number">0</span>]=i;</span><br><span class="line">	     	                arr[<span class="number">1</span>]=j;</span><br><span class="line">	     	                proMap.put(profit,arr);</span><br><span class="line">	                	&#125;</span><br><span class="line">	                &#125;</span><br><span class="line">	            &#125;</span><br><span class="line">	        &#125;</span><br><span class="line">        	<span class="comment">//如果map为空，说明市场不好不做买卖，利润为0</span></span><br><span class="line">            <span class="keyword">if</span>(proMap.isEmpty())&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">	        ArrayList&lt;Integer&gt; list=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">	        <span class="keyword">for</span>(Integer c : proMap.keySet()) &#123;</span><br><span class="line">	        	list.add(c);</span><br><span class="line">	        &#125;</span><br><span class="line">	        list.sort(<span class="keyword">null</span>);</span><br><span class="line">	        <span class="keyword">return</span> list.get(list.size()-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>　　上述算法其实还可优化，我们模拟人的选择过程，在上述方法中，如果我们选中了一天股票价格低于第二天的时候去买入，我们就以这一天的价格为准开始计算和后面的每一天价格做比较得到最大的利润，比如对于序列3,4,5,1,6,8。我们会先找到3这个点，然后分别计算4,5,6,8时候的利润，最后得到了最大利润是8-3=5,随后我们才会再找3后面的满足同样条件的点4（条件就是当前点的值小于下一个点的值）,这样计算肯定利润不会超过选中3时的利润，所以这一部分计算是重复无用的，此外，5也不是最大利润。只有当我们找到1这个点为买入点时，最后才能得到最大的利润为8-1=7。所以我们的算法应当这样改进：先买入序列的第一个点，然后判断它和后面的点的大小，如果后面的点比它大，就计算利润，并将这个利润值保存为当前的最大利润pmax，此时我们会计算p=4-3=1,pmax=1，然后是p=5-3=2，因为pmax&lt;p,所以更新pmax=p=2。然后继续向后判断，如果能找到比当前买入的点（此时为第一个点）的价格还低的点，就放弃第一个点将这个价格更低的点作为买入点，比如我们在找到了1这个点时发现1&lt;3，所以我们就将1当做买入点，然后从这个点出发再做和之前重复的判断，更新最大利润，找寻能产生更大利润的买入点，在这个序列里，后面不会再有比1还小的数了，所以我们的买入点不变，只是利润由6-1=5变为8-1=7，当运算到数组末尾的时候，这时候得到的最大利润就是一次买入卖出能得到的最大利润。代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> maxprofit=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> len=prices.length;</span><br><span class="line">        <span class="keyword">if</span>(len==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> bought=prices[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(bought&lt;prices[i])&#123;</span><br><span class="line">                <span class="keyword">if</span>(maxprofit&lt;prices[i]-bought)&#123;</span><br><span class="line">                    maxprofit=prices[i]-bought;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                bought=prices[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxprofit;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -190,11 +201,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Dynamic Programming</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Primary</a>
         		</li>
       		
 		</ul>
@@ -250,7 +265,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/06/和为s的两个数字/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/06/15/LeetCode-DP-Best-Time-to-Buy-and-Sell-Stock/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -264,18 +279,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/06/左旋转字符串/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          左旋转字符串
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/06/和为s的连续正数序列/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">和为s的连续正数序列</div>
+    <a href="/2018/06/15/LeetCode-DP-Climbing-Stairs/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LeetCode(DP)Climbing Stairs</div>
       <i class="icon-circle-right"></i>
     </a>
   
