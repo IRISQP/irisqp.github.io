@@ -18,7 +18,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="e:/hexo/source/image/noteimage/远程复位.PNG">
 <meta property="og:image" content="e:/hexo/source/image/noteimage/复位协议.PNG">
-<meta property="og:updated_time" content="2018-06-26T13:19:29.876Z">
+<meta property="og:updated_time" content="2018-06-26T14:04:19.683Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="智能机箱项目记录(三)远程复位功能的开发">
 <meta name="twitter:description" content="远程复位功能的实现　　应项目需求，现在需要修复上个版本的上位机的远程复位功能，上个版本的上位机在远程复位功能这块只实现了界面，具体的功能没有实现，并且，没有实现良好的应答，逻辑也有错误。为此我们需要做以下改进：上位机端要做到及时应答，并且只有在收到下位机反馈的复位成功与否的信息以后才能给客户返回这个信息，而不是一发送复位请求，就显示复位成功，上个版本的上位机中这个功能的逻辑是很有问题的，所以我们的">
@@ -179,6 +179,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="远程复位功能的实现"><a href="#远程复位功能的实现" class="headerlink" title="远程复位功能的实现"></a>远程复位功能的实现</h2><p>　　应项目需求，现在需要修复上个版本的上位机的远程复位功能，上个版本的上位机在远程复位功能这块只实现了界面，具体的功能没有实现，并且，没有实现良好的应答，逻辑也有错误。为此我们需要做以下改进：上位机端要做到及时应答，并且只有在收到下位机反馈的复位成功与否的信息以后才能给客户返回这个信息，而不是一发送复位请求，就显示复位成功，上个版本的上位机中这个功能的逻辑是很有问题的，所以我们的改动很有必要。</p>
+<a id="more"></a>
 <p>具体界面如下：</p>
 <p><img src="E:\hexo\source\image\noteimage\远程复位.PNG" alt=""></p>
 <p>　　主要要实现三个复位，交流器1,2以及机箱远程复位，我们的工作如下，对每个复位按钮添加单击事件，发送复位协议给下位机，下位机收到请求后，进行复位，复位结束后返回成功或者失败的标识，上位机收到后再做判断，显示给用户。</p>
@@ -274,6 +275,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/06/26/笔试记录-多益网络-从m个数中等概率取出n个数/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          笔试记录(多益网络)从m个数中等概率取出n个数
+        
+      </div>
+    </a>
   
   
     <a href="/2018/06/26/智能机箱项目记录-二-测试功能的开发/" id="article-nav-older" class="article-nav-link-wrap">
@@ -419,19 +429,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Midum</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Array&String</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -479,14 +489,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MVC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">事务</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
               </li>
              
@@ -495,11 +497,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">垃圾收集</a>
+                <a href="javascript:void(0)" class="js-tag color3">内存</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">内存</a>
+                <a href="javascript:void(0)" class="js-tag color4">MVC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">事务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">垃圾收集</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -515,11 +525,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">二叉树</a>
+                <a href="javascript:void(0)" class="js-tag color3">链表</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">链表</a>
+                <a href="javascript:void(0)" class="js-tag color4">二叉树</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -571,15 +581,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔试，多益网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">动态规划，真题练习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Programming</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">String</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态规划，真题练习</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="https://irisqp.github.io">
   <title>智能机箱项目记录(二)测试功能的开发 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="测试功能的实现　　应项目要求，我们需要实现一个上位机端可以检测下位机硬件环境是否正常以及网络以及其他一些常用功能是否正常，需要增加一个测试界面，集成所有的测试功能。 经过讨论，总结了需要进行测试的功能，写出了以下的测试界面。  　　针对以上每个功能测试需要设计一个测试协议，来保证每一个测试的独立性以及进行收发测试数据时的准确性。我们设计的测试协议如下：  　　针对以上协议，在每个测试功能的按钮下添">
+  <meta name="description" content="测试功能的实现　　应项目要求，我们需要实现一个上位机端可以检测下位机硬件环境是否正常以及网络以及其他一些常用功能是否正常，需要增加一个测试界面，集成所有的测试功能。">
 <meta name="keywords" content="项目,测试功能">
 <meta property="og:type" content="article">
 <meta property="og:title" content="智能机箱项目记录(二)测试功能的开发">
 <meta property="og:url" content="https://irisqp.github.io/2018/06/26/智能机箱项目记录-二-测试功能的开发/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="测试功能的实现　　应项目要求，我们需要实现一个上位机端可以检测下位机硬件环境是否正常以及网络以及其他一些常用功能是否正常，需要增加一个测试界面，集成所有的测试功能。 经过讨论，总结了需要进行测试的功能，写出了以下的测试界面。  　　针对以上每个功能测试需要设计一个测试协议，来保证每一个测试的独立性以及进行收发测试数据时的准确性。我们设计的测试协议如下：  　　针对以上协议，在每个测试功能的按钮下添">
+<meta property="og:description" content="测试功能的实现　　应项目要求，我们需要实现一个上位机端可以检测下位机硬件环境是否正常以及网络以及其他一些常用功能是否正常，需要增加一个测试界面，集成所有的测试功能。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="e:/hexo/source/image/noteimage/测试功能界面.PNG">
 <meta property="og:image" content="e:/hexo/source/image/noteimage/测试协议.PNG">
-<meta property="og:updated_time" content="2018-06-26T13:02:04.582Z">
+<meta property="og:updated_time" content="2018-06-26T14:04:27.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="智能机箱项目记录(二)测试功能的开发">
-<meta name="twitter:description" content="测试功能的实现　　应项目要求，我们需要实现一个上位机端可以检测下位机硬件环境是否正常以及网络以及其他一些常用功能是否正常，需要增加一个测试界面，集成所有的测试功能。 经过讨论，总结了需要进行测试的功能，写出了以下的测试界面。  　　针对以上每个功能测试需要设计一个测试协议，来保证每一个测试的独立性以及进行收发测试数据时的准确性。我们设计的测试协议如下：  　　针对以上协议，在每个测试功能的按钮下添">
+<meta name="twitter:description" content="测试功能的实现　　应项目要求，我们需要实现一个上位机端可以检测下位机硬件环境是否正常以及网络以及其他一些常用功能是否正常，需要增加一个测试界面，集成所有的测试功能。">
 <meta name="twitter:image" content="e:/hexo/source/image/noteimage/测试功能界面.PNG">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
@@ -179,6 +179,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="测试功能的实现"><a href="#测试功能的实现" class="headerlink" title="测试功能的实现"></a>测试功能的实现</h2><p>　　应项目要求，我们需要实现一个上位机端可以检测下位机硬件环境是否正常以及网络以及其他一些常用功能是否正常，需要增加一个测试界面，集成所有的测试功能。</p>
+<a id="more"></a>
 <p>经过讨论，总结了需要进行测试的功能，写出了以下的测试界面。</p>
 <p><img src="E:\hexo\source\image\noteimage\测试功能界面.PNG" alt=""></p>
 <p>　　针对以上每个功能测试需要设计一个测试协议，来保证每一个测试的独立性以及进行收发测试数据时的准确性。我们设计的测试协议如下：</p>
@@ -429,19 +430,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Midum</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Array&String</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -489,14 +490,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MVC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">事务</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
               </li>
              
@@ -505,11 +498,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">垃圾收集</a>
+                <a href="javascript:void(0)" class="js-tag color3">内存</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">内存</a>
+                <a href="javascript:void(0)" class="js-tag color4">MVC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">事务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">垃圾收集</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -525,11 +526,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">二叉树</a>
+                <a href="javascript:void(0)" class="js-tag color3">链表</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">链表</a>
+                <a href="javascript:void(0)" class="js-tag color4">二叉树</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -581,15 +582,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔试，多益网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">动态规划，真题练习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Programming</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">String</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态规划，真题练习</a>
               </li>
              
               <li class="article-tag-list-item">

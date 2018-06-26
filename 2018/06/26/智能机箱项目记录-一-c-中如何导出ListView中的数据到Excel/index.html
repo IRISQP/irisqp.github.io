@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://irisqp.github.io">
   <title>智能机箱项目记录(一)c#中如何导出ListView中的数据到Excel | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="C#中如何将ListView中的数据导出到excel　　应项目需求，需要给上位机添加导出记录的功能，因为之前上位机将查询到的记录都展示在了两个ListView中，所以，我们只需要将对应的listview中的数据导出到本地即可，考虑到数据的表格特性，决定导出为excel格式的文件。在网上找到了别人写的代码，将其做一些改动后，实现了该功能。 步骤记录如下：  首先，我们的c#的开发环境是Visual2">
+  <meta name="description" content="C#中如何将ListView中的数据导出到excel　　应项目需求，需要给上位机添加导出记录的功能，因为之前上位机将查询到的记录都展示在了两个ListView中，所以，我们只需要将对应的listview中的数据导出到本地即可，考虑到数据的表格特性，决定导出为excel格式的文件。在网上找到了别人写的代码，将其做一些改动后，实现了该功能。">
 <meta name="keywords" content="项目记录，C#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="智能机箱项目记录(一)c#中如何导出ListView中的数据到Excel">
 <meta property="og:url" content="https://irisqp.github.io/2018/06/26/智能机箱项目记录-一-c-中如何导出ListView中的数据到Excel/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="C#中如何将ListView中的数据导出到excel　　应项目需求，需要给上位机添加导出记录的功能，因为之前上位机将查询到的记录都展示在了两个ListView中，所以，我们只需要将对应的listview中的数据导出到本地即可，考虑到数据的表格特性，决定导出为excel格式的文件。在网上找到了别人写的代码，将其做一些改动后，实现了该功能。 步骤记录如下：  首先，我们的c#的开发环境是Visual2">
+<meta property="og:description" content="C#中如何将ListView中的数据导出到excel　　应项目需求，需要给上位机添加导出记录的功能，因为之前上位机将查询到的记录都展示在了两个ListView中，所以，我们只需要将对应的listview中的数据导出到本地即可，考虑到数据的表格特性，决定导出为excel格式的文件。在网上找到了别人写的代码，将其做一些改动后，实现了该功能。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="e:/hexo/source/image/noteimage/导出记录.PNG">
-<meta property="og:updated_time" content="2018-06-26T12:40:35.621Z">
+<meta property="og:updated_time" content="2018-06-26T14:04:36.909Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="智能机箱项目记录(一)c#中如何导出ListView中的数据到Excel">
-<meta name="twitter:description" content="C#中如何将ListView中的数据导出到excel　　应项目需求，需要给上位机添加导出记录的功能，因为之前上位机将查询到的记录都展示在了两个ListView中，所以，我们只需要将对应的listview中的数据导出到本地即可，考虑到数据的表格特性，决定导出为excel格式的文件。在网上找到了别人写的代码，将其做一些改动后，实现了该功能。 步骤记录如下：  首先，我们的c#的开发环境是Visual2">
+<meta name="twitter:description" content="C#中如何将ListView中的数据导出到excel　　应项目需求，需要给上位机添加导出记录的功能，因为之前上位机将查询到的记录都展示在了两个ListView中，所以，我们只需要将对应的listview中的数据导出到本地即可，考虑到数据的表格特性，决定导出为excel格式的文件。在网上找到了别人写的代码，将其做一些改动后，实现了该功能。">
 <meta name="twitter:image" content="e:/hexo/source/image/noteimage/导出记录.PNG">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
@@ -178,6 +178,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="C-中如何将ListView中的数据导出到excel"><a href="#C-中如何将ListView中的数据导出到excel" class="headerlink" title="C#中如何将ListView中的数据导出到excel"></a>C#中如何将ListView中的数据导出到excel</h2><p>　　应项目需求，需要给上位机添加导出记录的功能，因为之前上位机将查询到的记录都展示在了两个ListView中，所以，我们只需要将对应的listview中的数据导出到本地即可，考虑到数据的表格特性，决定导出为excel格式的文件。在网上找到了别人写的代码，将其做一些改动后，实现了该功能。</p>
+<a id="more"></a>
 <p>步骤记录如下：</p>
 <ol>
 <li>首先，我们的c#的开发环境是Visual2015。最重要的一步是添加Microsoft.Office.Interop.Excel引用，选中你自己的项目-&gt;引用-&gt;右键添加引用-&gt;选择COM-&gt;找到Microsoft Excel 16.0 Object Library(版本可以不同，我的环境是16)，点击确定即可添加。</li>
@@ -422,19 +423,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Midum</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Array&String</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">JSP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -482,14 +483,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MVC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">事务</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
               </li>
              
@@ -498,11 +491,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">垃圾收集</a>
+                <a href="javascript:void(0)" class="js-tag color3">内存</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">内存</a>
+                <a href="javascript:void(0)" class="js-tag color4">MVC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">事务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">垃圾收集</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -518,11 +519,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">二叉树</a>
+                <a href="javascript:void(0)" class="js-tag color3">链表</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">链表</a>
+                <a href="javascript:void(0)" class="js-tag color4">二叉树</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -574,15 +575,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔试，多益网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">动态规划，真题练习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Programming</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">String</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态规划，真题练习</a>
               </li>
              
               <li class="article-tag-list-item">
