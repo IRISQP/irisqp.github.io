@@ -176,6 +176,8 @@
 <p>具体界面如下：</p>
 <p><img src="E:\hexo\source\image\noteimage\远程复位.PNG" alt=""></p>
 <p>　　主要要实现三个复位，交流器1,2以及机箱远程复位，我们的工作如下，对每个复位按钮添加单击事件，发送复位协议给下位机，下位机收到请求后，进行复位，复位结束后返回成功或者失败的标识，上位机收到后再做判断，显示给用户。</p>
+<p>复位协议如下：</p>
+<p><img src="E:\hexo\source\image\noteimage\复位协议.PNG" alt=""></p>
 <p>单击事件函数以机箱远程复位为例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">private void button_rest_Click(object sender, EventArgs e)</span><br><span class="line">       &#123;</span><br><span class="line">           label_reset.Text = &quot;复位中...&quot;;</span><br><span class="line">           byte[] rest = &#123; 0xaa, 0xdd, 0x02, 0x31, 0x00, 0x00, 0x00, 0x88, 0xEE &#125;;</span><br><span class="line">           this.Invoke(new MethodInvoker(delegate</span><br><span class="line">           &#123;</span><br><span class="line">               bool send;</span><br><span class="line">               send= netTCPServer1.SendData(rest);</span><br><span class="line">               //if (send == true)</span><br><span class="line">                  // textBox_redis.AppendText(&quot;远程复位机箱成功      &quot; + DateTime.Now.ToString() + &quot;\r\n&quot;);</span><br><span class="line">           &#125;));</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
 <p>上位机接受返回的复位结果代码如下(以上代码在一个大的协议处理代码中，全部代码未给出)：</p>
