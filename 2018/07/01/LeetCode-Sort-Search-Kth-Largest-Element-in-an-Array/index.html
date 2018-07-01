@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>平衡二叉树 | irisqp的博客</title>
+  <title>LeetCode(Sort&amp;Search)Kth Largest Element in an Array | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编程练习题目：输入一棵二叉树，判断该二叉树是否是平衡二叉树。思路：平衡二叉搜索树（Self-balancing binary search tree）又被称为AVL树（有别于AVL算法），且具有以下性质：它是一 棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。由定义可知可以用递归思想，并且上一道题中判断二叉树的深度的方法也可以拿过来用。">
-<meta name="keywords" content="SwordToOffer,programming,二叉树">
+  <meta name="description" content="Kth Largest Element in an ArrayFind the kth  largest element in an unsorted array. Note that it is the kth largest  element in the sorted order, not the kth distinct element.">
+<meta name="keywords" content="LeetCode,Sort&amp;Search">
 <meta property="og:type" content="article">
-<meta property="og:title" content="平衡二叉树">
-<meta property="og:url" content="https://irisqp.github.io/2018/05/06/平衡二叉树/index.html">
+<meta property="og:title" content="LeetCode(Sort&amp;Search)Kth Largest Element in an Array">
+<meta property="og:url" content="https://irisqp.github.io/2018/07/01/LeetCode-Sort-Search-Kth-Largest-Element-in-an-Array/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="编程练习题目：输入一棵二叉树，判断该二叉树是否是平衡二叉树。思路：平衡二叉搜索树（Self-balancing binary search tree）又被称为AVL树（有别于AVL算法），且具有以下性质：它是一 棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。由定义可知可以用递归思想，并且上一道题中判断二叉树的深度的方法也可以拿过来用。">
+<meta property="og:description" content="Kth Largest Element in an ArrayFind the kth  largest element in an unsorted array. Note that it is the kth largest  element in the sorted order, not the kth distinct element.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-06T08:06:08.412Z">
+<meta property="og:updated_time" content="2018-07-01T15:05:24.923Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="平衡二叉树">
-<meta name="twitter:description" content="编程练习题目：输入一棵二叉树，判断该二叉树是否是平衡二叉树。思路：平衡二叉搜索树（Self-balancing binary search tree）又被称为AVL树（有别于AVL算法），且具有以下性质：它是一 棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。由定义可知可以用递归思想，并且上一道题中判断二叉树的深度的方法也可以拿过来用。">
+<meta name="twitter:title" content="LeetCode(Sort&amp;Search)Kth Largest Element in an Array">
+<meta name="twitter:description" content="Kth Largest Element in an ArrayFind the kth  largest element in an unsorted array. Note that it is the kth largest  element in the sorted order, not the kth distinct element.">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -155,27 +155,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-平衡二叉树" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-LeetCode-Sort-Search-Kth-Largest-Element-in-an-Array" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      平衡二叉树
+      LeetCode(Sort&amp;Search)Kth Largest Element in an Array
     </h1>
   
 
         
-        <a href="/2018/05/06/平衡二叉树/" class="archive-article-date">
-  	<time datetime="2018-05-06T03:45:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-06</time>
+        <a href="/2018/07/01/LeetCode-Sort-Search-Kth-Largest-Element-in-an-Array/" class="archive-article-date">
+  	<time datetime="2018-07-01T15:03:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h2><h3 id="题目：输入一棵二叉树，判断该二叉树是否是平衡二叉树。"><a href="#题目：输入一棵二叉树，判断该二叉树是否是平衡二叉树。" class="headerlink" title="题目：输入一棵二叉树，判断该二叉树是否是平衡二叉树。"></a>题目：输入一棵二叉树，判断该二叉树是否是平衡二叉树。</h3><p>思路：平衡二叉搜索树（Self-balancing binary search tree）又被称为AVL树（有别于AVL算法），且具有以下性质：它是一 棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。由定义可知可以用递归思想，并且上一道题中判断二叉树的深度的方法也可以拿过来用。<br><a id="more"></a><br>java代码如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IsBalanced_Tree</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> leftdp=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> rightdp=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">IsBalanced_Solution</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="keyword">null</span>) &#123;</span><br><span class="line">        	<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    	<span class="keyword">boolean</span> flag=<span class="keyword">false</span>;</span><br><span class="line">    	<span class="keyword">boolean</span> left=IsBalanced_Solution(root.left);</span><br><span class="line">    	<span class="keyword">boolean</span> right=IsBalanced_Solution(root.left);</span><br><span class="line">    	<span class="keyword">if</span>(left) &#123;</span><br><span class="line">    		leftdp=TreeDepth(root.left);</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">if</span>(right) &#123;</span><br><span class="line">    		rightdp=TreeDepth(root.right);</span><br><span class="line">    	&#125;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span>(leftdp-rightdp==<span class="number">1</span> || leftdp-rightdp==-<span class="number">1</span> || leftdp==rightdp) &#123;</span><br><span class="line">    		flag=<span class="keyword">true</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> flag;</span><br><span class="line">    	</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">TreeDepth</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">    	</span><br><span class="line">    	<span class="keyword">if</span>(root==<span class="keyword">null</span>) &#123;</span><br><span class="line">    		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">int</span> left=TreeDepth(root.left);</span><br><span class="line">    	<span class="keyword">int</span> right=TreeDepth(root.right);</span><br><span class="line">    	<span class="keyword">int</span> max=<span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">if</span>(left&gt;right) &#123;</span><br><span class="line">    		max=left;</span><br><span class="line">    	&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    		max=right;</span><br><span class="line">    	&#125;</span><br><span class="line">    	<span class="keyword">return</span> max+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	TreeNode root=<span class="keyword">new</span> TreeNode(<span class="number">0</span>);</span><br><span class="line">		TreeNode node1=<span class="keyword">new</span> TreeNode(<span class="number">1</span>);</span><br><span class="line">		TreeNode node2=<span class="keyword">new</span> TreeNode(<span class="number">2</span>);</span><br><span class="line">		TreeNode node3=<span class="keyword">new</span> TreeNode(<span class="number">3</span>);</span><br><span class="line">		TreeNode node4=<span class="keyword">new</span> TreeNode(<span class="number">4</span>);</span><br><span class="line">		TreeNode node5=<span class="keyword">new</span> TreeNode(<span class="number">5</span>);</span><br><span class="line">		TreeNode node6=<span class="keyword">new</span> TreeNode(<span class="number">6</span>);</span><br><span class="line">		</span><br><span class="line">		root.left=node1;</span><br><span class="line">		root.right=<span class="keyword">null</span>;</span><br><span class="line">		node1.left=node3;</span><br><span class="line">		node1.right=node4;</span><br><span class="line">		node2.left=node5;</span><br><span class="line">		node2.right=node6;</span><br><span class="line">		</span><br><span class="line">		IsBalanced_Tree bt=<span class="keyword">new</span> IsBalanced_Tree();</span><br><span class="line">		System.out.println(bt.IsBalanced_Solution(root));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h2 id="Kth-Largest-Element-in-an-Array"><a href="#Kth-Largest-Element-in-an-Array" class="headerlink" title="Kth Largest Element in an Array"></a>Kth Largest Element in an Array</h2><p>Find the <strong>k</strong>th  largest element in an unsorted array. Note that it is the kth largest  element in the sorted order, not the kth distinct element.</p>
+<a id="more"></a>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,2,1,5,6,4] and k = 2</span><br><span class="line">Output: 5</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,2,3,1,2,4,5,5,6] and k = 4</span><br><span class="line">Output: 4</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong><br> You may assume k is always valid, 1 ≤ k ≤ array’s length.</p>
+<p>思路：没什么好说的，最简单最直接的方法就是排序，然后返回第k大的数。写了一个插入排序，java代码如下。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findKthLargest</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        insertSort(nums);</span><br><span class="line">        <span class="keyword">return</span> nums[nums.length-k];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">insertSort</span><span class="params">(<span class="keyword">int</span> [] arr)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> temp=arr[i];</span><br><span class="line">            <span class="keyword">int</span> j;</span><br><span class="line">            <span class="keyword">for</span>(j=i-<span class="number">1</span>; j&gt;=<span class="number">0</span> &amp;&amp; temp&lt;arr[j]; j--)&#123;</span><br><span class="line">                arr[j+<span class="number">1</span>]=arr[j];</span><br><span class="line">            &#125;</span><br><span class="line">            arr[j+<span class="number">1</span>]=temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -189,15 +197,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">SwordToOffer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">LeetCode</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">programming</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">二叉树</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Sort&Search</a>
         		</li>
       		
 		</ul>
@@ -253,7 +257,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/05/06/平衡二叉树/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/07/01/LeetCode-Sort-Search-Kth-Largest-Element-in-an-Array/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -267,18 +271,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/05/06/数组中只出现一次的数字/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          数组中只出现一次的数字
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/05/06/二叉树的深度/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">二叉树的深度</div>
+    <a href="/2018/07/01/LeetCode-Sort-Search-Top-K-Frequent-Elements/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LeetCode(Sort&amp;Search)Top K Frequent Elements</div>
       <i class="icon-circle-right"></i>
     </a>
   
