@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="irisqp的博客">
 <meta property="og:description" content="堆排序　　堆排序是基于选择排序的排序算法，相对于选择排序来说更加高级，效率也高，因为使用了基于完全二叉树的最大堆或者最小堆结构，想要输出结果是升序的就用最大堆，反之则用最小堆。最大堆就是完全二叉树中所有的非叶子节点的值都大于或者等于其孩子结点的值。所以利用这种结构，我们每一次都将最大堆堆顶元素（最大）和堆底元素做交换，然后将堆的大小减一，调整新堆的结构使其符合最大堆的定义，然后递归去交换堆顶元素和">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-01T02:44:10.857Z">
+<meta property="og:updated_time" content="2018-07-01T02:44:39.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="堆排序">
 <meta name="twitter:description" content="堆排序　　堆排序是基于选择排序的排序算法，相对于选择排序来说更加高级，效率也高，因为使用了基于完全二叉树的最大堆或者最小堆结构，想要输出结果是升序的就用最大堆，反之则用最小堆。最大堆就是完全二叉树中所有的非叶子节点的值都大于或者等于其孩子结点的值。所以利用这种结构，我们每一次都将最大堆堆顶元素（最大）和堆底元素做交换，然后将堆的大小减一，调整新堆的结构使其符合最大堆的定义，然后递归去交换堆顶元素和">
@@ -176,6 +176,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>　　堆排序是基于选择排序的排序算法，相对于选择排序来说更加高级，效率也高，因为使用了基于完全二叉树的最大堆或者最小堆结构，想要输出结果是升序的就用最大堆，反之则用最小堆。最大堆就是完全二叉树中所有的非叶子节点的值都大于或者等于其孩子结点的值。所以利用这种结构，我们每一次都将最大堆堆顶元素（最大）和堆底元素做交换，然后将堆的大小减一，调整新堆的结构使其符合最大堆的定义，然后递归去交换堆顶元素和堆底元素的值即可，最后就能够得到已经排好序的数列。</p>
+<a id="more"></a>
 <p>java代码如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 堆排序：构建最大堆，每次交换堆顶和堆尾元素</span></span><br><span class="line"><span class="comment"> * 关键在于：最大堆的构建</span></span><br><span class="line"><span class="comment"> * 最大堆的构建的关键在于：最大堆的元素调整</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> 1</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HeapSort</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Heapsort</span><span class="params">(<span class="keyword">int</span> [] arr)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(arr==<span class="keyword">null</span> || arr.length==<span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		buildMaxHeap(arr);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=arr.length-<span class="number">1</span>;i&gt;=<span class="number">1</span>;i--) &#123;</span><br><span class="line">			<span class="keyword">int</span> temp=arr[<span class="number">0</span>];</span><br><span class="line">			arr[<span class="number">0</span>]=arr[i];</span><br><span class="line">			arr[i]=temp;</span><br><span class="line">			maxHeapcon(arr,<span class="number">0</span>,i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">buildMaxHeap</span><span class="params">(<span class="keyword">int</span> [] arr)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(arr==<span class="keyword">null</span> || arr.length==<span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//堆中最后一个不是叶子节点的结点就是arr.length/2</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=arr.length/<span class="number">2</span>;i&gt;=<span class="number">0</span>;i--) &#123;</span><br><span class="line">			maxHeapcon(arr,i,arr.length);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 调整最大堆</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> arr 输入堆</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> parent 当前的父节点位置</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> hsize 堆的大小</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">maxHeapcon</span><span class="params">(<span class="keyword">int</span> [] arr, <span class="keyword">int</span> parent ,<span class="keyword">int</span> hsize)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> left=parent*<span class="number">2</span>+<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> right=parent*<span class="number">2</span>+<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">int</span> largest=parent;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(left&lt;hsize &amp;&amp; arr[left]&gt;arr[largest]) &#123;</span><br><span class="line">			largest=left;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(right&lt;hsize &amp;&amp; arr[right]&gt;arr[largest]) &#123;</span><br><span class="line">			largest=right;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(largest!=parent) &#123;</span><br><span class="line">			<span class="keyword">int</span> temp=arr[parent];</span><br><span class="line">			arr[parent]=arr[largest];</span><br><span class="line">			arr[largest]=temp;</span><br><span class="line">			maxHeapcon(arr,largest,hsize);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> [] arr= &#123;<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>&#125;;</span><br><span class="line">		Heapsort(arr);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i:arr) &#123;</span><br><span class="line">			System.out.print(i+<span class="string">" "</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>由上述代码可见，堆排序的时间复杂度为（nlogn）因为，交换的复杂度是n，而重建堆结构的复杂度是logn，而每次交换以后都要重建堆结构，所以是nlogn。空间复杂度为o(1)，因为只有一个temp值用来在交换时暂存值。</p>
@@ -261,6 +262,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/07/01/归并排序/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          归并排序
+        
+      </div>
+    </a>
   
   
     <a href="/2018/06/28/希尔排序/" id="article-nav-older" class="article-nav-link-wrap">
@@ -390,10 +400,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面经</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
               </li>
              
@@ -406,11 +412,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Midum</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Array&String</a>
+                <a href="javascript:void(0)" class="js-tag color3">面经</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -419,6 +421,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Midum</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Array&String</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -458,11 +468,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Tree</a>
+                <a href="javascript:void(0)" class="js-tag color2">Sort&Search</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Sort&Search</a>
+                <a href="javascript:void(0)" class="js-tag color5">Tree</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -482,14 +492,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MVC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">事务</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">SwordToOffer</a>
               </li>
              
@@ -498,11 +500,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">链表</a>
+                <a href="javascript:void(0)" class="js-tag color4">MVC</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">对象</a>
+                <a href="javascript:void(0)" class="js-tag color3">事务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -514,7 +516,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">链表</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -534,15 +544,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">丑数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">排序，高级排序</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">plan</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">丑数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">逆序对</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -558,10 +572,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">逆序对</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">回溯法</a>
               </li>
              
@@ -574,15 +584,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">翻转单词列</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Programming</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">String</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">翻转单词列</a>
               </li>
             
             <div class="clearfix"></div>
