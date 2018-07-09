@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://irisqp.github.io">
-  <title>LeetCode(Sorting&amp;Searching)Find Peak Element | irisqp的博客</title>
+  <title>LeetCode (Math) Factorial Trailing Zeroes | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Find Peak ElementA peak element is an element that is greater than its neighbors. Given an input array nums, where nums[i] ≠ nums[i+1], find a peak element and return its index. The array may contain">
-<meta name="keywords" content="LeetCode,Sort&amp;Search">
+  <meta name="description" content="Factorial Trailing ZeroesGiven an integer n, return the number of trailing zeroes in n!. Example 1: 123Input: 3Output: 0Explanation: 3! = 6, no trailing zero. Example 2: 123Input: 5Output: 1Explanatio">
+<meta name="keywords" content="LeetCode,Math">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode(Sorting&amp;Searching)Find Peak Element">
-<meta property="og:url" content="https://irisqp.github.io/2018/07/02/LeetCode-Sorting-Searching-Find-Peak-Element/index.html">
+<meta property="og:title" content="LeetCode (Math) Factorial Trailing Zeroes">
+<meta property="og:url" content="https://irisqp.github.io/2018/07/09/LeetCode-Math-Factorial-Trailing-Zeroes/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="Find Peak ElementA peak element is an element that is greater than its neighbors. Given an input array nums, where nums[i] ≠ nums[i+1], find a peak element and return its index. The array may contain">
+<meta property="og:description" content="Factorial Trailing ZeroesGiven an integer n, return the number of trailing zeroes in n!. Example 1: 123Input: 3Output: 0Explanation: 3! = 6, no trailing zero. Example 2: 123Input: 5Output: 1Explanatio">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-02T13:38:20.684Z">
+<meta property="og:updated_time" content="2018-07-09T11:04:39.514Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode(Sorting&amp;Searching)Find Peak Element">
-<meta name="twitter:description" content="Find Peak ElementA peak element is an element that is greater than its neighbors. Given an input array nums, where nums[i] ≠ nums[i+1], find a peak element and return its index. The array may contain">
+<meta name="twitter:title" content="LeetCode (Math) Factorial Trailing Zeroes">
+<meta name="twitter:description" content="Factorial Trailing ZeroesGiven an integer n, return the number of trailing zeroes in n!. Example 1: 123Input: 3Output: 0Explanation: 3! = 6, no trailing zero. Example 2: 123Input: 5Output: 1Explanatio">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -155,40 +155,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-LeetCode-Sorting-Searching-Find-Peak-Element" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-LeetCode-Math-Factorial-Trailing-Zeroes" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      LeetCode(Sorting&amp;Searching)Find Peak Element
+      LeetCode (Math) Factorial Trailing Zeroes
     </h1>
   
 
         
-        <a href="/2018/07/02/LeetCode-Sorting-Searching-Find-Peak-Element/" class="archive-article-date">
-  	<time datetime="2018-07-02T12:10:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
+        <a href="/2018/07/09/LeetCode-Math-Factorial-Trailing-Zeroes/" class="archive-article-date">
+  	<time datetime="2018-07-09T09:36:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Find-Peak-Element"><a href="#Find-Peak-Element" class="headerlink" title="Find Peak Element"></a>Find Peak Element</h2><p>A peak element is an element that is greater than its neighbors.</p>
-<p>Given an input array <code>nums</code>, where <code>nums[i] ≠ nums[i+1]</code>, find a peak element and return its index.</p>
-<p>The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.</p>
-<p>You may imagine that <code>nums[-1] = nums[n] = -∞</code>.</p>
-<a id="more"></a>
+        <h2 id="Factorial-Trailing-Zeroes"><a href="#Factorial-Trailing-Zeroes" class="headerlink" title="Factorial Trailing Zeroes"></a>Factorial Trailing Zeroes</h2><p>Given an integer <em>n</em>, return the number of trailing zeroes in <em>n</em>!.</p>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,2,3,1]</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: 3 is a peak element and your function should return the index number 2.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 3</span><br><span class="line">Output: 0</span><br><span class="line">Explanation: 3! = 6, no trailing zero.</span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,2,1,3,5,6,4]</span><br><span class="line">Output: 1 or 5 </span><br><span class="line">Explanation: Your function can return either index number 1 where the peak element is 2, </span><br><span class="line">             or index number 5 where the peak element is 6.</span><br></pre></td></tr></table></figure>
-<p><strong>Note:</strong></p>
-<p>Your solution should be in logarithmic complexity.</p>
-<p>思路：就按这个题目要求的找到满足当前数大于相邻数的目标数即可，注意首位为峰以及末尾为峰的特殊情况，分情况讨论清楚即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 5</span><br><span class="line">Output: 1</span><br><span class="line">Explanation: 5! = 120, one trailing zero.</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong> Your solution should be in logarithmic time complexity.</p>
+<a id="more"></a>
+<p>思路：就是求给定的数n的阶乘中末尾0的个数，首先能想到的最简单的算法是求出这个阶乘值，然后从末尾开始统计0的个数当做结果返回即可。这里需要注意的是int型的溢出问题，如果使用int来计算阶乘的话，在计算13！的时候就溢出，所以这里我们采用了BigInteger来计算。</p>
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> irisqp.leetcode;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.math.BigInteger;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TrailingZeroes</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">trailingZeroes</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        BigInteger temp = BigInteger.valueOf(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = n; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">            temp = temp.multiply(BigInteger.valueOf(i));</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(temp);</span><br><span class="line">        String s = String.valueOf(temp);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> j = s.length()-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; s.charAt(j) == <span class="string">'0'</span>) &#123;</span><br><span class="line">            res++;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        TrailingZeroes tz = <span class="keyword">new</span> TrailingZeroes();</span><br><span class="line"></span><br><span class="line">        System.out.println(tz.trailingZeroes(<span class="number">4860</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>　　最后提交时超时了，暗示我们还应该有更简单的做法。</p>
+<p>　　通过观察我们可以发现：从1到4的阶乘末尾都没有0，而从5开始，所有的阶乘末尾都会有0。因为5！=120, 这个数开始，以后每个数的阶乘都是它的倍数，比如6！=120*6=720，然后我们会发现7,8,9的阶乘末尾都只有1个零，直到10的阶乘为362800,末尾是两个0，然后我们发现15的阶乘末尾有3个0，20的阶乘末尾有4个0，而25的阶乘末尾有6个0。</p>
+<p>　　我们发现只要是5的倍数，末尾就可以至少有n/5个0。至于为什么25的阶乘末尾有6个0，是因为25/5=5，除下来的值还大于5，而当这个5/5=1时，才是我们的结果5+1=6。</p>
 <p>java代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findPeakElement</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len=nums.length;</span><br><span class="line">        <span class="keyword">if</span>(len==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(len==<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(len==<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[<span class="number">0</span>]&gt;nums[<span class="number">1</span>])&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;len; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i&lt;len-<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[i]&gt;nums[i-<span class="number">1</span>] &amp;&amp; nums[i]&gt;nums[i+<span class="number">1</span>])&#123;</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">                &#125; </span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(nums[i]&gt;nums[i-<span class="number">1</span>] &amp;&amp; i==len-<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(nums[<span class="number">0</span>]&gt;nums[<span class="number">1</span>])&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 5的阶乘为120，以后只有在乘以5的倍数时候才会增加0，比如10的阶乘后面有2个0</span></span><br><span class="line"><span class="comment">     * 5 10 15 20 25 对应的末尾为0的个数是 1 2 3 4 6。为什么25是6呢，因为25/5以后得5，还有1个5，所以是5+1，总共有6个0.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> n</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">trailingZeroes2</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (n &lt; <span class="number">5</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (n &gt;= <span class="number">5</span>) &#123;</span><br><span class="line">                n /= <span class="number">5</span>;</span><br><span class="line">                res += n;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        TrailingZeroes tz = <span class="keyword">new</span> TrailingZeroes();</span><br><span class="line"></span><br><span class="line">        System.out.println(tz.trailingZeroes2(<span class="number">91</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -206,7 +207,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Sort&Search</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Math</a>
         		</li>
       		
 		</ul>
@@ -262,7 +263,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/07/02/LeetCode-Sorting-Searching-Find-Peak-Element/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://irisqp.github.io/2018/07/09/LeetCode-Math-Factorial-Trailing-Zeroes/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -276,18 +277,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/02/LeetCode-Sorting-Searching-Search-for-a-Range/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          LeetCode(Sorting&amp;Searching)Search for a Range
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/07/01/LeetCode-Sort-Search-Kth-Largest-Element-in-an-Array/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">LeetCode(Sort&amp;Search)Kth Largest Element in an Array</div>
+    <a href="/2018/07/08/LeetCode-Math-Happy-Number/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LeetCode(Math)Happy Number</div>
       <i class="icon-circle-right"></i>
     </a>
   
