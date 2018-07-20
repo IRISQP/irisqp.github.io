@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="irisqp的博客">
 <meta property="og:description" content="C#中如何将ListView中的数据导出到excel　　应项目需求，需要给上位机添加导出记录的功能，因为之前上位机将查询到的记录都展示在了两个ListView中，所以，我们只需要将对应的listview中的数据导出到本地即可，考虑到数据的表格特性，决定导出为excel格式的文件。在网上找到了别人写的代码，将其做一些改动后，实现了该功能。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="e:/hexo/source/image/noteimage/导出记录.PNG">
-<meta property="og:updated_time" content="2018-06-26T14:04:36.909Z">
+<meta property="og:image" content="https://irisqp.github.io/image/noteimage/导出记录.PNG">
+<meta property="og:updated_time" content="2018-07-20T15:24:15.393Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="智能机箱项目记录(一)c#中如何导出ListView中的数据到Excel">
 <meta name="twitter:description" content="C#中如何将ListView中的数据导出到excel　　应项目需求，需要给上位机添加导出记录的功能，因为之前上位机将查询到的记录都展示在了两个ListView中，所以，我们只需要将对应的listview中的数据导出到本地即可，考虑到数据的表格特性，决定导出为excel格式的文件。在网上找到了别人写的代码，将其做一些改动后，实现了该功能。">
-<meta name="twitter:image" content="e:/hexo/source/image/noteimage/导出记录.PNG">
+<meta name="twitter:image" content="https://irisqp.github.io/image/noteimage/导出记录.PNG">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -182,7 +182,7 @@
 <p>步骤记录如下：</p>
 <ol>
 <li>首先，我们的c#的开发环境是Visual2015。最重要的一步是添加Microsoft.Office.Interop.Excel引用，选中你自己的项目-&gt;引用-&gt;右键添加引用-&gt;选择COM-&gt;找到Microsoft Excel 16.0 Object Library(版本可以不同，我的环境是16)，点击确定即可添加。</li>
-<li>对将要增加功能的listview面板附近添加一个按钮“导出记录”，对该按钮添加单击事件，调用导出函数，传入要导出的listview即可。<img src="E:\hexo\source\image\noteimage\导出记录.PNG" alt=""></li>
+<li>对将要增加功能的listview面板附近添加一个按钮“导出记录”，对该按钮添加单击事件，调用导出函数，传入要导出的listview即可。<img src="\image\noteimage\导出记录.PNG" alt=""></li>
 <li>在单击事件中调用以下写好的代码，详细解释见注释。</li>
 </ol>
 <p>代码如下：</p>

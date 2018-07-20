@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="irisqp的博客">
 <meta property="og:description" content="测试功能的实现　　应项目要求，我们需要实现一个上位机端可以检测下位机硬件环境是否正常以及网络以及其他一些常用功能是否正常，需要增加一个测试界面，集成所有的测试功能。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="e:/hexo/source/image/noteimage/测试功能界面.PNG">
-<meta property="og:image" content="e:/hexo/source/image/noteimage/测试协议.PNG">
-<meta property="og:updated_time" content="2018-06-26T14:04:27.106Z">
+<meta property="og:image" content="https://irisqp.github.io/image/noteimage/测试功能界面.PNG">
+<meta property="og:image" content="https://irisqp.github.io/image/noteimage/测试协议.PNG">
+<meta property="og:updated_time" content="2018-07-20T15:24:42.146Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="智能机箱项目记录(二)测试功能的开发">
 <meta name="twitter:description" content="测试功能的实现　　应项目要求，我们需要实现一个上位机端可以检测下位机硬件环境是否正常以及网络以及其他一些常用功能是否正常，需要增加一个测试界面，集成所有的测试功能。">
-<meta name="twitter:image" content="e:/hexo/source/image/noteimage/测试功能界面.PNG">
+<meta name="twitter:image" content="https://irisqp.github.io/image/noteimage/测试功能界面.PNG">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
   
@@ -181,9 +181,9 @@
         <h2 id="测试功能的实现"><a href="#测试功能的实现" class="headerlink" title="测试功能的实现"></a>测试功能的实现</h2><p>　　应项目要求，我们需要实现一个上位机端可以检测下位机硬件环境是否正常以及网络以及其他一些常用功能是否正常，需要增加一个测试界面，集成所有的测试功能。</p>
 <a id="more"></a>
 <p>经过讨论，总结了需要进行测试的功能，写出了以下的测试界面。</p>
-<p><img src="E:\hexo\source\image\noteimage\测试功能界面.PNG" alt=""></p>
+<p><img src="\image\noteimage\测试功能界面.PNG" alt=""></p>
 <p>　　针对以上每个功能测试需要设计一个测试协议，来保证每一个测试的独立性以及进行收发测试数据时的准确性。我们设计的测试协议如下：</p>
-<p><img src="E:\hexo\source\image\noteimage\测试协议.PNG" alt=""></p>
+<p><img src="\image\noteimage\测试协议.PNG" alt=""></p>
 <p>　　针对以上协议，在每个测试功能的按钮下添加单击事件，然后上位机就发送相应的测试协议数据包给客户机，然后客户机在收到对应协议后调用对应的功能来测试该功能是否正常，将检测结果对应的协议返回给上位机，上位机再接受到该数据后作出应答，显示给用户对应的测试功能是否正确。</p>
 <p>　　我们以拍照功能为例，测试功能上位机端的代码如下：</p>
 <p>对应按钮的单击事件：</p>
