@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://irisqp.github.io">
   <title>智能机箱项目笔记(7.20)多个新功能的增加与维护 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="多个新功能的增加与维护　　甲方爸爸又提新需求了，从昨天到今天没歇，主要完成了以下几个功能的增加。 1、照片缓存　　这个需求是要求上位机将机箱门被打开后拍摄的照片缓存到上位机，后来经过进一步讨论，实现一个保存拍照数据到上位机本地以及通过上位机查询后展示给用户的功能能够较好满足该需求。因为拍照主要是为了防盗，只有当机柜门被打开，才会拍照，所以每次拍照的信息都极为关键，我们不能只缓存一定时间段内的照片，">
+  <meta name="description" content="多个新功能的增加与维护　　甲方爸爸又提新需求了，从昨天到今天没歇，主要完成了以下几个功能的增加。">
 <meta name="keywords" content="项目笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="智能机箱项目笔记(7.20)多个新功能的增加与维护">
 <meta property="og:url" content="https://irisqp.github.io/2018/07/20/智能机箱项目笔记-7-20-多个新功能的增加与维护/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="多个新功能的增加与维护　　甲方爸爸又提新需求了，从昨天到今天没歇，主要完成了以下几个功能的增加。 1、照片缓存　　这个需求是要求上位机将机箱门被打开后拍摄的照片缓存到上位机，后来经过进一步讨论，实现一个保存拍照数据到上位机本地以及通过上位机查询后展示给用户的功能能够较好满足该需求。因为拍照主要是为了防盗，只有当机柜门被打开，才会拍照，所以每次拍照的信息都极为关键，我们不能只缓存一定时间段内的照片，">
+<meta property="og:description" content="多个新功能的增加与维护　　甲方爸爸又提新需求了，从昨天到今天没歇，主要完成了以下几个功能的增加。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://irisqp.github.io/image/noteimage/图片查询效果图.JPG">
-<meta property="og:updated_time" content="2018-07-20T15:18:20.919Z">
+<meta property="og:updated_time" content="2018-07-20T15:21:05.367Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="智能机箱项目笔记(7.20)多个新功能的增加与维护">
-<meta name="twitter:description" content="多个新功能的增加与维护　　甲方爸爸又提新需求了，从昨天到今天没歇，主要完成了以下几个功能的增加。 1、照片缓存　　这个需求是要求上位机将机箱门被打开后拍摄的照片缓存到上位机，后来经过进一步讨论，实现一个保存拍照数据到上位机本地以及通过上位机查询后展示给用户的功能能够较好满足该需求。因为拍照主要是为了防盗，只有当机柜门被打开，才会拍照，所以每次拍照的信息都极为关键，我们不能只缓存一定时间段内的照片，">
+<meta name="twitter:description" content="多个新功能的增加与维护　　甲方爸爸又提新需求了，从昨天到今天没歇，主要完成了以下几个功能的增加。">
 <meta name="twitter:image" content="https://irisqp.github.io/image/noteimage/图片查询效果图.JPG">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
@@ -178,6 +178,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="多个新功能的增加与维护"><a href="#多个新功能的增加与维护" class="headerlink" title="多个新功能的增加与维护"></a>多个新功能的增加与维护</h2><p>　　甲方爸爸又提新需求了，从昨天到今天没歇，主要完成了以下几个功能的增加。</p>
+<a id="more"></a>
 <h3 id="1、照片缓存"><a href="#1、照片缓存" class="headerlink" title="1、照片缓存"></a>1、照片缓存</h3><p>　　这个需求是要求上位机将机箱门被打开后拍摄的照片缓存到上位机，后来经过进一步讨论，实现一个保存拍照数据到上位机本地以及通过上位机查询后展示给用户的功能能够较好满足该需求。因为拍照主要是为了防盗，只有当机柜门被打开，才会拍照，所以每次拍照的信息都极为关键，我们不能只缓存一定时间段内的照片，只要拍了，我们就应该存下来，以备后边调查取证时得到有价值的线索。所以我采用了保存图片到本地，并提供给用户一个查询特定图片的接口。所以我们的图片缓存就变成了–&gt;图片保存+查询功能。</p>
 <p>　　存图片时可以将图片以二进制文件信息存进数据库或者将图片保存到本地，为了方便查询，我们势必要用到数据库，但是因为图片较字符数据量较大，所以将图片保存到数据库的操作并不可取，我采用了将图片保存到本地的指定文件夹，然后将图片的存储路径存入数据库，为此，需要专门新建一个表picture_table来保存图片的地址信息，该表的字段我设计了id, address, time, picture_url四个字段，其中id作为主键，address表示拍照的设备所在地址，time表示拍照的时间，pictrue_url表示图片的保存路径。然后我们需要将picturebox里的图片保存到指定的文件夹，并获得该路径，将该路径以及相关信息写入picture_table表中。</p>
 <p>关键代码如下：</p>
