@@ -8,21 +8,21 @@
   <link rel="dns-prefetch" href="https://irisqp.github.io">
   <title>智能机箱项目记录(四)多个bug消除以及ui调整 | irisqp的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="多个bug消除以及ui调整​    最近的一次测试中发现了有几处bug, 通过调试，跟踪，讨论解决了这些bug。 主要bug如下： 1.网络异常弹窗过于频繁异常现象： 　　网络断开连接后，如果上位机再给下位机发送数据，就会弹出“不能对非连接的套接字执行此操作的错误”。该错误在每次有数据下发时都会弹出错误确认框，严重影响了用户体验还有可能由于用户的操作不当引起上位机死机。 解决方案： 　　通过排查源">
+  <meta name="description" content="多个bug消除以及ui调整​    最近的一次测试中发现了有几处bug, 通过调试，跟踪，讨论解决了这些bug。 主要bug如下：">
 <meta name="keywords" content="项目记录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="智能机箱项目记录(四)多个bug消除以及ui调整">
 <meta property="og:url" content="https://irisqp.github.io/2018/07/27/智能机箱项目记录-四-多个bug消除以及ui调整/index.html">
 <meta property="og:site_name" content="irisqp的博客">
-<meta property="og:description" content="多个bug消除以及ui调整​    最近的一次测试中发现了有几处bug, 通过调试，跟踪，讨论解决了这些bug。 主要bug如下： 1.网络异常弹窗过于频繁异常现象： 　　网络断开连接后，如果上位机再给下位机发送数据，就会弹出“不能对非连接的套接字执行此操作的错误”。该错误在每次有数据下发时都会弹出错误确认框，严重影响了用户体验还有可能由于用户的操作不当引起上位机死机。 解决方案： 　　通过排查源">
+<meta property="og:description" content="多个bug消除以及ui调整​    最近的一次测试中发现了有几处bug, 通过调试，跟踪，讨论解决了这些bug。 主要bug如下：">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://irisqp.github.io/image/noteimage/首页.PNG">
 <meta property="og:image" content="https://irisqp.github.io/image/noteimage/网络异常.PNG">
 <meta property="og:image" content="https://irisqp.github.io/image/noteimage/参数设置.PNG">
-<meta property="og:updated_time" content="2018-07-27T08:42:41.517Z">
+<meta property="og:updated_time" content="2018-07-27T08:50:29.882Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="智能机箱项目记录(四)多个bug消除以及ui调整">
-<meta name="twitter:description" content="多个bug消除以及ui调整​    最近的一次测试中发现了有几处bug, 通过调试，跟踪，讨论解决了这些bug。 主要bug如下： 1.网络异常弹窗过于频繁异常现象： 　　网络断开连接后，如果上位机再给下位机发送数据，就会弹出“不能对非连接的套接字执行此操作的错误”。该错误在每次有数据下发时都会弹出错误确认框，严重影响了用户体验还有可能由于用户的操作不当引起上位机死机。 解决方案： 　　通过排查源">
+<meta name="twitter:description" content="多个bug消除以及ui调整​    最近的一次测试中发现了有几处bug, 通过调试，跟踪，讨论解决了这些bug。 主要bug如下：">
 <meta name="twitter:image" content="https://irisqp.github.io/image/noteimage/首页.PNG">
   
     <link rel="alternative" href="/atom.xml" title="irisqp的博客" type="application/atom+xml">
@@ -181,6 +181,7 @@
       
         <h2 id="多个bug消除以及ui调整"><a href="#多个bug消除以及ui调整" class="headerlink" title="多个bug消除以及ui调整"></a>多个bug消除以及ui调整</h2><p>​    最近的一次测试中发现了有几处bug, 通过调试，跟踪，讨论解决了这些bug。</p>
 <p>主要bug如下：</p>
+<a id="more"></a>
 <h3 id="1-网络异常弹窗过于频繁"><a href="#1-网络异常弹窗过于频繁" class="headerlink" title="1.网络异常弹窗过于频繁"></a>1.网络异常弹窗过于频繁</h3><p>异常现象：</p>
 <p>　　网络断开连接后，如果上位机再给下位机发送数据，就会弹出“不能对非连接的套接字执行此操作的错误”。该错误在每次有数据下发时都会弹出错误确认框，严重影响了用户体验还有可能由于用户的操作不当引起上位机死机。</p>
 <p>解决方案：</p>
